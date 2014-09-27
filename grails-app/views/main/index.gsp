@@ -17,6 +17,6 @@
 
     <div id="content">Грузоперевозки из ${city} по России</div>
 
-    <div id="right">Правое</div>
+    %{--<div id="right">Правое</div>--}%
 </body>
 </html>

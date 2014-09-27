@@ -17,23 +17,31 @@
         <style>
             #header {
                 background: rgb(51,153,204);
-                height: 50px;
+                background: darkgrey;
+                height: 150px;
             }
             #body-content {
 
             }
             #left {
+                background: rgb(231,238,241);
+                width: 250px;
+                float: left;
+            }
 
+            #content{
+                background: gray;
+                width: 950px ;
+                float: right;
             }
             #right{
 
             }
-            #content{
-
-            }
             #footer {
                 /*width: 1200px;*/
-                margin: 0 auto;
+                /*margin: 0 auto;*/
+                background: rgb(51,153,204);
+                height: 80px;
                 clear: both;
             }
         </style>
