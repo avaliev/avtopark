@@ -5,7 +5,7 @@
   Time: 23:24
 --%>
 
-%{--<%@ page contentType="text/html;charset=UTF-8" %>--}%
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="main"/>
@@ -13,9 +13,14 @@
 </head>
 
 <body>
-    <div id="left">Левое</div>
+    <div id="left">
+        <p class="p-title"><strong>Грузоперевозки по 1000 городам России и в обратном направлении</strong></p>
+    </div>
 
-    <div id="content">Грузоперевозки из ${city} по России</div>
+    <div id="content">
+        <div class="text"><h1>Грузоперевозки по России</h1>
+        </div>
+    </div>
 
     %{--<div id="right">Правое</div>--}%
 </body>
