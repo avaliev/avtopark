@@ -16,41 +16,56 @@
 		<asset:javascript src="application.js"/>
         <style>
             #header {
-                background: rgb(51,153,204);
-                background: darkgrey;
-                height: 150px;
+                background: rgb(80,200,175);
+                height: 100px;
+                padding: 20px;
+            }
+            #nav-bar {
+                background: rgb(0,182,149);
+                height: 50px;
+                border-bottom: 1px solid #000000;
+                border-top: 1px solid #000000;
             }
             #body-content {
 
             }
             #left {
                 background: rgb(231,238,241);
-                width: 250px;
+                width: 200px;
+                height: 700px;
                 float: left;
             }
 
             #content{
                 background: gray;
-                width: 950px ;
+                width: 1100px ;
+                height: 700px;
                 float: right;
             }
             #right{
 
             }
             #footer {
-                /*width: 1200px;*/
-                /*margin: 0 auto;*/
+                border-top: 1px solid #000000;
                 background: rgb(51,153,204);
                 height: 80px;
                 clear: both;
+                padding: 10px;
             }
         </style>
 		<g:layoutHead/>
 	</head>
 	<body>
 
-    <div style="width: 1200px ; margin: 0 auto">
-        <div id="header">Шапка</div>
+    <div style="width: 1300px ; margin: 0 auto">
+        <div id="header">Шапка
+           <p></p>
+           <p></p>
+           <p></p>
+        </div>
+        <div id="nav-bar">
+
+        </div>
         <div id="body-content">
             <g:layoutBody/>
         </div>
