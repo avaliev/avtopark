@@ -29,18 +29,25 @@
                 border-top: 1px solid #000000;
 
             }
+
+            #nav-bar ul li {
+                display: inline;
+                margin-right: 15px;
+                font-size: 110%;
+                font-weight: bold;
+            }
             #body-content {
 
             }
             #left {
-                background: rgb(231,238,241);
+                background: rgb(180, 204, 214);
                 width: 200px;
                 height: 700px;
                 float: left;
             }
 
             #content{
-                background: rgb(231,238,241);
+                background: rgb(180, 204, 214);
                 width: 1100px ;
                 height: 700px;
                 float: left;
@@ -84,10 +91,17 @@
             margin-bottom: 5px;
             color: #ffffff;
         }
+
+        .text h1 {
+            color: darkblue;
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+        }
         </style>
 		<g:layoutHead/>
 	</head>
-	<body>
+	<body style="margin: 0; background: rgb(231,238,241)">
 
     <div style="width: 1300px ; margin: 0 auto">
         <div id="header">
@@ -96,7 +110,11 @@
            <div class="phone">Телефон: <span>8-800-5000</span></div>
         </div>
         <div id="nav-bar">
-
+            <ul>
+                <li><g:link controller="main" action="index">Главная</g:link></li>
+                <li><g:link controller="menu" action="index">Тарифы</g:link></li>
+                <li><g:link controller="menu" action="index">Контакты</g:link></li>
+            </ul>
         </div>
         <div id="body-content">
             <g:layoutBody/>
