@@ -19,16 +19,13 @@
 	<body>
         <div id="header">Шапка</div>
         <div id="body-content">
-            <div id="left">Левое</div>
-            <div id="content">Content</div>
-            <div id="right">Правое</div>
             <g:layoutBody/>
         </div>
 
         <div id="footer">Подвал</div>
 		%{--<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>--}%
 
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+		%{--<div class="footer" role="contentinfo"></div>--}%
+		%{--<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>--}%
 	</body>
 </html>

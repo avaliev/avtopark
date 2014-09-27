@@ -6,7 +6,7 @@ class MainController {
 //        render(params*.toString()+'main');
         // show main page with cities
         // for url: /city/index.html
-        render 'index'
+        render(view: 'index' , model: [city : "Kazan"])
     }
 
     def withRoutes(){
