@@ -10,7 +10,6 @@
 <head>
     <meta name="layout" content="main"/>
     <title>Грузоперевозки из ${city} по России</title>
-
 </head>
 
 <body>

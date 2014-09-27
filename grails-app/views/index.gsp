@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Грузоперевозки по всей России</title>
+		<title>Groovy Index Page</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;

@@ -14,15 +14,41 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
   		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
+        <style>
+            #header {
+                background: rgb(51,153,204);
+                height: 50px;
+            }
+            #body-content {
+
+            }
+            #left {
+
+            }
+            #right{
+
+            }
+            #content{
+
+            }
+            #footer {
+                /*width: 1200px;*/
+                margin: 0 auto;
+                clear: both;
+            }
+        </style>
 		<g:layoutHead/>
 	</head>
 	<body>
+
+    <div style="width: 1200px ; margin: 0 auto">
         <div id="header">Шапка</div>
         <div id="body-content">
             <g:layoutBody/>
         </div>
 
         <div id="footer">Подвал</div>
+     </div>
 		%{--<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>--}%
 
 		%{--<div class="footer" role="contentinfo"></div>--}%
