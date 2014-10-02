@@ -17,8 +17,8 @@ hibernate {
 // environment specific settings
 environments {
     development {
-        grails.dbconsole.enabled = true
-        grails.dbconsole.urlRoot = '/admin/dbconsole'
+//        grails.dbconsole.enabled = true
+//        grails.dbconsole.urlRoot = '/admin/dbconsole'
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
