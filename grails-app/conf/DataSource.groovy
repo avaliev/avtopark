@@ -17,8 +17,10 @@ hibernate {
 // environment specific settings
 environments {
     development {
-//        grails.dbconsole.enabled = true
-//        grails.dbconsole.urlRoot = '/admin/dbconsole'
+        grails.dbconsole.enabled = true
+        grails.dbconsole.urlRoot = '/admin/dbconsole'
+        // по умолчанию используется слабая миграция от hibernate
+        // dbmigration плагин используется отдельно
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
@@ -28,6 +30,7 @@ environments {
         dataSource {
             dbCreate = "update"
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+
         }
     }
     production {

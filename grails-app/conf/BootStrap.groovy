@@ -22,7 +22,14 @@ class BootStrap {
        }
 
        if (Route.count<1) {
-
+//            def cities=City.list();
+//
+//           for (City cityFrom: cities) {
+//               for (City cityTo: cities) {
+//
+//               }
+//
+//           }
        }
 
     }

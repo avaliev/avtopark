@@ -11,5 +11,6 @@ class Route {
     City destinationCity;
 
     static constraints = {
+        price nullable: true;
     }
 }
