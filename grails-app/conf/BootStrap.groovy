@@ -4,6 +4,7 @@ import ru.avtopark.Route
 class BootStrap {
 
     def init = { servletContext ->
+
        if (City.count<1) {
            new City(name: "Москва",urlName: "moskva",desc: "Описание").save()
            new City(name: "Санкт-Петербург",urlName: "peterburg",desc: "Описание").save()

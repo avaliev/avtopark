@@ -9,7 +9,7 @@ class UrlMappings {
 
         "/"(controller: "main" , action: "index")
         "/$city?"(controller: "main", action: "city")
-//        "/$city?/$route?"(controller: "main", action: "withRoutes")
+        "/$city?/$route?"(controller: "main", action: "withRoutes")
         "500"(view:'/error')
 	}
 }

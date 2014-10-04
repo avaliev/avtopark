@@ -6,11 +6,14 @@ class Route {
 
     Integer price;
 
+    Integer distance;
+
     City departureCity;
 
     City destinationCity;
 
     static constraints = {
         price nullable: true;
+        distance nullable: true;
     }
 }
