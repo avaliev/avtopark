@@ -85,9 +85,11 @@ grails.hibernate.pass.readonly = false
 // configure passing read-only to OSIV session by default, requires "singleSession = false" OSIV mode
 grails.hibernate.osiv.readonly = false
 
-grails.assets.less.compile = 'less4j'
-grails.assets.plugin."twitter-bootstrap".excludes = ["**/*.less"]
-grails.assets.plugin."twitter-bootstrap".includes = ["bootstrap.less"]
+//grails.assets.less.compile = 'less4j'
+//grails.assets.plugin."twitter-bootstrap".excludes = ["**/*.less"]
+//grails.assets.plugin."twitter-bootstrap".includes = ["bootstrap.less"]
+
+//grails.assets.bundle=true
 
 environments {
     development {
