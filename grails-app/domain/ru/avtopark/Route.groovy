@@ -4,6 +4,8 @@ class Route {
 
     String urlName;
 
+    String name;
+
     Integer price;
 
     Integer distance;

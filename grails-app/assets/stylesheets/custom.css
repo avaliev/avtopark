@@ -18,8 +18,8 @@
     font-size: 110%;
     font-weight: bold;
 }
-#body-content {
-
+#body-content .jumbotron {
+ background: #f5f5f5;
 }
 #left {
     background: rgb(180, 204, 214);

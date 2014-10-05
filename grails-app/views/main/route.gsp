@@ -13,15 +13,21 @@
 </head>
 
 <body>
-<div id="left">
-    <p class="p-title"><strong>Грузоперевозки по 1000 городам России и в обратном направлении</strong></p>
-</div>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-sm-3">
+            <h2>Города</h2>
+            <ul class="nav nav-pills nav-stacked">
+            <g:each in="${city.routes}" var="route">
+                <li><a href="../marshrut/${route.urlName}">${route.name}</a></li>
+            </g:each>
+            </ul>
+        </div>
 
-<div id="content">
-    <div class="text"><h1>Грузоперевозки по маршруту ${route}</h1>
+        <div class="col-sm-9">
+            <h2> Грузоперевозки по маршруту ${route.name}</h2>
+        </div>
+
     </div>
-</div>
-
-%{--<div id="right">Правое</div>--}%
 </body>
 </html>

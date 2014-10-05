@@ -6,25 +6,34 @@ class MainController {
 
     def FriendlyUrlService friendlyUrlService;
 
+    City lastCity=null;
+
     def index() {
 //        render(params*.toString()+'main');
         // show main page with cities
         // for url: /city/index.html
-        render(view: 'index')
+        render(view: 'index', model : [cities :City.list()] )
     }
 
 
     def city(){
-        render(view: 'city' ,  model: [city : params.get("city")] )
+        String url=params.get("city");
+        City city=City.findByUrlName(url);
+        lastCity=city;
+        render(view: 'city' ,  model: [city : city] )
     }
 
     def withRoutes() {
        // need model routes , city
-       // own view - difference in left links list
-        // for url /city/route.html (/city/city-city.html)
-//        render('with routes')
-//        render(params*.toString());
-        render(view: 'route' , model: [route : params.get("route")])
+        // need variable for context
+        def query=Route.where {
+            (departureCity==lastCity) && (urlName==params.get("route"))
+        }
+//        Route route = lastCity.routes.find {
+//            route.urlName==params.get("route")
+//        }
+        Route route=query.find();
+        render(view: 'route' , model: [route : route , city : lastCity])
     }
 
 

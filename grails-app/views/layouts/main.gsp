@@ -21,11 +21,14 @@
 <body style="margin: 0; background: rgb(231,238,241)">
 
 <div class="container-fluid">
-    <div class="page-header">
-        <div><h2>Авто парк</h2></div>
+    <div class="container">
+        <div class="page-header">
+            <div><h2>Авто парк</h2></div>
+        </div>
     </div>
+
     <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -35,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a></div>
+                <a class="navbar-brand" href="../"><span class="glyphicon glyphicon-home"></span></a></div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -54,33 +57,10 @@
         </div>
     </nav>
 
-    <div class="jumbotron">
-        <h2>Добро пожаловать!</h2>
-
-        <div class="page-header"></div>
-
-        <p>Грузоперевозки по всей России</p>
-
-        <div class="row">
-            <div class="col-sm-3">
-                <h2>Города</h2>
-                <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#">Москва</a></li>
-                    <li><a href="#">Петербург</a></li>
-                    <li><a href="#">Казань</a></li>
-                </ul>
-            </div>
-
-            <div class="col-sm-9">
-                <h2>Содержание</h2>
-            </div>
-
-        </div>
+    <div id="body-content">
+        <g:layoutBody/>
     </div>
 
-    <div class="footer">
-        <p>2013</p>
-    </div>
 </div>
 
 %{--<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>--}%
