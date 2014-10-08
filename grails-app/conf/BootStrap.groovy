@@ -4,6 +4,7 @@ import ru.avtopark.Route
 class BootStrap {
 
     def init = { servletContext ->
+
        if (City.count<1) {
            new City(name: "Москва",urlName: "moskva",desc: "Описание").save()
            new City(name: "Санкт-Петербург",urlName: "peterburg",desc: "Описание").save()
@@ -22,14 +23,20 @@ class BootStrap {
        }
 
        if (Route.count<1) {
-//            def cities=City.list();
-//
-//           for (City cityFrom: cities) {
-//               for (City cityTo: cities) {
-//
-//               }
-//
-//           }
+            def cities=City.list();
+
+           for (City cityFrom: cities) {
+               for (City cityTo: cities) {
+                   if (cityFrom.urlName!=cityTo.urlName) {
+                       Route route=new Route();
+                       route.setUrlName(cityFrom.urlName+'-'+cityTo.urlName);
+                       route.setName(cityFrom.name+' - '+cityTo.name)
+                       route.setDepartureCity(cityFrom);
+                       route.setDestinationCity(cityTo);
+                       route.save();
+                   }
+               }
+           }
        }
 
     }

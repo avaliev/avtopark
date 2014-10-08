@@ -13,15 +13,29 @@
 </head>
 
 <body>
-    <div id="left">
-        <p class="p-title"><strong>Грузоперевозки по 1000 городам России и в обратном направлении</strong></p>
-    </div>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-sm-3">
+            <h2>Города</h2>
 
-    <div id="content">
-        <div class="text"><h1>Грузоперевозки по России</h1>
+            %{--<p>${cities.count()}</p>--}%
+            <ul class="nav nav-pills nav-stacked">
+
+            <g:each var="city" in="${cities}">
+
+                %{--<g:link controller="gorod" action="${city.urlName}" >${city.name}</g:link>--}%
+                <li><a href="gorod/${city.urlName}">${city.name}</a></li>
+                %{--<li><a href="#">Петербург</a></li>--}%
+                %{--<li><a href="#">Казань</a></li>--}%
+             </g:each>
+            </ul>
         </div>
-    </div>
 
-    %{--<div id="right">Правое</div>--}%
+        <div class="col-sm-9">
+            <h2> Грузоперевозки по всей России</h2>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>

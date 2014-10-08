@@ -9,19 +9,28 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Грузоперевозки из ${city} по России</title>
+    <title>Грузоперевозки из ${city.name} по России</title>
 </head>
 
 <body>
-<div id="left">
-    <p class="p-title"><strong>Грузоперевозки по 1000 городам России и в обратном направлении</strong></p>
-</div>
+<div class="jumbotron">
 
-<div id="content">
-    <div class="text"><h1>Грузоперевозки из ${city} по городам России</h1>
+    <div class="row">
+        <div class="col-sm-3">
+            <h2>Города</h2>
+            <ul class="nav nav-pills nav-stacked">
+                <g:each in="${city.routes}" var="route">
+                    <li><a href="../marshrut/${route.urlName}">${route.name}</a></li>
+                </g:each>
+
+            </ul>
+        </div>
+
+        <div class="col-sm-9">
+            <h2>грузоперевозки из ${city.name} по России</h2>
+        </div>
+
     </div>
 </div>
-
-%{--<div id="right">Правое</div>--}%
 </body>
 </html>
