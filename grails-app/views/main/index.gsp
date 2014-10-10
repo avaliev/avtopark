@@ -15,21 +15,7 @@
 <body>
 <div class="jumbotron">
     <div class="row">
-        <div class="col-md-3 col-sm-3">
-            <h2>Города</h2>
-
-            %{--<p>${cities.count()}</p>--}%
-            <ul class="nav nav-pills nav-stacked">
-
-            <g:each var="city" in="${cities}">
-
-                %{--<g:link controller="gorod" action="${city.urlName}" >${city.name}</g:link>--}%
-                <li><a href="gorod/${city.urlName}">${city.name}</a></li>
-                %{--<li><a href="#">Петербург</a></li>--}%
-                %{--<li><a href="#">Казань</a></li>--}%
-             </g:each>
-            </ul>
-        </div>
+        <g:render template="/shared/leftList" model="[list: cities]"></g:render>
 
         <div class="col-md-6 col-sm-9">
             <h2 class="center-block"> Грузоперевозки по всей России</h2>

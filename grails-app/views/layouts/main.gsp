@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
+    <g:javascript library="jquery"/>
     <g:layoutHead/>
 </head>
 
@@ -27,7 +28,7 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -38,7 +39,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../"><span class="glyphicon glyphicon-home"></span></a></div>
+                <!-- need real servlet contex path -->
+                <a class="navbar-brand" href="../"><span class="glyphicon glyphicon-home"></span></a>
+            </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">

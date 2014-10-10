@@ -15,14 +15,7 @@
 <body>
 <div class="jumbotron">
     <div class="row">
-        <div class="col-sm-3">
-            <h2>Города</h2>
-            <ul class="nav nav-pills nav-stacked">
-            <g:each in="${city.routes}" var="route">
-                <li><a href="../marshrut/${route.urlName}">${route.name}</a></li>
-            </g:each>
-            </ul>
-        </div>
+        <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
 
         <div class="col-sm-9">
             <h2> Грузоперевозки по маршруту ${route.name}</h2>

@@ -1,82 +1,41 @@
-#header {
-    background: rgb(80,200,175);
-    height: 100px;
-    padding: 10px;
-    color: #ffffff;
-}
-#nav-bar {
-    background: rgb(0,182,149);
-    height: 50px;
-    border-bottom: 1px solid #000000;
-    border-top: 1px solid #000000;
 
-}
-
-#nav-bar ul li {
-    display: inline;
-    margin-right: 15px;
-    font-size: 110%;
-    font-weight: bold;
-}
-#body-content .jumbotron {
- background: #f5f5f5;
-}
-#left {
-    background: rgb(180, 204, 214);
-    width: 200px;
-    height: 700px;
-    float: left;
-}
-
-#content{
-    background: rgb(180, 204, 214);
-    width: 1100px ;
-    height: 700px;
-    float: left;
-
-}
-#footer {
-    border-top: 1px solid #000000;
-    background: rgb(51,153,204);
-    background: #505050;
-    height: 80px;
-    clear: both;
-    padding: 10px;
-}
 .brand {
     font-size: 150%;
     float: left;
     display: inline;
 }
-.phone {
-    /*float: right;*/
-    /*margin-top: -50px;*/
-    color: #ffffff;
+
+div.main-desc p {
+    font-size: 14px;
+}
+
+h1,h2 {
+    text-align: center !important;
+
+}
+
+.navbar-nav>li:hover,
+.navbar-nav>li:focus,
+.navbar-nav>li>a:hover  {
+    background-color: #716f7b;
+    color: #00b3ee; !important;
+
+}
+
+nav {
+    background: #000000 !important;
+}
+
+.jumbotron {
+    background: #ffffff !important;
+}
+
+.left-content {
+    background: #ffffff !important;
+}
+
+.navbar-n
+.navbar-nav>li {
     font-weight: bold;
-    font-size: 110%;
-    display: inline;
-    float: right;
-
-}
-.phone span {
-    color: #ffffff;
-    font-weight: normal;
-}
-.logo {
-    margin-bottom: 20px;
-}
-.p-title {
-    text-align: center;
-}
-#footer p {
-    margin: 0;
-    margin-bottom: 5px;
-    color: #ffffff;
-}
-
-.text h1 {
-    color: darkblue;
-    margin: auto;
-    text-align: center;
-    margin-top: 10px;
+    font-size: 17px;
 }

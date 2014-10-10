@@ -10,9 +10,11 @@ class MainController {
 
     def index() {
 //        render(params*.toString()+'main');
-        // show main page with cities
-        // for url: /city/index.html
-        render(view: 'index', model : [cities :City.list()] )
+        def cities= City.list();
+        cities.collect {
+            it.urlName='gorod/'+it.urlName
+        }
+        render(view: 'index', model : [cities : cities] )
     }
 
 
@@ -20,7 +22,16 @@ class MainController {
         String url=params.get("city");
         City city=City.findByUrlName(url);
         lastCity=city;
-        render(view: 'city' ,  model: [city : city] )
+        city.routes.collect {
+            it.urlName='../marshrut/'+it.urlName;
+        }
+        render(view: 'city' ,  model: [city : city ] )
+    }
+
+
+    def intent(){
+        String name=params.get("user_name");
+        String phone=params.get("user_phone");
     }
 
     def withRoutes() {
