@@ -1,10 +1,13 @@
 package ru.avtopark
 
+import avto.park.EmailSendService
 import avto.park.FriendlyUrlService
 
 class MainController {
 
     def FriendlyUrlService friendlyUrlService;
+
+    def EmailSendService emailSendService;
 
     City lastCity=null;
 
@@ -30,13 +33,17 @@ class MainController {
 
 
     def intent(){
-        String name=params.get("user_name");
-        String phone=params.get("user_phone");
+//        render(params*.toString());
+        new Intent(userName: params.get('userName'),phone: params.get('phone'), comment: params.get("comment")).save();
+        // send email
+        // save intent
+
     }
 
     def withRoutes() {
        // need model routes , city
         // need variable for context
+        // существует такой метод чтобы найти соответв. маршрут и вывести его имя на русском
         def query=Route.where {
             (departureCity==lastCity) && (urlName==params.get("route"))
         }

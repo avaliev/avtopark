@@ -15,7 +15,9 @@
     <link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
-    <g:javascript library="jquery"/>
+    <script>
+        $( document ).ready(initHandlers);
+    </script>
     <g:layoutHead/>
 </head>
 
@@ -45,7 +47,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li id="li1">
                         <a href="#">Информация о компании</a>
                     </li>
                     <!-- Это у нас меню и поэтому будет использоваться для каждого раздела надо ссылку сделать соотв. активной -->

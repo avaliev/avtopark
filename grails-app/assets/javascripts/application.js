@@ -19,3 +19,9 @@ if (typeof jQuery !== 'undefined') {
 		});
 	})(jQuery);
 }
+function initHandlers() {
+    jQuery("#send-btn").click(function(){
+       alert("click");
+    });
+}
+
