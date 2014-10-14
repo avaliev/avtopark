@@ -7,7 +7,7 @@
     <div class="panel panel-primary">
         <div class="panel-heading">Оставить заявку на расчет стоимости (заказать звонок)</div>
         <div class="panel-body form-group">
-            <g:form controller="main" action="intent" method="POST" class="form-group" >
+            <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" >
                 <div class="form-group">
                     <label for="user_name">Пожалуйста, представьтесь:</label>
                     <g:textField id="user_name" class="form-control" name="userName" value="" placeholder="Ваше имя" />
@@ -28,7 +28,12 @@
                     <label for="comment">Комментарий:</label>
                     <g:textField id="comment" class="form-control" name="comment" value="" placeholder="Ваше примечание" />
                 </div>
-                <button type="button" class="btn btn-success" id="send-btn">Отправить</button>
+                <div class="form-group">
+                    <button type="button" class="btn btn-success" id="send-btn">Отправить</button>
+                </div>
+                <div id="send-alert-suc" class="alert alert-success form-group" style="display: none">ОК, заявка отправлена!</div>
+                <div id="send-alert-err" class="alert alert-warning form-group" style="display: none">
+                    А Вы заполнили необходимые поля о себе?</div>
             </g:form>
             <div id="alert-div" hidden="hidden" class="alert alert-success">...</div>
         </div>

@@ -21,7 +21,24 @@ if (typeof jQuery !== 'undefined') {
 }
 function initHandlers() {
     jQuery("#send-btn").click(function(){
-       alert("click");
+        userName=$("#user_name").val();
+        userPhone=$("#user_phone").val();
+        comment=$("#comment").val();
+
+        if ( userName==null || userName=='' || userPhone==null || userPhone=='' )  {
+            // show error
+            $('#send-alert-err').show();
+            $('#send-alert-suc').hide();
+        } else {
+            // submit ajax
+            $.post("/avto-park/main/intent",{userName:userName,phone:userPhone,comment:comment},
+                function(data){
+                $('#send-alert-suc').show();
+                $('#send-alert-err').hide();
+            });
+        }
     });
+
 }
+
 
