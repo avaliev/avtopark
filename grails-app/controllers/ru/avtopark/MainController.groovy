@@ -37,7 +37,7 @@ class MainController {
         new Intent(userName: params.get('userName'),phone: params.get('phone'), comment: params.get("comment")).save();
         // send email
         // save intent
-
+        render("OK");
     }
 
     def withRoutes() {
