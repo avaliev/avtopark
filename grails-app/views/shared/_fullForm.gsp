@@ -3,6 +3,7 @@
   User: Valiev
   Date: 10.10.14
   Time: 16:51
+  make by post form send
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>

@@ -6,4 +6,10 @@ class MenuController {
         // how to map
         render params*.toString()
     }
+
+
+    def intent(){
+
+    }
+
 }
