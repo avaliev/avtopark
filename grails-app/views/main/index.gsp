@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="main-theme"/>
     <title>Грузоперевозки из ${city} по России</title>
 </head>
 
