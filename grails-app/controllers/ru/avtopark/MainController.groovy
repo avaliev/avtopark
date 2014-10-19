@@ -34,7 +34,12 @@ class MainController {
 
     def intent(){
 //        render(params*.toString());
-        new Intent(userName: params.get('userName'),phone: params.get('phone'), comment: params.get("comment")).save();
+        City target=null;
+        Integer city=params.get("city_id");
+        if (params.get("city_id")!=null) {
+            target=City.findById(params.get("city_id").toString());
+        }
+        new Intent(userName: params.get('userName'),phone: params.get('phone'), city: target, comment: params.get("comment")).save();
         // send email
         // save intent
         render("OK");

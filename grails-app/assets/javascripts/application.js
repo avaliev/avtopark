@@ -24,6 +24,7 @@ function initHandlers() {
         userName=$("#user_name").val();
         userPhone=$("#user_phone").val();
         comment=$("#comment").val();
+        city=$("#city_id").val();
 
         if ( userName==null || userName=='' || userPhone==null || userPhone=='' )  {
             // show error
@@ -31,7 +32,7 @@ function initHandlers() {
             $('#send-alert-suc').hide();
         } else {
             // submit ajax
-            $.post("/avto-park/main/intent",{userName:userName,phone:userPhone,comment:comment},
+            $.post("/avto-park/main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment},
                 function(data){
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();

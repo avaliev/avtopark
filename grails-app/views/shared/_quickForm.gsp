@@ -4,7 +4,7 @@
   Date: 10.10.14
   Time: 16:52
 --%>
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" style="float: right">
         <div class="panel-heading">Оставить заявку на расчет стоимости (заказать звонок)</div>
         <div class="panel-body form-group">
             <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" >
@@ -31,6 +31,10 @@
                 <div class="form-group">
                     <button type="button" class="btn btn-success" id="send-btn">Отправить</button>
                 </div>
+                <g:if test="${city!=null}">
+                    <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"  />
+                </g:if>
+                <div> </div>
                 <div id="send-alert-suc" class="alert alert-success form-group" style="display: none">ОК, заявка отправлена!</div>
                 <div id="send-alert-err" class="alert alert-warning form-group" style="display: none">
                     А Вы заполнили необходимые поля о себе?</div>

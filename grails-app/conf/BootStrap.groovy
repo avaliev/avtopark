@@ -1,5 +1,6 @@
 import ru.avtopark.City
 import ru.avtopark.Route
+import ru.avtopark.Settings
 
 class BootStrap {
 
@@ -38,6 +39,15 @@ class BootStrap {
                }
            }
        }
+
+
+        if (Settings.count<1) {
+            new Settings(param_key: "address", param_value: "Kazan").save();
+            new Settings(param_key: "phone", param_value: "8-800-700-6798").save();
+            new Settings(param_key: "email", param_value: "logist.d1@mail.ru").save();
+            new Settings(param_key: "fax", param_value: "-").save();
+            new Settings(param_key: "about", param_value: "Грузоперевозки по России любым видом транспорта!").save();
+        }
 
     }
     def destroy = {

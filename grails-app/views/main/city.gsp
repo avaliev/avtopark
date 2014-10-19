@@ -18,8 +18,12 @@
     <div class="row">
         <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
 
-        <div class="col-sm-9">
-            <h2>грузоперевозки из ${city.name} по России</h2>
+        <div class="col-md-6 col-sm-9">
+            <h2>Грузоперевозки из ${city.name} по России</h2>
+        </div>
+
+        <div class="col-md-3 col-sm-9">
+            <g:render template="/shared/quickForm"></g:render>
         </div>
 
     </div>

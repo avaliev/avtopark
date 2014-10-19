@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="layout" content="main-theme"/>
-    <title>Грузоперевозки из ${city} по России</title>
+    <title>Грузоперевозки по России</title>
 </head>
 
 <body>
@@ -24,7 +24,6 @@
         <div class="col-md-3 col-sm-9">
             <g:render template="/shared/quickForm"></g:render>
         </div>
-
 
     </div>
 </div>

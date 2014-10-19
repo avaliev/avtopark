@@ -21,6 +21,11 @@
             <h2> Грузоперевозки по маршруту ${route.name}</h2>
         </div>
 
+        <div class="col-md-3 col-sm-9">
+            <g:render template="/shared/quickForm"></g:render>
+        </div>
+
+
     </div>
 </body>
 </html>
