@@ -1,9 +1,11 @@
 dataSource {
     pooled = true
     jmxExport = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
+    driverClassName = "com.mysql.jdbc.Driver"
+    dialect = ru.avtopark.MySQLUTF8InnoDBDialect
+
+    username = "root"
+    password = "donotdrink"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -14,16 +16,19 @@ hibernate {
     flush.mode = 'manual' // OSIV session flush mode outside of transactional context
 }
 
+
+
 // environment specific settings
 environments {
     development {
-        grails.dbconsole.enabled = true
-        grails.dbconsole.urlRoot = '/admin/dbconsole'
+//        grails.dbconsole.enabled = true
+//        grails.dbconsole.urlRoot = '/admin/dbconsole'
         // по умолчанию используется слабая миграция от hibernate
         // dbmigration плагин используется отдельно
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+//            url = "jdbc:h2:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            url = "jdbc:mysql://89.108.71.209:3306/perevozki_test?useUnicode=yes&characterEncoding=UTF-8"
         }
     }
     test {
