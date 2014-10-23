@@ -23,22 +23,22 @@ class BootStrap {
            new City(name: "Тюмень",urlName: "tyumen",desc: "tyumen").save()
        }
 
-       if (Route.count<1) {
-            def cities=City.list();
-
-           for (City cityFrom: cities) {
-               for (City cityTo: cities) {
-                   if (cityFrom.urlName!=cityTo.urlName) {
-                       Route route=new Route();
-                       route.setUrlName(cityFrom.urlName+'-'+cityTo.urlName);
-                       route.setName(cityFrom.name+' - '+cityTo.name)
-                       route.setDepartureCity(cityFrom);
-                       route.setDestinationCity(cityTo);
-                       route.save();
-                   }
-               }
-           }
-       }
+//       if (Route.count<1) {
+//            def cities=City.list();
+//
+//           for (City cityFrom: cities) {
+//               for (City cityTo: cities) {
+//                   if (cityFrom.urlName!=cityTo.urlName) {
+//                       Route route=new Route();
+//                       route.setUrlName(cityFrom.urlName+'-'+cityTo.urlName);
+//                       route.setName(cityFrom.name+' - '+cityTo.name)
+//                       route.setDepartureCity(cityFrom);
+//                       route.setDestinationCity(cityTo);
+//                       route.save();
+//                   }
+//               }
+//           }
+//       }
 
 
         if (Settings.count<1) {
