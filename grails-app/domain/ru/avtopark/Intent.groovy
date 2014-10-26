@@ -6,6 +6,7 @@ class Intent {
     String email;
     String phone;
     String comment;
+    Date intentDate;
     // from which city page was sent intent
     City city;
 
