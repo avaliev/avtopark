@@ -9,16 +9,19 @@ div.main-desc p {
     font-size: 14px;
 }
 
-h1,h2 {
+h1,h2,h3 {
     text-align: center !important;
 
+}
+
+p.descr {
+    font-size: 15px !important;
 }
 
 .navbar-nav>li:hover,
 .navbar-nav>li:focus,
 .navbar-nav>li>a:hover  {
     /*color: #00b3ee; !important;*/
-
 }
 
 nav {

@@ -15,10 +15,16 @@
 <body>
 <div class="jumbotron">
     <div class="row">
-        <g:render template="/shared/leftList" model="[list: cities]"></g:render>
+
+
+        <div class="col-sm-3 leftList">
+            <h4>Города </h4>
+            <g:render template="/shared/leftList" model="[list: cities]"></g:render>
+        </div>
+
 
         <div class="col-md-6 col-sm-9">
-            <h2 class="center-block"> Грузоперевозки по всей России</h2>
+            <h3 class="center-block"> Грузоперевозки по всей России</h3>
         </div>
 
         <div class="col-md-3 col-sm-9">

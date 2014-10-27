@@ -9,17 +9,26 @@
 <html>
 <head>
     <meta name="layout" content="main-theme"/>
-    <title>Грузоперевозки из ${city.name} по России</title>
+    <title>Грузоперевозки из ${city.gname} по России</title>
 </head>
 
 <body>
 <div class="jumbotron">
 
     <div class="row">
-        <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
+
+        <div class="col-sm-3 leftList">
+            <h4>Направления из ${city.gname} </h4>
+            <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
+        </div>
+
 
         <div class="col-md-6 col-sm-9">
-            <h2>Грузоперевозки из ${city.name} по России</h2>
+            <h3>Грузоперевозки из ${city.gname} по России</h3>
+                <p class="descr">${city.descr}</p>
+                <p class="descr">${city.descr1}</p>
+
+
         </div>
 
         <div class="col-md-3 col-sm-9">
