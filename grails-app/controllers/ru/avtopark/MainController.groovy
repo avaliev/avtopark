@@ -14,7 +14,13 @@ class MainController {
 
     def index() {
 //        render(params*.toString()+'main');
-        def cities= City.list();
+        def cities= City.list(sort:'name');
+        def moscow=cities.find {city->city.name=="Москва"}
+        def piter= cities.find{city-> city.urlName == "sankt-peterburg"}
+        cities.remove(moscow);
+        cities.add(0,moscow);
+        cities.remove(piter);
+        cities.add(1,piter);
         cities.collect {
             it.urlName='gorod/'+it.urlName
         }
