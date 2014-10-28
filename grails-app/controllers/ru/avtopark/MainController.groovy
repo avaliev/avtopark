@@ -41,6 +41,15 @@ class MainController {
         }
         new Intent(userName: params.get('userName'),intentDate: new Date(),phone: params.get('phone'), city: target, comment: params.get("comment")).save();
         // send email
+        sendMail {
+            async true
+            from "support@rfperevozki.ru"
+            to "dr.classic@yandex.ru"
+            subject "vvvvvvvvvvvv"
+            body "aaaaaaaaaaaaaaaaaaaaaaa"
+        }
+
+        // TODO нужно перенести отправлку почты на другой контроллер
         // save intent
         render("OK");
     }

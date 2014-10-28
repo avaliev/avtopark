@@ -104,6 +104,28 @@ environments {
     }
 }
 
+//grails {
+//    mail {
+//        host = "smtp.gmail.com"
+//        port = 465
+//        username = "airat.valiev@gmail.com"
+//        password = "turbopascal7"
+//        props = ["mail.smtp.auth":"true",
+//                "mail.smtp.socketFactory.port":"465",
+//                "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+//                "mail.smtp.socketFactory.fallback":"false"]
+//    }
+//}
+
+grails {
+    mail {
+        host = "rfperevozki.ru"
+        port = 25
+        username = "support@rfperevozki.ru"
+        password = "pascal7"
+    }
+}
+
 grails.app.context = "/"
 
 // log4j configuration
