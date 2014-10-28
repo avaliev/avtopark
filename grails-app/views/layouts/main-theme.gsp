@@ -58,7 +58,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav pull-right navbar-nav">
-                    <li class="active"><a href="/avto-park">Главная</a></li>
+                    <li><a href="${request.contextPath}">Главная</a></li>
                     <li><a href="#">Оставить заявку</a></li>
                     <li><a href="#">Услуги</a></li>
                     <li><a href="#">О нас</a></li>

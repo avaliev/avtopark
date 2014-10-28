@@ -5,10 +5,11 @@ import avto.park.FriendlyUrlService
 
 class MainController {
 
-    def FriendlyUrlService friendlyUrlService;
+//    def FriendlyUrlService friendlyUrlService;
 
     def EmailSendService emailSendService;
 
+    // область видимости контроллеров
     City lastCity=null;
 
     def index() {
@@ -33,24 +34,15 @@ class MainController {
 
 
     def intent(){
-//        render(params*.toString());
         City target=null;
         String city_id=params.get("city_id");
         if (city_id!=null) {
             target=City.findById(Integer.parseInt(city_id));
         }
-        new Intent(userName: params.get('userName'),intentDate: new Date(),phone: params.get('phone'), city: target, comment: params.get("comment")).save();
+        Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),phone: params.get('phone'), city: target, comment: params.get("comment"));
+        intent.save();
         // send email
-        sendMail {
-            async true
-            from "support@rfperevozki.ru"
-            to "dr.classic@yandex.ru"
-            subject "vvvvvvvvvvvv"
-            body "aaaaaaaaaaaaaaaaaaaaaaa"
-        }
-
-        // TODO нужно перенести отправлку почты на другой контроллер
-        // save intent
+        emailSendService.sendEmail(intent);
         render("OK");
     }
 

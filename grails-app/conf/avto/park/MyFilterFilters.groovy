@@ -5,7 +5,7 @@ import ru.avtopark.Settings
 class MyFilterFilters {
 
     def filters = { // TODO нужно перенести отправлку почты на другой контроллер
-        all(controller:'main', action:'*') {
+        all(controller:'main', action:'*' , actionExclude: 'intent') {
             before = {
 
             }
