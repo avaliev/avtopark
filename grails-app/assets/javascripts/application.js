@@ -32,7 +32,7 @@ function initHandlers() {
             $('#send-alert-suc').hide();
         } else {
             // submit ajax
-            $.post("/avto-park/main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment},
+            $.post("main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment},
                 function(data){
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();
