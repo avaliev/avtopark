@@ -5,15 +5,23 @@ class Intent {
     String userName;
     String email;
     String phone;
-    String comment;
     Date intentDate;
+    // dop info
+    String departure;
+    String destination;
+    String weight;
+    String volume;
+    String comment;
     // from which city page was sent intent
     City city;
 
-
     static constraints = {
+        weight nullable: true
+        departure nullable: true;
+        destination nullable: true;
         comment nullable: true;
         city nullable: true;
         email nullable: true;
+        volume nullable: true
     }
 }

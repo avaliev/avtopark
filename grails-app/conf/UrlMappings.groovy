@@ -13,5 +13,11 @@ class UrlMappings {
 
         "/marshrut/$route?"(controller: "main", action: "withRoutes")
         "500"(view:'/error')
+
+        "/$controller/$action?/$id?(.$format)?"{
+            constraints {
+                // apply constraints here
+            }
+        }
 	}
 }

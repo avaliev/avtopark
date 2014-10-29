@@ -18,66 +18,78 @@
     <asset:javascript src="application.js"/>
     <!-- restart theme css links -->
     <link href="${request.contextPath}/restart_v3/animate.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="${request.contextPath}/restart_v3/js/woothemes-FlexSlider-06b12f8/flexslider.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="${request.contextPath}/restart_v3/js/prettyPhoto_3.1.5/prettyPhoto.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="${request.contextPath}/restart_v3/style.css"  type="text/css">
-    <link rel="stylesheet" href="${request.contextPath}/restart_v3/fonts/font-awesome/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" href="${request.contextPath}/restart_v3/js/woothemes-FlexSlider-06b12f8/flexslider.css"
+          type="text/css" media="screen">
+    <link rel="stylesheet" href="${request.contextPath}/restart_v3/js/prettyPhoto_3.1.5/prettyPhoto.css" type="text/css"
+          media="screen">
+    <link rel="stylesheet" href="${request.contextPath}/restart_v3/style.css" type="text/css">
+    <link rel="stylesheet" href="${request.contextPath}/restart_v3/fonts/font-awesome/css/font-awesome.min.css"
+          media="screen">
     <script type="text/javascript" src="${request.contextPath}/restart_v3/js/modernizr.custom.48287.js"></script>
 
     <script>
-        $( document ).ready(initHandlers);
+        $(document).ready(initHandlers);
     </script>
     <g:layoutHead/>
 </head>
 
 <body>
 <div class="container-fluid">
-<header>
-    <section class="top_bar animated slideInDown">
-    <div class="container">
-        <div class="row">
-            <div class="tob_bar_left_col col-xs-12 col-sm-6 col-md-6">
-                <ul class="top_menu">
+    <header>
+        <section class="top_bar animated slideInDown">
+            <div class="container">
+                <div class="row">
+                    <div class="tob_bar_left_col col-xs-12 col-sm-6 col-md-6">
+                        <ul class="top_menu">
 
-                    <li><a href="${request.contextPath}">Главная</a></li>
-                    <li><a href="about_us.html">О нас</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="portfolio.html">Связаться с нами</a></li>
-                </ul>
-            </div>
-            <div class="tob_bar_right_col col-xs-6 col-sm-6 col-md-6">
-                <p>Звонок бесплатный! ${contacts.phone}</p>
-            </div>
-        </div>
-    </div>
-    </section>
-    <div class="container">
-        <div class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="${request.contextPath}"><asset:image src="logo.gif" width="300" height="200"/></a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav pull-right navbar-nav">
-                    <li><a href="${request.contextPath}">Главная</a></li>
-                    <li><a href="#">Оставить заявку</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li hidden="true" class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#">Документы<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="home_alternative.html">Home Alternative</a></li>
-                            <li><a href="page_alternative.html">Page Alternative</a></li>
-                            <li><a href="gallery.html">Portfolio Masonry</a></li>
-                            <li><a href="portfolio_item.html">Portfolio Item</a></li>
-                            <li><a href="portfolio_item_2.html">Portfolio Item II</a></li>
-                            <li><a href="documentation/index.html">Documentation <span class="label label-danger">new</span></a></li>
+                            <li><a href="/">Главная</a></li>
+                            <li><a href="about_us.html">О нас</a></li>
+                            <li><a href="services.html">Услуги</a></li>
+                            <li><a href="portfolio.html">Связаться с нами</a></li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+
+                    <div class="tob_bar_right_col col-xs-6 col-sm-6 col-md-6">
+                        <g:if test="${contacts != null}">
+                            <p>Звонок бесплатный! ${contacts.phone}</p>
+                        </g:if>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="${request.contextPath}"><asset:image src="logo.gif" width="300"
+                                                                                       height="200"/></a>
+                </div>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav pull-right navbar-nav">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/menu/request">Оставить заявку</a></li>
+                        <li><a href="/menu/services">Услуги</a></li>
+                        <li><a href="/menu/about">О нас</a></li>
+                        <li><a href="/menu/contacts">Контакты</a></li>
+                        <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
+                                                              href="#">Документы<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="home_alternative.html">Home Alternative</a></li>
+                                <li><a href="page_alternative.html">Page Alternative</a></li>
+                                <li><a href="gallery.html">Portfolio Masonry</a></li>
+                                <li><a href="portfolio_item.html">Portfolio Item</a></li>
+                                <li><a href="portfolio_item_2.html">Portfolio Item II</a></li>
+                                <li><a href="documentation/index.html">Documentation <span
+                                        class="label label-danger">new</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <div id="body-content">
         <g:layoutBody/>
@@ -89,28 +101,34 @@
                 <div class="row">
                     <div class="footer_teaser col-sm-4 col-md-4">
                         <h3>О нас</h3>
-                        <p>${contacts.about}</p>
-                        <p><i class="fa fa-map-marker"></i> ${contacts.address}</p>
-                        <p><i class="fa fa-phone"></i> ${contacts.phone}</p>
-                        <p><i class="fa fa-print"></i> ${contacts.fax}</p>
-                        <p><i class="fa fa-envelope"></i> ${contacts.email} </p>
+                        <g:if test="${contacts != null}">
+                            <p>${contacts.about}</p>
+
+                            <p><i class="fa fa-map-marker"></i> ${contacts.address}</p>
+
+                            <p><i class="fa fa-phone"></i> ${contacts.phone}</p>
+
+                            <p><i class="fa fa-print"></i> ${contacts.fax}</p>
+
+                            <p><i class="fa fa-envelope"></i> ${contacts.email}</p>
+                        </g:if>
                     </div>
                     %{--<div class="footer_teaser col-sm-4 col-md-4">--}%
-                        %{--<h3>Latest News</h3>--}%
-                        %{--<ul class="media-list">--}%
-                            %{--<li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">19<span>FEB</span></a>--}%
-                                %{--<h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a></h5>--}%
-                                %{--<p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>--}%
-                            %{--</li>--}%
-                            %{--<li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">18<span>FEB</span></a>--}%
-                                %{--<h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>--}%
-                                %{--<p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>--}%
-                            %{--</li>--}%
-                        %{--</ul>--}%
+                    %{--<h3>Latest News</h3>--}%
+                    %{--<ul class="media-list">--}%
+                    %{--<li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">19<span>FEB</span></a>--}%
+                    %{--<h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a></h5>--}%
+                    %{--<p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>--}%
+                    %{--</li>--}%
+                    %{--<li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">18<span>FEB</span></a>--}%
+                    %{--<h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>--}%
+                    %{--<p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>--}%
+                    %{--</li>--}%
+                    %{--</ul>--}%
                     %{--</div>--}%
                     %{--<div class="footer_teaser col-sm-4 col-md-4" id="latest-flickr-images">--}%
-                        %{--<h3>FlickrFeed</h3>--}%
-                        %{--<ul></ul> <p>All photos © by <a href="http://www.dimitragiannouka.com" target="_blank">Dimitra Giannouka</a>.</p>--}%
+                    %{--<h3>FlickrFeed</h3>--}%
+                    %{--<ul></ul> <p>All photos © by <a href="http://www.dimitragiannouka.com" target="_blank">Dimitra Giannouka</a>.</p>--}%
                     %{--</div>--}%
                 </div>
             </div>
@@ -118,8 +136,10 @@
         <section class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6"> Copyright ©2014 all rights reserved </div>
-                    <div class="text-right col-sm-6 col-md-6"> Designed by <a href="http://vk.com/ajrat">Ayrat Valiev</a> </div>
+                    <div class="col-sm-6 col-md-6">Copyright ©2014 all rights reserved</div>
+
+                    <div class="text-right col-sm-6 col-md-6">Designed by <a href="http://vk.com/ajrat">Ayrat Valiev</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -131,7 +151,8 @@
 %{--<script src="${request.contextPath}/restart_v3/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>--}%
 
 <script src="${request.contextPath}/restart_v3/js/woothemes-FlexSlider-06b12f8/jquery.flexslider-min.js"></script>
-<script src="${request.contextPath}/restart_v3/js/prettyPhoto_3.1.5/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="${request.contextPath}/restart_v3/js/prettyPhoto_3.1.5/jquery.prettyPhoto.js" type="text/javascript"
+        charset="utf-8"></script>
 <script src="${request.contextPath}/restart_v3/js/isotope/jquery.isotope.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/jquery.ui.totop.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/easing.js"></script>
