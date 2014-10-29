@@ -19,8 +19,7 @@ class MenuController {
 
 
     def intent() {
-
-
+        emailSendService.createIntent(params)
         redirect(controller: 'main')
     }
 
