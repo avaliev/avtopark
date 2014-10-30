@@ -24,6 +24,7 @@ class EmailSendService {
 
         mailService.sendMail {
             async true
+            from 'rfperevozki@gmail.com'
             to forEmail.param_value
             subject "Заявка на звонок!"
             body buffer
@@ -38,7 +39,9 @@ class EmailSendService {
         if (city_id!=null) {
             target=City.findById(Integer.parseInt(city_id));
         }
-        Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),phone: params.get('phone'), city: target, comment: params.get("comment"));
+        Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),
+                phone: params.get('phone'), city: target, comment: params.get("comment"));
+
 
         if (params.get("isMainForm")) {
             intent.setDeparture(params.get("departure"))

@@ -43,7 +43,7 @@ class MainController {
 
 
     def intent() {
-        City target = null;
+
         try {
             // send email
             emailSendService.createIntent(params)
