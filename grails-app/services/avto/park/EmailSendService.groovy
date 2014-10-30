@@ -12,14 +12,40 @@ class EmailSendService {
 
     MailService mailService;
 
-    def sendEmail(Intent intent){
+    def sendEmail(Intent intent,Boolean isMainForm){
 
         def forEmail=Settings.findByParam_key("email");
-        StringBuffer buffer=new StringBuffer("Отправлена заявка на обратный звонок \r\n");
+        StringBuffer buffer=new StringBuffer("");
+        if (isMainForm) {
+            buffer.append("Отправлена форма заявки на перевозку. \r\n")
+        } else {
+            buffer.append("Отправлена заявка на обратный звонок. \r\n")
+        }
         buffer.append("Имя клиента: ").append(intent.userName).append("\r\n")
         buffer.append("Номер телефона: ").append(intent.phone).append("\r\n")
+
+        if (intent.email!=null) {
+            buffer.append("Email: ").append(intent.email).append("\r\n")
+        }
+
         if (intent.comment!=null) {
-            buffer.append("Комментарий: ").append(intent.comment)
+            buffer.append("Комментарий: ").append(intent.comment).append("\r\n")
+        }
+
+        if (intent.departure!=null) {
+            buffer.append("Место погрузки: ").append(intent.departure).append("\r\n")
+        }
+
+        if (intent.destination!=null) {
+            buffer.append("Место выгрузки: ").append(intent.destination).append("\r\n")
+        }
+
+        if (intent.weight!=null) {
+            buffer.append("Вес: ").append(intent.weight).append("\r\n")
+        }
+
+        if (intent.volume!=null) {
+            buffer.append("Объем: ").append(intent.volume).append("\r\n")
         }
 
         mailService.sendMail {
@@ -27,7 +53,7 @@ class EmailSendService {
             from 'rfperevozki@gmail.com'
             to forEmail.param_value
             subject "Заявка на звонок!"
-            body buffer
+            body buffer.toString()
         }
     }
 
@@ -42,7 +68,6 @@ class EmailSendService {
         Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),
                 phone: params.get('phone'), city: target, comment: params.get("comment"));
 
-
         if (params.get("isMainForm")) {
             intent.setDeparture(params.get("departure"))
             intent.setDestination(params.get("destination"))
@@ -52,6 +77,6 @@ class EmailSendService {
         }
         intent.save();
 
-        sendEmail(intent)
+        sendEmail(intent,Boolean.parseBoolean(params.get("isMainForm")))
     }
 }
