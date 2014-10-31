@@ -50,7 +50,7 @@ class EmailSendService {
 
         mailService.sendMail {
             async true
-            from 'rfperevozki@gmail.com'
+            from 'admin@rfperevozki.ru'
             to forEmail.param_value
             subject "Заявка на звонок!"
             body buffer.toString()

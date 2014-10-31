@@ -106,10 +106,10 @@ environments {
 
 grails {
     mail {
-        host = "smtp.gmail.com"
+        host = "smtp.yandex.ru"
         port = 465
-        username = "rfperevozki@gmail.com"
-        password = "kazan2014"
+        username = "admin@rfperevozki.ru"
+        password = "pascal7"
         props = ["mail.smtp.auth":"true",
                 "mail.smtp.socketFactory.port":"465",
                 "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
