@@ -1,6 +1,7 @@
 package avto.park
 
 import grails.plugin.mail.MailService
+import groovyjarjarcommonscli.MissingArgumentException
 import ru.avtopark.City
 import ru.avtopark.Intent
 import ru.avtopark.Settings
@@ -44,7 +45,8 @@ class EmailSendService {
             buffer.append("Вес: ").append(intent.weight).append("\r\n")
         }
 
-        if (intent.volume!=null) {
+
+        if (intent.volume!=null && intent.volume) {
             buffer.append("Объем: ").append(intent.volume).append("\r\n")
         }
 
@@ -65,6 +67,15 @@ class EmailSendService {
         if (city_id!=null) {
             target=City.findById(Integer.parseInt(city_id));
         }
+
+        String userName=params.get('userName');
+        String phone=params.get('phone');
+
+        if (userName ==null || userName.allWhitespace || userName.isEmpty()
+        || phone==null || phone.allWhitespace || phone.isEmpty()) {
+            throw new IllegalArgumentException("Не заполнена контактная информация !")
+        }
+
         Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),
                 phone: params.get('phone'), city: target, comment: params.get("comment"));
 

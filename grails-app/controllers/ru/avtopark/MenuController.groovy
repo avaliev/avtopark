@@ -1,6 +1,7 @@
 package ru.avtopark
 
 import avto.park.EmailSendService
+import groovyjarjarcommonscli.MissingArgumentException
 
 class MenuController {
 
@@ -17,10 +18,15 @@ class MenuController {
         render ( view : 'request')
     }
 
-
     def intent() {
-        emailSendService.createIntent(params)
-        redirect(controller: 'main')
+        try {
+            emailSendService.createIntent(params);
+            render(view: 'request_ok');
+        }  catch (IllegalArgumentException e) {
+            render(view: 'request_fail', model: [ message: e.message ])
+        }  catch (Exception e){
+            render(view: 'request_fail');
+        }
     }
 
 
