@@ -43,9 +43,9 @@
                         <ul class="top_menu">
 
                             <li><a href="/">Главная</a></li>
-                            <li><a href="about_us.html">О нас</a></li>
-                            <li><a href="services.html">Услуги</a></li>
-                            <li><a href="portfolio.html">Связаться с нами</a></li>
+                            <li><a href="/menu/about">О нас</a></li>
+                            <li><a href="/menu/services">Услуги</a></li>
+                            <li><a href="/menu/request">Связаться с нами</a></li>
                         </ul>
                     </div>
 
