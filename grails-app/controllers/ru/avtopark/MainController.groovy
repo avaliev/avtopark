@@ -36,7 +36,7 @@ class MainController {
         City city = City.findByUrlName(url);
         lastCity = city;
         city.routes.collect {
-            it.urlName = '../marshrut/' + it.urlName;
+            it.urlName = '../gruzoperevozki/' + it.urlName;
         }
         render(view: 'city', model: [city: city])
     }

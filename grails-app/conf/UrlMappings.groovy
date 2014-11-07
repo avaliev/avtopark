@@ -11,7 +11,7 @@ class UrlMappings {
         "/gorod/$city?" (controller: "main", action: "city")
         "/gorod/$city" (controller: "main", action: "city")
 
-        "/marshrut/$route?"(controller: "main", action: "withRoutes")
+        "/gruzoperevozki/$route?"(controller: "main", action: "withRoutes")
         "500"(view:'/error')
 
         "/$controller/$action?/$id?(.$format)?"{

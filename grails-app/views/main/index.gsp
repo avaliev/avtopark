@@ -16,7 +16,7 @@
 <div class="jumbotron">
     <div class="row">
         <div class="col-sm-3 leftList">
-            <h4>Города </h4>
+            <h3>Грузоперевозки по городам </h3>
             <g:render template="/shared/leftList" model="[list: cities]"></g:render>
         </div>
         <div class="col-md-6 col-sm-9 col-xs-9">
