@@ -76,12 +76,10 @@
                         <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
                                                               href="#">Документы<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="home_alternative.html">Home Alternative</a></li>
-                                <li><a href="page_alternative.html">Page Alternative</a></li>
-                                <li><a href="gallery.html">Portfolio Masonry</a></li>
-                                <li><a href="portfolio_item.html">Portfolio Item</a></li>
-                                <li><a href="portfolio_item_2.html">Portfolio Item II</a></li>
-                                <li><a href="documentation/index.html">Documentation <span
+                                <li><a href="/menu/tariff">Скачать тарифы на перевозку</a></li>
+                                <li><a href="/menu/license">Лизенция</a></li>
+                                <li style="display: none">
+                                    <a href="documentation/index.html">Documentation <span
                                         class="label label-danger">new</span></a></li>
                             </ul>
                         </li>
