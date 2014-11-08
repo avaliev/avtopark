@@ -62,7 +62,7 @@
         <div class="container">
             <div class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="${request.contextPath}"><asset:image src="logo.gif" width="300"
+                    <a class="navbar-brand" href="/"><asset:image src="logo.gif" width="300"
                                                                                        height="200"/></a>
                 </div>
 
