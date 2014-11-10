@@ -38,6 +38,13 @@ nav {
     color: blue;
     color: #428bca;
     margin-left: 10%;
+    height: 30px;
+}
+
+.phone-info {
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .leftList h3 {
@@ -47,6 +54,7 @@ nav {
 .leftList {
     background-color: #f0ecb6;
     border-radius: 5px 5px 5px 5px;
+    padding-bottom: 15px;
 }
 
 .jumbotron {

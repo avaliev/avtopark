@@ -25,10 +25,9 @@
 
         <div class="col-md-6 col-sm-9">
             <h3>Грузоперевозки из ${city.gname} по России</h3>
+                <img src="/images/${city.urlName}.jpg" style="float: left ; margin-right: 10px">
                 <p class="descr">${city.descr}</p>
                 <p class="descr">${city.descr1}</p>
-
-
         </div>
 
         <div class="col-md-3 col-sm-9">

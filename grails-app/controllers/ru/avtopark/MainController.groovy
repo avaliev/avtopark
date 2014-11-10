@@ -12,9 +12,6 @@ class MainController {
 
     def EmailSendService emailSendService;
 
-    // область видимости контроллеров
-    City lastCity = null;
-
     def index() {
 //        render(params*.toString()+'main');
         def cities = City.list(sort: 'name');
@@ -34,7 +31,6 @@ class MainController {
     def city() {
         String url = params.get("city");
         City city = City.findByUrlName(url);
-        lastCity = city;
         city.routes.collect {
             it.urlName = '../gruzoperevozki/' + it.urlName;
         }
@@ -60,13 +56,14 @@ class MainController {
         // need variable for context
         // существует такой метод чтобы найти соответв. маршрут и вывести его имя на русском
         def query = Route.where {
-            (departureCity == lastCity) && (urlName == params.get("route"))
+            urlName == params.get("route")
         }
 //        Route route = lastCity.routes.find {
 //            route.urlName==params.get("route")
 //        }
         Route route = query.find();
-        render(view: 'route', model: [route: route, city: lastCity])
+
+        render(view: 'route', model: [route: route, city: route.departureCity])
     }
 
 
