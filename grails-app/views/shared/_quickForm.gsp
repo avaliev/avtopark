@@ -4,7 +4,7 @@
   Date: 10.10.14
   Time: 16:52
 --%>
-    <div class="panel panel-success" style="float: right">
+    <div class="panel panel-primary" style="float: right">
         <div class="panel-heading">Оставить заявку на расчет стоимости (заказать звонок)</div>
         <div class="panel-body form-group">
             <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" role="form" >

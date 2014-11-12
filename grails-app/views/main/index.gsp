@@ -15,11 +15,11 @@
 <body>
 <div class="jumbotron">
     <div class="row">
-        <div class="col-sm-3 leftList">
+        <div class="col-sm-2 leftList">
             <h3>Грузоперевозки по городам </h3>
             <g:render template="/shared/leftList" model="[list: cities]"></g:render>
         </div>
-        <div class="col-md-6 col-sm-9 col-xs-9">
+        <div class="col-md-7 col-sm-9 col-xs-9 center-content">
             <h3 class="center-block"> Грузоперевозки по всей России</h3>
             <p class="descr">
                 Опытные логисты нашей компании помогут вам рассчитать стоимость перевозки догрузом. Для этого достаточно только позвонить нам или отправить сообщение на адрес электронной почты. Мы принимаем заявки ежедневно и перезвоним вам сами. Высококвалифицированные менеджеры обрабатывают каждую заявку без задержек, благодаря чему наши клиенты получают ответ незамедлительно.

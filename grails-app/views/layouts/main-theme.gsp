@@ -51,7 +51,7 @@
 
                     <div class="tob_bar_right_col col-xs-12 col-sm-12 col-md-12" >
                         <g:if test="${contacts != null}">
-                            <p style="font-size: 15px"><span class="glyphicon glyphicon-phone-alt"></span> ${contacts.phone} - Звонок бесплатный!</p>
+                            <p style="font-size: 15px"><span class="glyphicon glyphicon-phone-alt"></span> ${contacts.phone} - Горячая линия!</p>
                         </g:if>
                     </div>
                 </div>

@@ -17,13 +17,13 @@
 
     <div class="row">
 
-        <div class="col-sm-3 leftList">
+        <div class="col-sm-2 leftList">
             <h4>Направления из ${city.gname} </h4>
             <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
         </div>
 
 
-        <div class="col-md-6 col-sm-9">
+        <div class="col-md-7 col-sm-9 center-content">
             <h3>Грузоперевозки из ${city.gname} по России</h3>
                 <img src="/images/${city.urlName}.jpg" style="float: left ; margin-right: 10px">
                 <p class="descr">${city.descr}</p>

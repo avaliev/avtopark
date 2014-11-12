@@ -17,12 +17,12 @@
 
     <div class="row">
 
-        <div class="col-sm-3 leftList">
+        <div class="col-sm-2 leftList">
             <h4>Направления из ${city.gname}</h4>
             <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
         </div>
 
-        <div class="col-md-6 col-sm-9">
+        <div class="col-md-7 col-sm-9 center-content">
             <h3>Грузоперевозки по маршруту ${route.name}</h3>
             <h5>Доставка грузов по всем городам и регионам России. Отправляем догрузом!</h5>
             <h4>Перевозки</h4>

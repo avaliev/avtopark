@@ -16,6 +16,7 @@ h1,h2,h3,h4 {
 
 p.descr {
     font-size: 15px !important;
+    text-align: justify;
 }
 
 .navbar-nav>li:hover,
@@ -47,8 +48,16 @@ nav {
     vertical-align: middle;
 }
 
+.center-content {
+    margin-left: 0%;
+}
+
 .leftList h3 {
     width: 100%;
+}
+
+.leftList .nav > li > a {
+    padding: 0;
 }
 
 .leftList {
