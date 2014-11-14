@@ -98,7 +98,7 @@
             <div class="container">
                 <div class="row">
                     <div class="footer_teaser col-sm-4 col-md-4">
-                        <h3>О нас</h3>
+                        <h3>Контакты</h3>
                         <g:if test="${contacts != null}">
                             <p>${contacts.about}</p>
 
