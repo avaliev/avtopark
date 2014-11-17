@@ -15,6 +15,7 @@ class MainController {
     def index() {
 //        render(params*.toString()+'main');
         def cities = City.list(sort: 'name');
+        if (cities==null) render(view: 'index');
         def moscow = cities.find { city -> city.name == "Москва" }
         def piter = cities.find { city -> city.urlName == "sankt-peterburg" }
         cities.remove(moscow);

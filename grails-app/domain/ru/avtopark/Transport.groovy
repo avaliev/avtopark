@@ -6,6 +6,12 @@ package ru.avtopark
 class Transport {
 
     String name;
+
+    String descr;
     // for km riding
     Integer price;
+
+    static constraints = {
+        descr nullable: true
+    }
 }

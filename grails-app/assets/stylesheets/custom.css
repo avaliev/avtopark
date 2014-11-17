@@ -33,13 +33,13 @@ nav {
 .leftList ul > li > a:focus {
     text-decoration: underline;
     background-color: #f0ecb6;
+
 }
 
 .leftList ul > li > a {
     color: blue;
     color: #428bca;
-    margin-left: 10%;
-    height: 30px;
+    margin-left: 5%;
 }
 
 .phone-info {
