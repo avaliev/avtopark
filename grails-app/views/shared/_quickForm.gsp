@@ -38,6 +38,5 @@
                 <div id="send-alert-err" class="alert alert-warning form-group" style="display: none">
                     А Вы заполнили необходимые поля о себе?</div>
             </g:form>
-            <div id="alert-div" hidden="hidden" class="alert alert-success">...</div>
         </div>
     </div>
