@@ -45,6 +45,10 @@
         <div class="col-md-3 col-sm-9 col-xs-9">
             <g:render template="/shared/quickForm"></g:render>
         </div>
+
+        <div class="col-md-3 col-sm-9 col-xs-9">
+            <g:render template="/shared/calculator"></g:render>
+        </div>
     </div>
 </div>
 </body>

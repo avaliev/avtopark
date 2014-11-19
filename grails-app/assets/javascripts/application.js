@@ -20,6 +20,7 @@ if (typeof jQuery !== 'undefined') {
 	})(jQuery);
 }
 function initHandlers() {
+
     jQuery("#send-btn").click(function(){
         userName=$("#user_name").val();
         userPhone=$("#user_phone").val();
@@ -39,6 +40,45 @@ function initHandlers() {
             });
         }
     });
+
+    jQuery("#calc-btn").click(function(){
+        var service = new google.maps.DistanceMatrixService();
+        function callback(response, status){
+            var distance=response.rows[0].elements[0].distance.value;
+            window.alert(distance);
+        }
+        service.getDistanceMatrix(
+            {
+                origins: ['Москва'],
+                destinations: ['Вышний Волочек'],
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.METRIC,
+                avoidHighways: false,
+                avoidTolls: false
+            }, callback);
+
+
+        function calculateDistances() {
+            var service = new google.maps.DistanceMatrixService();
+            window.alert("suka");
+            function callback(response, status){
+                 window.alert(response);
+            }
+            service.getDistanceMatrix(
+                {
+                    origins: ['Москва'],
+                    destinations: ['Казань'],
+                    travelMode: google.maps.TravelMode.DRIVING,
+                    unitSystem: google.maps.UnitSystem.METRIC,
+                    avoidHighways: false,
+                    avoidTolls: false
+                }, callback);
+
+
+        }
+    })
+
+
 
 }
 
