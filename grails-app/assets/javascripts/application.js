@@ -19,6 +19,54 @@ if (typeof jQuery !== 'undefined') {
 		});
 	})(jQuery);
 }
+
+function checkCalc(){
+
+    g2 = document.getElementById("kg2");
+    g1 = document.getElementById("kg1");
+    tr = document.getElementById("ktr");
+
+    if (g1.selectedIndex>0 && g2.selectedIndex>0 ) {
+        // пересчитываем расстояние
+        // получаем расстояние
+        var city1=g1.options[g1.selectedIndex].text;
+        var city2=g2.options[g2.selectedIndex].text;
+
+        function callback(response, status){
+            var distance=response.rows[0].elements[0].distance.value;
+            calc_km=Math.round(distance/1000);
+            $("#calc-distance").val(calc_km);
+            // если транспорт был выбран раннее
+            if (tr.selectedIndex>0) {
+                // показать стоимость
+                $("#calc-total").text(tr.value*calc_km);
+            }
+
+        }
+
+        var service = new google.maps.DistanceMatrixService();
+        service.getDistanceMatrix(
+            {
+                origins: [city1],
+                destinations: [city2],
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.METRIC,
+                avoidHighways: false,
+                avoidTolls: false
+            }, callback);
+    }
+}
+
+function onChangeTransport(){
+    tr = document.getElementById("ktr");
+    if (tr.selectedIndex>0) {
+        $("#calc-price").val(tr.value);
+        if (calc_km) {
+            $("#calc-total").val(tr.value*calc_km);
+        }
+    }
+}
+
 function initHandlers() {
 
     jQuery("#send-btn").click(function(){
@@ -43,27 +91,23 @@ function initHandlers() {
 
     jQuery("#calc-btn").click(function(){
         var service = new google.maps.DistanceMatrixService();
-        function callback(response, status){
-            var distance=response.rows[0].elements[0].distance.value;
-            window.alert(distance);
-        }
-        service.getDistanceMatrix(
-            {
-                origins: ['Москва'],
-                destinations: ['Вышний Волочек'],
-                travelMode: google.maps.TravelMode.DRIVING,
-                unitSystem: google.maps.UnitSystem.METRIC,
-                avoidHighways: false,
-                avoidTolls: false
-            }, callback);
+        var g1=$("#kg1");
+        var trval=$("#ktr").val();
 
 
-        function calculateDistances() {
-            var service = new google.maps.DistanceMatrixService();
-            window.alert("suka");
+        var g1 = document.getElementById("kg1");
+        var g2 = document.getElementById("kg2");
+        tr = document.getElementById("ktr");
+        if (g1.selectedIndex>0 && g2.selectedIndex>0 && tr.selectedIndex>0  ) {
             function callback(response, status){
-                 window.alert(response);
+                var distance=response.rows[0].elements[0].distance.value;
+                var km=Math.round(distance/1000);
+                var price=tr.value;
+                $("#calc-result").text(" <b>Расстояние:</b> " + km +"x"+ price +"руб/км" + "=" + km*price);
+                $("#calc-result").show();
             }
+
+
             service.getDistanceMatrix(
                 {
                     origins: ['Москва'],
@@ -73,9 +117,12 @@ function initHandlers() {
                     avoidHighways: false,
                     avoidTolls: false
                 }, callback);
-
-
         }
+        else {
+            window.alert('Выберите маршрут и транспортное средство!')
+        }
+
+
     })
 
 
