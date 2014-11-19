@@ -39,13 +39,11 @@ function checkCalc(){
             // если транспорт был выбран раннее
             if (tr.selectedIndex>0) {
                 // показать стоимость
-                $("#calc-total").text(tr.value*calc_km);
+                $("#calc-total").val(tr.value*calc_km);
             }
 
         }
-
-        var service = new google.maps.DistanceMatrixService();
-        service.getDistanceMatrix(
+        mapService.getDistanceMatrix(
             {
                 origins: [city1],
                 destinations: [city2],
@@ -69,6 +67,8 @@ function onChangeTransport(){
 
 function initHandlers() {
 
+    mapService = new google.maps.DistanceMatrixService();
+
     jQuery("#send-btn").click(function(){
         userName=$("#user_name").val();
         userPhone=$("#user_phone").val();
@@ -88,6 +88,8 @@ function initHandlers() {
             });
         }
     });
+
+
 
     jQuery("#calc-btn").click(function(){
         var service = new google.maps.DistanceMatrixService();
