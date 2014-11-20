@@ -41,7 +41,6 @@ function checkCalc(){
                 // показать стоимость
                 $("#calc-total").val(tr.value*calc_km);
             }
-
         }
         mapService.getDistanceMatrix(
             {
@@ -88,47 +87,6 @@ function initHandlers() {
             });
         }
     });
-
-
-
-    jQuery("#calc-btn").click(function(){
-        var service = new google.maps.DistanceMatrixService();
-        var g1=$("#kg1");
-        var trval=$("#ktr").val();
-
-
-        var g1 = document.getElementById("kg1");
-        var g2 = document.getElementById("kg2");
-        tr = document.getElementById("ktr");
-        if (g1.selectedIndex>0 && g2.selectedIndex>0 && tr.selectedIndex>0  ) {
-            function callback(response, status){
-                var distance=response.rows[0].elements[0].distance.value;
-                var km=Math.round(distance/1000);
-                var price=tr.value;
-                $("#calc-result").text(" <b>Расстояние:</b> " + km +"x"+ price +"руб/км" + "=" + km*price);
-                $("#calc-result").show();
-            }
-
-
-            service.getDistanceMatrix(
-                {
-                    origins: ['Москва'],
-                    destinations: ['Казань'],
-                    travelMode: google.maps.TravelMode.DRIVING,
-                    unitSystem: google.maps.UnitSystem.METRIC,
-                    avoidHighways: false,
-                    avoidTolls: false
-                }, callback);
-        }
-        else {
-            window.alert('Выберите маршрут и транспортное средство!')
-        }
-
-
-    })
-
-
-
 }
 
 
