@@ -10,16 +10,18 @@
 <head>
     <meta name="layout" content="main-theme"/>
     <title>Грузоперевозки по России</title>
+    <meta name="keywords" content="грузоперевозки по России">
+    <meta name="description" content="Грузоперевозки по России осуществляются как в областные города, так и районные центры. Грузоперевозки по России возможны с участием как отдельного транспорта, так и с помощью догруза, возможна перевозка сборных грузов.">
 </head>
 
 <body>
 <div class="jumbotron">
     <div class="row">
-        <div class="col-sm-2 leftList">
+        <div class="col-sm-2 col-xs-12 leftList">
             <h3>Грузоперевозки по городам </h3>
             <g:render template="/shared/leftList" model="[list: cities]"></g:render>
         </div>
-        <div class="col-md-7 col-sm-9 col-xs-9 center-content">
+        <div class="col-lg-7 col-md-10 col-sm-10 col-xs-10 center-content">
             <h3 class="center-block"> Грузоперевозки по всей России</h3>
 
             <p class="descr">Направление деятельности нашей компании – это <b>грузоперевозки по России</b>, которые осуществляются с помощью автомобильного транспорта:
@@ -42,11 +44,11 @@
                 <img src="/images/gruzoperevozki-rf.jpg">
             </p>
         </div>
-        <div class="col-md-3 col-sm-9 col-xs-9">
+        <div class="col-lg-3 col-md-10 col-sm-10 col-xs-9">
             <g:render template="/shared/quickForm"></g:render>
         </div>
 
-        <div class="col-md-3 col-sm-9 col-xs-9">
+        <div class="col-lg-3 col-md-10 col-sm-10 col-xs-10">
             <g:render template="/shared/calculator"></g:render>
         </div>
     </div>

@@ -7,10 +7,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="грузоперевозки по России">
-    <title><g:layoutTitle default="Грузоперевозки по всей России"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <title><g:layoutTitle default="Грузоперевозки по всей России"/></title>
+    <g:layoutHead/>
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.jpg')}" type="image/x-icon">
     <link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
@@ -30,7 +30,7 @@
     <script>
         $(document).ready(initHandlers);
     </script>
-    <g:layoutHead/>
+
 </head>
 
 <body>
@@ -111,23 +111,6 @@
                             <p><i class="fa fa-envelope"></i> ${contacts.email}</p>
                         </g:if>
                     </div>
-                    %{--<div class="footer_teaser col-sm-4 col-md-4">--}%
-                    %{--<h3>Latest News</h3>--}%
-                    %{--<ul class="media-list">--}%
-                    %{--<li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">19<span>FEB</span></a>--}%
-                    %{--<h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a></h5>--}%
-                    %{--<p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>--}%
-                    %{--</li>--}%
-                    %{--<li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">18<span>FEB</span></a>--}%
-                    %{--<h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>--}%
-                    %{--<p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>--}%
-                    %{--</li>--}%
-                    %{--</ul>--}%
-                    %{--</div>--}%
-                    %{--<div class="footer_teaser col-sm-4 col-md-4" id="latest-flickr-images">--}%
-                    %{--<h3>FlickrFeed</h3>--}%
-                    %{--<ul></ul> <p>All photos © by <a href="http://www.dimitragiannouka.com" target="_blank">Dimitra Giannouka</a>.</p>--}%
-                    %{--</div>--}%
                 </div>
             </div>
         </section>
