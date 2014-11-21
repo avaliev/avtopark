@@ -29,6 +29,10 @@ class MenuController {
         }
     }
 
+    def services(){
+        render( view: 'services')
+    }
+
 
     def about(){
         render( view : 'about')

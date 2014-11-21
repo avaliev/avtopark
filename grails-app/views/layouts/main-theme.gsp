@@ -65,8 +65,8 @@
                         <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
                                                               href="#">Документы<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/menu/tariff">Скачать тарифы на перевозку</a></li>
-                                <li><a href="/menu/license">Лизенция</a></li>
+                                <li><a href="#">Скачать тарифы на перевозку</a></li>
+                                <li><a href="#">Лизенция</a></li>
                                 <li style="display: none">
                                     <a href="documentation/index.html">Documentation <span
                                         class="label label-danger">new</span></a></li>
@@ -132,7 +132,7 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>
 <script type="text/javascript"
-        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=false">
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>
 </body>
 </html>

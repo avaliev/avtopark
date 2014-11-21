@@ -40,7 +40,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://127.0.0.1:3306/perevozki_test?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://127.0.0.1:3306/perevozki?useUnicode=yes&characterEncoding=UTF-8"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
