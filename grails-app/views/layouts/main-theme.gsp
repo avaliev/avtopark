@@ -55,7 +55,7 @@
                                                                                        height="200"/></a>
                 </div>
 
-                <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
                     <ul class="nav pull-right navbar-nav">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/menu/request">Оставить заявку</a></li>

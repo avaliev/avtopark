@@ -19,12 +19,12 @@
 
     <div class="row">
 
-        <div class="col-sm-2 leftList">
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5 leftList">
             <h4>Направления из ${city.gname}</h4>
             <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
         </div>
 
-        <div class="col-md-7 col-sm-9 center-content">
+        <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
             <h3>Грузоперевозки по маршруту ${route.name}</h3>
             <h4>Доставка грузов по всем городам и регионам России. Отправляем догрузом!</h4>
             <img src="/images/${city.urlName}.jpg" style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
@@ -54,8 +54,9 @@
             <p class="descr">Доставка груза, а также его забор производится строго по тем адресам, которые указал клиент. Кроме того, наша компания предлагает такую услугу, как ответственное хранение товара на складе.</p>
         </div>
 
-        <div class="col-md-3 col-sm-9">
+        <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">
             <g:render template="/shared/quickForm"></g:render>
+            <g:render template="/shared/calculator"></g:render>
         </div>
     </div>
 
