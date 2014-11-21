@@ -20,6 +20,10 @@
     <div class="row">
 
         <div class="col-sm-2 leftList">
+
+            <div class="alert alert-info">
+                <a href="#" class="alert-link">Алерт</a>
+            </div>
             <h4>Направления из ${city.gname} </h4>
             <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
         </div>

@@ -39,16 +39,6 @@
         <section class="top_bar animated slideInDown">
             <div class="container">
                 <div class="row">
-                    %{--<div class="tob_bar_left_col col-xs-12 col-sm-6 col-md-6">--}%
-                        %{--<ul class="top_menu">--}%
-
-                            %{--<li><a href="/">Главная</a></li>--}%
-                            %{--<li><a href="/menu/about">О нас</a></li>--}%
-                            %{--<li><a href="/menu/services">Услуги</a></li>--}%
-                            %{--<li><a href="/menu/request">Связаться с нами</a></li>--}%
-                        %{--</ul>--}%
-                    %{--</div>--}%
-
                     <div class="tob_bar_right_col col-xs-12 col-sm-12 col-md-12" >
                         <g:if test="${contacts != null}">
                             <p style="font-size: 15px"><span class="glyphicon glyphicon-phone-alt"></span> ${contacts.phone} - Горячая линия!</p>

@@ -1,4 +1,4 @@
-<div class="panel panel-primary" style="float: right; width: 95%;">
+<div class="panel panel-primary" style="float: right; width: 100%;">
     <div class="panel-heading">Расчет стоимости для отправки отдельным транспортом</div>
     <div class="panel-body form-group" id="calculator">
             <div class="form-group">
