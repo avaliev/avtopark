@@ -40,7 +40,6 @@ class MyFilterFilters {
             for (def s : settings) {
                 contacts.put(s.param_key, s.param_value);
             }
-
             model.put("contacts", contacts);
         }
     }

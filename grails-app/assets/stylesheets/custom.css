@@ -9,9 +9,27 @@ div.main-desc p {
     font-size: 14px;
 }
 
-h1,h2,h3,h4 {
-    text-align: center !important;
+/*h1,h2,h3,h4 {*/
+    /*text-align: center !important;*/
+/*}*/
 
+.txt-c{
+    text-align: center;
+}
+
+
+p.tel {
+    font-size: 14px;
+}
+
+
+.jumbotron .about p {
+    font-size: 15px;
+    /*color: darkblue;*/
+}
+
+.jumbotron .about p .blue {
+    color: #000069;
 }
 
 p.descr {
@@ -20,7 +38,7 @@ p.descr {
 }
 
 .navbar-nav>li:hover,
-.navbar-nav>li:focus,pa
+.navbar-nav>li:focus,
 .navbar-nav>li>a:hover  {
     /*color: #00b3ee; !important;*/
 }

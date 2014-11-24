@@ -1,6 +1,7 @@
 package avto.park
 
 import grails.plugin.mail.MailService
+import grails.transaction.Transactional
 import groovyjarjarcommonscli.MissingArgumentException
 import ru.avtopark.City
 import ru.avtopark.Intent
@@ -9,6 +10,7 @@ import ru.avtopark.Settings
 /**
  * Created by Admin on 11.10.14.
  */
+@Transactional
 class EmailSendService {
 
     MailService mailService;
