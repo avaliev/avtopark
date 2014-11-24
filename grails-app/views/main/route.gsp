@@ -20,12 +20,12 @@
     <div class="row">
 
         <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5 leftList">
-            <h4>Направления из ${city.gname}</h4>
+            <h4 class="txt-c">Направления из ${city.gname}</h4>
             <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
         </div>
 
         <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
-            <h3>Грузоперевозки по маршруту ${route.name}</h3>
+            <h3 class="txt-c">Грузоперевозки по маршруту ${route.name}</h3>
             <h4>Доставка грузов по всем городам и регионам России. Отправляем догрузом!</h4>
             <img src="/images/${city.urlName}.jpg" style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
             <p class="descr">Вы ищете надежную компанию, которая осуществляет грузоперевозки в городе ${city.name} ?

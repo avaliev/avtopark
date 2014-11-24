@@ -65,7 +65,6 @@ function onChangeTransport(){
 }
 
 function initHandlers() {
-
     mapService = new google.maps.DistanceMatrixService();
 
     jQuery("#send-btn").click(function(){
@@ -87,6 +86,16 @@ function initHandlers() {
             });
         }
     });
+}
+
+function makeMap() {
+//    window.alert("makeMap!")
+//    var mapOptions = {
+//        zoom: 8,
+//        center: new google.maps.LatLng(55.7594591,49.1486698),
+//        mapTypeId: google.maps.MapTypeId.ROADMAP
+//    }
+//    var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 }
 
 

@@ -44,13 +44,15 @@ class BootStrap {
 
 
         if (Settings.count<1) {
-            new Settings(param_key: "address", param_value: "Kazan").save();
+            new Settings(param_key: "address", param_value: "г. Казань, ул. Оренбургский тракт, д.20").save();
             new Settings(param_key: "phone", param_value: "8-800-700-6798").save();
             new Settings(param_key: "email", param_value: "logist.d1@mail.ru").save();
-            new Settings(param_key: "fax", param_value: "-").save();
+            new Settings(param_key: "fax", param_value: "8-843-277-90-15").save();
+            new Settings(param_key: "tel_kazan", param_value: "8(843) 277-90-15").save();
+            new Settings(param_key: "tel_spb", param_value: "8-800-700-6798").save();
+            new Settings(param_key: "tel_moscow", param_value: "8-800-700-6798").save();
             new Settings(param_key: "about", param_value: "Грузоперевозки по России любым видом транспорта!").save();
         }
-
     }
     def destroy = {
     }
