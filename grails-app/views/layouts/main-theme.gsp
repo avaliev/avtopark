@@ -61,7 +61,7 @@
                         <li><a href="/menu/request">Оставить заявку</a></li>
                         <li><a href="/menu/services">Услуги</a></li>
                         <li><a href="/menu/about">О компании</a></li>
-                        <li><a href="/menu/contacts">Контакты</a></li>
+                        <li><a href="/menu/about">Контакты</a></li>
                         <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
                                                               href="#">Документы<span class="caret"></span></a>
                             <ul class="dropdown-menu">

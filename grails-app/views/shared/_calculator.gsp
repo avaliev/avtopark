@@ -1,4 +1,5 @@
-<div class="panel panel-primary" style="float: right; width: 100%;">
+<div style="align-content: center">
+<div class="panel panel-primary calculator">
     <div class="panel-heading">Расчет стоимости для отправки отдельным транспортом</div>
     <div class="panel-body form-group" id="calculator">
             <div class="form-group">
@@ -41,15 +42,16 @@
             </div>
 
             <div class="input-group">
-                <input disabled style="text-align: right" type="email" class="form-control" id="calc-distance" placeholder="Расстояние">
+                <input disabled style="text-align: right" type="email" class="form-control" id="calc-distance">
                 <div class="input-group-addon">км</div>
-                <input disabled style="text-align: right" type="email" class="form-control" id="calc-price" placeholder="Цена">
+                <input disabled style="text-align: right" type="email" class="form-control" id="calc-price">
                 <div class="input-group-addon">руб/км</div>
             </div>
             <div class="input-group">
-                <input disabled style="text-align: right" type="email" class="form-control" id="calc-total" placeholder="Стоимость">
+                <input disabled style="text-align: right" type="email" class="form-control" id="calc-total">
                 <div class="input-group-addon">рублей</div>
             </div>
             <div id="calc-result" class="alert alert-success form-group" style="padding: 10px; display: none">...</div>
     </div>
+</div>
 </div>
