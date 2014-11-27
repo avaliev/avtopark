@@ -27,7 +27,7 @@
         <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
             <h3 class="txt-c">Грузоперевозки по маршруту ${route.name}</h3>
             <h4>Доставка грузов по всем городам и регионам России. Отправляем догрузом!</h4>
-            <img src="/images/${city.urlName}.jpg" style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
+            <img src="/images/${city.urlName}.jpg" alt="грузоперевозки из ${city.gname}" style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
             <p class="descr">Вы ищете надежную компанию, которая осуществляет грузоперевозки в городе ${city.name} ?
 
             Мы являемся одними из лидеров в данной области не только в ${city.gname}, но и далеко за ее границами.

@@ -29,12 +29,16 @@
 
         <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
             <h3 class="txt-c">Грузоперевозки из ${city.gname} по России</h3>
-            <img src="/images/${city.urlName}.jpg"
+            <img src="/images/${city.urlName}.jpg" alt="грузоперевозки из ${city.gname}"
                  style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
+
+            <img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA" alt="перевозки ${city.name}" style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
 
             <p class="descr">${city.descr}</p>
 
             <p class="descr">${city.descr1}</p>
+
+
 
             <p class="descr">Грузовые перевозки объединяют мир: производители продукции имеют возможность поставлять ее в другие города и страны, предприниматели получают отличный способ продавать и покупать товары вне зависимости от места нахождения компании. Компания «Авто-парк» возьмется доставить ваш товар из ${city.gname} по России и сделает это быстро, слаженно и недорого. Автомобильные перевозки по России — для вас!</p>
             <h4>Грузоперевозки отдельным транспортом</h4>

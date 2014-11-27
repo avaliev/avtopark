@@ -15,17 +15,12 @@
                 </p>
 
                 <p>Для городских грузоперевозок также лучше использовать Газель. Таким образом, возможность проехать по узким дорогам, заставленным припаркованными автомобилями, значительно увеличивается. Более того, Газель может проехать по любым, даже центральным дорогам, ведь ее грузоподъемность менее 1,5 тонн, а на такие грузоперевозки ограничения не распространяются.</p>
-                <a class="btn btn-primary pull-right" href="/">Заказать газель</a></div>
+                %{--<a class="btn btn-primary pull-right" href="/">Заказать газель</a></div>--}%
         </div>
     </div>
 
     <div class="service_teaser">
         <div class="row">
-            <div class="service_photo col-sm-4 col-md-4">
-                %{--<figure style="background-image:url(images/zil.jpg)"></figure>--}%
-                <img src="/images/zil.jpg">
-            </div>
-
             <div class="service_details col-sm-8 col-md-8">
                 <h2 class="section_header skincolored">Перевозки <b>«Бычком»</b> (ЗИЛ) <small>до 5 тонн, объем до 40 куб. длиной до 6 м.</small>
                 </h2>
@@ -35,10 +30,29 @@
                     В автопарке компании имеются комфортабельные и маневренные грузовики Бычок. Главная сфера их применения – это перевозка различных грузов средней тоннажности.
 
                 </p>
-
                 <p>
                     Бычок легко сможет справиться перевозками продуктов питания, частного имущества, промышленных товаров, строительных материалов и прочих грузов. Также, Бычок является лучшим решением для перевозки мягкой и корпусной мебели.
                     При желании, вы можете ознакомиться с тарифами на грузоперевозки Бычком, позвонив по телефонам, указанным на сайте нашей компании.
+                </p>
+            </div>
+            <div class="service_photo col-sm-4 col-md-4">
+                <img src="/images/zil.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="service_teaser right">
+        <div class="row">
+            <div class="service_photo col-sm-4 col-md-4">
+                <img src="/images/kamaz.jpg">
+            </div>
+
+            <div class="service_details col-sm-8 col-md-8">
+                <h2 class="section_header skincolored">Перевозки <b>КАМАЗом</b>  <small>до 10 тонн, объем до 60 куб.</small>
+                </h2>
+                <p><strong>КАМАЗы</strong> ценятся за высокую степень надежности и проходимости, которые давно являются лидерами на рынке междугородних грузоперевозок по России.
+                Однако КАМАЗы характеризуются не только высокой проходимостью и выносливостью. Сюда нужно отнести универсальность этих грузовиков, ведь они могут работать, как при жарких климатических условиях, так и в северных широтах.
+                <b>Камаз</b> подойдет для перевозки фанеры, металла, стройматериалов или другого тяжеловесного груза. Хорошая проходимость в труднодоступных местах России.
                 </p>
             </div>
         </div>
@@ -46,7 +60,7 @@
 
     <div class="service_teaser right">
         <div class="row">
-            <div class="service_details col-sm-8 col-md-8 wow animated slideInLeft">
+            <div class="service_details col-sm-8 col-md-8">
                 <h2 class="section_header skincolored">Перевозки <b>фурой</b>  <small>до 20 тонн, объем до 120 куб. длиной до 15 м.</small>
                 </h2>
 
@@ -55,11 +69,13 @@
                 </p>
             </div>
 
-            <div class="service_photo col-sm-4 col-md-4 wow animated slideInRight">
+            <div class="service_photo col-sm-4 col-md-4">
                 <img src="/images/fura.jpg">
             </div>
         </div>
     </div>
+
+
 
     %{--<div class="service_teaser inverted">--}%
         %{--<div class="row">--}%
