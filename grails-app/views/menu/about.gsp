@@ -47,14 +47,13 @@
                     <p>${contacts.address}</p>
                     <img src="http://maps.googleapis.com/maps/api/staticmap?center=55.760293, 49.147683&zoom=15&size=700x400&markers=55.760293, 49.147683&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA"/>
                 </div>
-
             </div>
         </div>
 
         <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">
             %{--<g:render template="/shared/quickForm"></g:render>--}%
             %{--<g:render template="/shared/calculator"></g:render>--}%
-            <g:render template="/shared/vkwidget"></g:render>
+            <div style="float: right; width: 100%" id="vk_groups"></div>
         </div>
     </div>
 </div>

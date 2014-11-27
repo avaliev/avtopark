@@ -37,6 +37,11 @@ p.descr {
     text-align: justify;
 }
 
+.service_teaser .service_details .price {
+    font-weight: bold ;
+    color: cornflowerblue;
+}
+
 .navbar-nav>li:hover,
 .navbar-nav>li:focus,
 .navbar-nav>li>a:hover  {

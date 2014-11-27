@@ -10,6 +10,8 @@
 <head>
     <meta name="layout" content="main-theme"/>
     <title>Заявка на перевозку</title>
+    <meta name="keywords" content="грузоперевозки по России,заказ грузоперевозки">
+    <meta name="description" content="сделать заказ на грузоперевозку по России">
 </head>
 
 <body>

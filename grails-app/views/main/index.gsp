@@ -52,6 +52,8 @@
         </div>
         <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">
             <g:render template="/shared/quickForm"></g:render>
+            <!-- VK Widget -->
+            <div style="float: right; width: 100%" id="vk_groups"></div>
         </div>
         %{--<div class="col-lg-3 col-md-4 col-sm-10 col-xs-12">--}%
             %{--<g:render template="/shared/quickForm"></g:render>--}%
