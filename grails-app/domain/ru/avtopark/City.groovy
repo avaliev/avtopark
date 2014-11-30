@@ -2,6 +2,11 @@ package ru.avtopark
 
 import org.apache.log4j.Logger
 
+import java.nio.charset.Charset
+import java.nio.file.FileSystems
+import java.nio.file.Files
+import java.nio.file.Path
+
 class City {
 
     String name;
@@ -55,5 +60,19 @@ class City {
             }
         }
 
+    }
+
+    public String getText() {
+
+        Path file=FileSystems.getDefault().getPath("web-app","text","goroda",id.toString(),"text.txt")
+
+        if (Files.exists(file)) {
+            byte[] bytes=Files.readAllBytes(file);
+            String str=new String(bytes);
+            String s="ddddd"
+
+            return str;
+        }
+        return null;
     }
 }

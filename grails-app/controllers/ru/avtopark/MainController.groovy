@@ -29,7 +29,7 @@ class MainController {
             it.urlName = '../gruzoperevozki/' + it.urlName;
         }
         city.routes=city.routes.sort ({ r -> r.name});
-        render(view: 'city', model: [city: city, cities: cities])
+        render(view: 'city', model: [city: city, cities: cities, text: city.getText()])
     }
 
 
