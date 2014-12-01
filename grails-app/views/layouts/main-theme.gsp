@@ -109,9 +109,11 @@
         <section class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">Copyright ©2014 all rights reserved</div>
-
-                    <div class="text-right col-sm-6 col-md-6">Designed by <a href="http://vk.com/ajrat">Ayrat Valiev</a>
+                    <div class="col-sm-5 col-md-5">Copyright ©2014 all rights reserved</div>
+                    <div class="col-sm-2 col-md-2">
+                        <g:render template="/shared/yametrika"></g:render>
+                    </div>
+                    <div class="text-right col-sm-5 col-md-5">Designed by <a href="http://vk.com/ajrat">Ayrat Valiev</a>
                     </div>
                 </div>
             </div>
@@ -141,5 +143,7 @@
 <script type="text/javascript">
     VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
 </script>
+<script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>
+
 </body>
 </html>

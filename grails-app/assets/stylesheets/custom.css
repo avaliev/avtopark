@@ -109,7 +109,8 @@ nav {
 }
  /*for  cross-browser dropdownlist styling*/
 select.modern {
-    background:  #f0ecb6;;
+    background:  #f0ecb6;
+    background: #eeeeee;
     font: normal 14px/16px Arial, Helvetica, Sans-serif;
     padding: 8px;
     display: block;
@@ -137,11 +138,20 @@ div.modern::after {
     text-align: center;
     position : absolute;
     background:  #f0ecb6;
+    background: #eeeeee;
 }
 div.modern {
     position: relative;
     display: inline-block;
     width: 100%;
+}
+
+#calculator {
+    background-color: #f0ecb6;
+}
+
+.panel.calculator {
+    background-color: #f0ecb6;
 }
 
 #calc-btn {

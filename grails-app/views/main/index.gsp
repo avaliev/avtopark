@@ -41,14 +41,14 @@
                 Логисты компании, исходя из таких параметров, как - вес, объем, категория (особенности) груза, смогут наиболее точно подобрать для вас самое подходящее транспортное средство.
                 Также менеджеры помогут рассчитать данные параметры и минимизировать расходы, которые пойдут на транспортировку груза.
             </p>
-
+            <g:render template="/shared/calculator"></g:render>
             %{--<p class="descr">--}%
                 %{--<img src="/images/gruzoperevozki-rf.jpg">--}%
             %{--</p>--}%
             <h3 class="txt-c">Наши услуги </h3>
             <g:render template="/shared/services"></g:render>
 
-            <g:render template="/shared/calculator"></g:render>
+
         </div>
         <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">
             <g:render template="/shared/quickForm"></g:render>
