@@ -30,7 +30,7 @@
 
             <div class="form-group">
                 <label>Требуемый транспорт:</label>
-                <div class="modern" ><!-- / -->
+                <div class="modern"><!-- / -->
                     <select class="modern" id="ktr" onchange="onChangeTransport()">
                         <option value="" selected="">- Выберите из списка -</option>
                         <option value="15">до 2 тонн (20 куб)</option>
