@@ -1,7 +1,7 @@
 <div style="align-content: center">
-<div class="panel panel-primary calculator">
-    <div class="panel-heading">Расчет стоимости для отправки отдельным транспортом</div>
-    <div class="panel-body form-group" id="calculator">
+<div class="panel calculator" id="calculator">
+    <h3 class="txt-c" style="height: 20%">Расчет стоимости для отправки отдельным транспортом</h3>
+    <div class="panel-body form-group" >
             <div class="form-group">
                 <label>Город отправки:</label>
                 <div class="modern"><!-- / -->
@@ -42,16 +42,16 @@
             </div>
 
             <div class="input-group">
-                <input disabled style="text-align: right" type="email" class="form-control" id="calc-distance">
+                <input disabled style="text-align: right" class="form-control" id="calc-distance">
                 <div class="input-group-addon">км</div>
-                <input disabled style="text-align: right" type="email" class="form-control" id="calc-price">
+                <input disabled style="text-align: right" class="form-control" id="calc-price">
                 <div class="input-group-addon">руб/км</div>
-            </div>
-            <div class="input-group">
-                <input disabled style="text-align: right" type="email" class="form-control" id="calc-total">
+                <input disabled style="text-align: right" class="form-control" id="calc-total">
                 <div class="input-group-addon">рублей</div>
             </div>
-            <div id="calc-result" class="alert alert-success form-group" style="padding: 10px; display: none">...</div>
+            <div class="form-group">
+                <a class="btn btn-primary pull-right" href="/menu/request">Уточнить стоимость индивидуально</a>
+            </div>
     </div>
 </div>
 </div>

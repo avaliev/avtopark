@@ -1,4 +1,5 @@
 <section class="service_teasers">
+    <h2 class="txt-c">Наши услуги </h2>
     <div class="service_teaser">
         <div class="row">
             <div class="service_photo col-sm-4 col-md-4">

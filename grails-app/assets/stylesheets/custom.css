@@ -98,8 +98,7 @@ nav {
 }
 .calculator {
     /*width: 80%;*/
-    margin-right: 10%;
-    margin-left: 10%;
+    width: 100%;
 }
 
 .navbar-n
