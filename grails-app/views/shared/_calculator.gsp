@@ -50,7 +50,7 @@
                 <div class="input-group-addon">рублей</div>
             </div>
             <div class="form-group">
-                <a class="btn btn-primary pull-right" href="/menu/request">Уточнить стоимость индивидуально</a>
+                <a class="btn btn-primary pull-right" href="/menu/request">Рассчитать стоимость персонально</a>
             </div>
     </div>
 </div>

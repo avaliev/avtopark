@@ -69,8 +69,6 @@ class City {
         if (Files.exists(file)) {
             byte[] bytes=Files.readAllBytes(file);
             String str=new String(bytes);
-            String s="ddddd"
-
             return str;
         }
         return null;

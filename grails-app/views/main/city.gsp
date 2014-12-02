@@ -39,10 +39,10 @@
 
             <p class="descr">${city.descr1}</p>
 
-            <g:if test="${text!=null}" >
+            <g:if test="${seo_content!=null}" >
                 <div id="seo-content">
                     %{--разметка и текст для целевой страницы--}%
-                    ${text}
+                    ${seo_content}
                 </div>
             </g:if>
 
