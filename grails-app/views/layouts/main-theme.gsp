@@ -31,20 +31,42 @@
         $(document).ready(initHandlers);
     </script>
 
-
-
 </head>
 
 <body>
 <div class="container-fluid">
     <header>
-        <section class="top_bar animated slideInDown">
-            <div class="container">
+        %{--<section class="top_bar">--}%
+        %{--<div class="container">--}%
+        %{--<div class="row">--}%
+        %{--<div class="tob_bar_right_col col-xs-12 col-sm-12 col-md-12" >--}%
+        %{--<g:if test="${contacts != null}">--}%
+        %{--<p style="font-size: 15px"><span class="glyphicon glyphicon-phone-alt"></span> ${contacts.phone} - Горячая линия!</p>--}%
+        %{--</g:if>--}%
+        %{--</div>--}%
+        %{--</div>--}%
+        %{--</div>--}%
+        %{--</section>--}%
+        <section class="header">
+            <div class="container header">
                 <div class="row">
-                    <div class="tob_bar_right_col col-xs-12 col-sm-12 col-md-12" >
-                        <g:if test="${contacts != null}">
-                            <p style="font-size: 15px"><span class="glyphicon glyphicon-phone-alt"></span> ${contacts.phone} - Горячая линия!</p>
-                        </g:if>
+                    <div class="col-sm-4 col-xs-4 head-city">
+                        <div style="float: left"><img src="/images/gerb_msk.jpg"></div>
+
+                        <div><b>Офис в Москве:</b><br/>  <span class="header-phone">${contacts.tel_moscow}</span></div>
+                    </div>
+
+                    <div class="col-sm-4 col-xs-4 head-city">
+                        <div style="float: left"><img src="/images/gerb_spb.jpg"></div>
+
+                        <div><b>Офис в Петербурге:</b> <br/>  <span class="header-phone">${contacts.tel_spb}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-xs-4 head-city">
+                        <div style="float: left"><img src="/images/gerb_kzn.jpg"></div>
+
+                        <div><b>Офис в Казани:</b> <br/>  <span class="header-phone">${contacts.tel_kazan}</span></div>
                     </div>
                 </div>
             </div>
@@ -54,16 +76,16 @@
             <div class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/"><asset:image src="logo.gif" width="300"
-                                                                                       height="200"/></a>
+                                                                  height="200"/></a>
                 </div>
 
-                <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav pull-right navbar-nav">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/menu/request">Оставить заявку</a></li>
                         <li><a href="/menu/services">Услуги</a></li>
                         <li><a href="/menu/about">О компании</a></li>
-                        <li><a href="/menu/about">Контакты</a></li>
+                        <li><a href="/menu/contacts">Контакты</a></li>
                         <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
                                                               href="#">Документы<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -71,7 +93,7 @@
                                 <li><a href="#">Лизенция</a></li>
                                 <li style="display: none">
                                     <a href="documentation/index.html">Documentation <span
-                                        class="label label-danger">new</span></a></li>
+                                            class="label label-danger">new</span></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -90,7 +112,7 @@
             <div class="container">
                 <div class="row">
                     <div class="footer_teaser col-sm-4 col-md-4">
-                        <h3>Контакты</h3>
+                        <h4>Транспортная компания "Авто-парк"</h4>
                         <g:if test="${contacts != null}">
                             <p>${contacts.about}</p>
 
@@ -103,6 +125,30 @@
                             <p><i class="fa fa-envelope"></i> ${contacts.email}</p>
                         </g:if>
                     </div>
+
+                    <div class="footer_teaser col-sm-4 col-md-4">
+                        <p>&nbsp;</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>Телефона офиса в Москве:</p>
+
+                        <p><i class="fa fa-phone"></i> ${contacts.tel_moscow}</p>
+                    </div>
+
+                    <div class="footer_teaser col-sm-4 col-md-4">
+                        <p>&nbsp;</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>&nbsp;</p>
+
+                        <p>Телефона офиса в Санкт-Петербурге:</p>
+
+                        <p><i class="fa fa-phone"></i> ${contacts.tel_spb}</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -110,9 +156,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5 col-md-5">Copyright ©2014 all rights reserved</div>
+
                     <div class="col-sm-2 col-md-2">
                         <g:render template="/shared/yametrika"></g:render>
                     </div>
+
                     <div class="text-right col-sm-5 col-md-5">Designed by <a href="http://vk.com/ajrat">Ayrat Valiev</a>
                     </div>
                 </div>

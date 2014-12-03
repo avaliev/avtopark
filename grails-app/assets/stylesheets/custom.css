@@ -85,10 +85,6 @@ nav {
     padding-bottom: 15px;
 }
 
-.jumbotron {
-    background: #ffffff !important;
-}
-
 .jumbotron .service_teasers p {
     font-size: 13px;
 }
@@ -145,12 +141,9 @@ div.modern {
     width: 100%;
 }
 
-#calculator {
-    background-color: #f0ecb6;
-}
 
 .panel.calculator {
-    background-color: #f0ecb6;
+    background-color: #E5DE77;
 }
 
 #calc-btn {
@@ -172,3 +165,24 @@ div.modern {
     color: #000000;
     font-weight: bold;
 }
+
+#body-content .jumbotron{
+    background-color: #e2e2e2;
+    background-color: #ffffff;
+    /*border-top: 1px inset #cccccc;*/
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.head-city {
+    padding: 5px;
+}
+
+section.header {
+    border-bottom: 1px solid #b6b6b6;
+}
+

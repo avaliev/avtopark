@@ -41,4 +41,11 @@ class MenuController {
         render( view : 'about', model : [cities: maincont.cities]);
     }
 
+    def contacts(){
+//        def maincontroller=grailsApplication.getArtefact("Controller","MainController");
+        def maincont=applicationContext.getBean("ru.avtopark.MainController")
+
+        render( view : 'contacts', model : [cities: maincont.cities]);
+    }
+
 }
