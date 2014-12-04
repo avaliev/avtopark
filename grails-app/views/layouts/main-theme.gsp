@@ -35,9 +35,10 @@
 
 <body>
 <div class="container-fluid">
-    <header>
+    <header style="background-color: rgb(214, 237, 240)">
         %{--<section class="top_bar">--}%
         %{--<div class="container">--}%
+        %{--style="background: url(/images/head-fura.jpg) no-repeat ; background-size: 500px 300px;"--}%
         %{--<div class="row">--}%
         %{--<div class="tob_bar_right_col col-xs-12 col-sm-12 col-md-12" >--}%
         %{--<g:if test="${contacts != null}">--}%
@@ -72,14 +73,16 @@
             </div>
         </section>
 
-        <div class="container">
+        <div class="container" style="background-color: rgb(214, 237, 240)" >
+
             <div class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/"><asset:image src="logo.gif" width="300"
-                                                                  height="200"/></a>
+                    <a class="navbar-brand" href="/">
+                        <asset:image src="logo.gif"/></a>
+                    <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="nb_left pull-left"> <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span> </a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse">
                     <ul class="nav pull-right navbar-nav">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/menu/request">Оставить заявку</a></li>
@@ -100,6 +103,7 @@
                 </div>
             </div>
         </div>
+
     </header>
 
     <div id="body-content">

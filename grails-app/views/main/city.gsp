@@ -30,10 +30,10 @@
 
         <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
             <h3 class="txt-c">Грузоперевозки из ${city.gname} по России</h3>
-            <img src="/images/${city.urlName}.jpg" alt="грузоперевозки из ${city.gname}"
+            <img src="/images/${city.urlName}.jpg" alt="грузоперевозки по России из ${city.gname}"
                  style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
 
-            <img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA" alt="перевозки ${city.name}" style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
+            <img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA" alt="перевозки ${city.name} газель, бычок" style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
 
             <p class="descr">${city.descr}</p>
 

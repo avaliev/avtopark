@@ -144,6 +144,7 @@ div.modern {
 
 .panel.calculator {
     background-color: #E5DE77;
+    background-color: #C8E7F1;
 }
 
 #calc-btn {
@@ -176,6 +177,10 @@ div.modern {
     width: 50px;
     height: 50px;
     float: left;
+}
+
+.header {
+    background-color: beige;
 }
 
 .head-city {

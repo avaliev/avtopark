@@ -16,7 +16,7 @@
 
 <body>
 <div class="jumbotron">
-    <h2>Оформить заявку на расчет стоимости перевозки</h2>
+    <h2 class="text-center">Оформить заявку на расчет стоимости перевозки</h2>
     <form class="form-horizontal" role="form" action="/menu/intent" method="post">
         <p class="col-sm-offset-2 col-sm-10">Контактная информация</p>
         <div class="form-group">
