@@ -56,6 +56,7 @@
 
             <g:render template="/shared/calculator"></g:render>
             <g:render template="/shared/services"></g:render>
+            <g:render template="/shared/pereezd"></g:render>
         </div>
 
         <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">

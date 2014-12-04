@@ -32,6 +32,8 @@
             <div class="about">
                 <h3>Транспортная компания "Авто-парк"</h3>
 
+                <p> Горячая линия (бесплатно по всей России): <span class="blue">${contacts.phone}</span></p>
+
                 <p>Телефон офиса в Москве: <span class="blue">${contacts.tel_moscow}</span></p>
 
                 <p>Телефон офиса в Санкт-Петербурге: <span class="blue">${contacts.tel_spb}</span></p>

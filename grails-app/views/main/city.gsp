@@ -65,8 +65,10 @@
 
 
             <g:render template="/shared/calculator" model="${city}"></g:render>
-
+            <hr/>
             <g:render template="/shared/services"></g:render>
+            <hr/>
+            <g:render template="/shared/pereezd"></g:render>
 
         </div>
 
