@@ -35,7 +35,7 @@
 
 <body>
 <div class="container-fluid">
-    <header style="background-color: rgb(214, 237, 240)">
+    <header>
         %{--<section class="top_bar">--}%
         %{--<div class="container">--}%
         %{--style="background: url(/images/head-fura.jpg) no-repeat ; background-size: 500px 300px;"--}%
@@ -73,9 +73,9 @@
             </div>
         </section>
 
-        <div class="container" style="background-color: rgb(214, 237, 240)" >
+        <div class="container" >
 
-            <div class="navbar navbar-default" role="navigation">
+            <div class="navbar navbar-default" role="navigation" style="margin: 25px">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/">
                         <asset:image src="logo.gif"/></a>
