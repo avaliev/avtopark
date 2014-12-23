@@ -15,10 +15,10 @@
 <body>
 <div class="jumbotron">
     <div class="row">
-        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5 leftList">
-            <h3 class="txt-c">Грузоперевозки по городам</h3>
-            <g:render template="/shared/leftList" model="[list: cities]"></g:render>
-        </div>
+        %{--<div class="col-lg-2 col-md-3 col-sm-3 col-xs-5">--}%
+            %{--<h3 class="txt-c">Группа во Вконтакте</h3>--}%
+            %{--<div style="float: right; width: 100%" id="vk_groups"></div>--}%
+        %{--</div>--}%
 
         <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
             <section class="hgroup">
@@ -48,11 +48,6 @@
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">
-            %{--<g:render template="/shared/quickForm"></g:render>--}%
-            %{--<g:render template="/shared/calculator"></g:render>--}%
-            <div style="float: right; width: 100%" id="vk_groups"></div>
-        </div>
     </div>
 </div>
 

@@ -180,7 +180,8 @@ div.modern {
 }
 
 .header {
-    background-color: beige;
+    background-color: #56b8ff;
+    background-color: #87c3f1;
 }
 
 .head-city {
@@ -193,5 +194,9 @@ section.header {
 
 .fon-b {
  background-color: rgb(214, 237, 240)
+}
+
+.leftList ul li a {
+    font-size: 90%;
 }
 
