@@ -38,7 +38,6 @@
     <header>
         %{--<section class="top_bar">--}%
         %{--<div class="container">--}%
-        %{--style="background: url(/images/head-fura.jpg) no-repeat ; background-size: 500px 300px;"--}%
         %{--<div class="row">--}%
         %{--<div class="tob_bar_right_col col-xs-12 col-sm-12 col-md-12" >--}%
         %{--<g:if test="${contacts != null}">--}%
@@ -49,41 +48,49 @@
         %{--</div>--}%
         %{--</section>--}%
         <section class="header">
-            <div class="container header">
+            <div class="container header" style="height: 100px">
                 <div class="row">
-                    <div class="col-sm-4 col-xs-4 head-city">
-                        <div style="float: left"><img src="/images/gerb_msk.jpg"></div>
-
-                        <div><b>Офис в Москве:</b><br/>  <span class="header-phone">${contacts.tel_moscow}</span></div>
+                    <div class="col-sm-2 logotip" >
+                        <a class="" href="/">
+                            <asset:image src="logo.gif"/></a>
                     </div>
 
-                    <div class="col-sm-4 col-xs-4 head-city">
-                        <div style="float: left"><img src="/images/gerb_spb.jpg"></div>
+                    <div class="col-sm-3 header-text" >
+                        Грузоперевозки по России </br>
+                        автомобильным транспортом
+                    </div>
 
-                        <div><b>Офис в Петербурге:</b> <br/>  <span class="header-phone">${contacts.tel_spb}</span>
+                    <div class="col-sm-3 russia-label">
+                            <asset:image src="russia-label.png"/>
+                    </div>
+
+
+                    <div class="col-sm-4">
+                        <div style="float: left">
+                            <asset:image src="phone-icon.png"/>
                         </div>
-                    </div>
+                        <p></p>
+                        <p class="phone-info">Горячая линия: 8-800-700-6798 <br>
+                            <small style="color: #000000; font-size: 12px">Звонок по России бесплатный!</small>
+                        </p>
+                        %{--<p style="float: right">Звонок по России бесплатный!</p>--}%
 
-                    <div class="col-sm-4 col-xs-4 head-city">
-                        <div style="float: left"><img src="/images/gerb_kzn.jpg"></div>
-
-                        <div><b>Офис в Казани:</b> <br/>  <span class="header-phone">${contacts.tel_kazan}</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="container" >
+        <div class="container">
 
-            <div class="navbar navbar-default" role="navigation" style="margin: 25px">
+            <div class="navbar navbar-default" role="navigation" style="margin: 15px">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">
-                        <asset:image src="logo.gif"/></a>
+                    %{--<a class="navbar-brand" href="/">--}%
+                        %{--<asset:image src="logo.gif"/></a>--}%
                     <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="nb_left pull-left"> <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span> </a>
                 </div>
 
                 <div class="collapse navbar-collapse">
-                    <ul class="nav pull-right navbar-nav">
+                    <ul class="nav navbar-nav" style="margin: auto">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/menu/request">Оставить заявку</a></li>
                         <li><a href="/menu/services">Услуги</a></li>

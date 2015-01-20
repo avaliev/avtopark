@@ -66,9 +66,12 @@ nav {
 }
 
 .phone-info {
-    height: 40px;
     text-align: center;
     vertical-align: middle;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #bc751a;
+    margin: 0px;
 }
 
 .leftList h3 {
@@ -180,16 +183,23 @@ div.modern {
 }
 
 .header {
-    background-color: #56b8ff;
-    background-color: #87c3f1;
+    /*background-color: #56b8ff;*/
+    /*background-color: #87c3f1;*/
+    padding-top: 10px;
 }
 
-.head-city {
-    padding: 5px;
+.logotip img {
+    height: 75px;
+    width: 110px;
+}
+
+.russia-label img {
+    height: 80px;
+    width: 150px;
 }
 
 section.header {
-    border-bottom: 1px solid #b6b6b6;
+    border-bottom: 1px solid #cccccc;
 }
 
 .fon-b {
@@ -200,3 +210,9 @@ section.header {
     font-size: 90%;
 }
 
+.header-text {
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #41afff;
+}

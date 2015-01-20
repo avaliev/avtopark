@@ -5979,7 +5979,7 @@ header .container {
   text-shadow: 1px 1px 0px #ffffff;
 }
 .navbar .nav {
-  margin: 27px 0 0 0;
+  /*margin: 27px 0 0 0;*/
 }
 .navbar .nav li a {
   margin: 0 3px;
