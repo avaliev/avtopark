@@ -223,3 +223,9 @@ section.header {
 .red {
     color : rgb(161, 28, 28);
 }
+
+.prices td {
+    text-align: center !important;
+    vertical-align: middle !important;
+    color: #0033ff;
+}
