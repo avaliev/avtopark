@@ -34,6 +34,15 @@ class MenuController {
     }
 
 
+    def docs(){
+        render(view: 'docs')
+    }
+
+    def prices(){
+        render(view: 'prices');
+    }
+
+
     def about(){
 //        def maincontroller=grailsApplication.getArtefact("Controller","MainController");
         def maincont=applicationContext.getBean("ru.avtopark.MainController")

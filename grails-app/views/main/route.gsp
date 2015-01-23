@@ -27,7 +27,21 @@
 
         <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
             <h3 class="txt-c">Грузоперевозки по маршруту ${route.name}</h3>
-            <h4 class="txt-c">Заказ отдельной машины для грузоперевозок ${route.name}. Так же есть варианты для отправки догрузом!</h4>
+            <h4 class="txt-c red">Заказ отдельной машины для грузоперевозок ${route.name}.</h4>
+
+            <div class="row">
+                <div class="col-sm-5">  <p style="font-size: 12px ;color : #124072; padding-left: 10px"><b>Сборный груз:</b> <span class="red">900 руб.,</span> доставка груза в течении 24 часов.<br>
+                    <b>Догруз:</b> <span class="red">от 1500 руб.,</span> доставка на следующий день.</p></div>
+                <div class="col-sm-7">
+                    <p style="font-size: 12px; padding-left: 10px; color : #124072"><b>Отдельная машина:</b><br>
+                        - до 2 тонн, объем до 18 куб. Стоимость: от <span class="red">12 руб./км</span> до <span class="red">15 руб./км.</span><br>
+                        - до 5 тонн, объем до 40 куб. Стоимость: от <span class="red">15 руб./км</span> до <span class="red">20 руб./км.</span><br>
+                        - до 10 тонн, объем до 60 куб. Стоимость: от <span class="red">20 руб./км</span> до <span class="red">25 руб./км.</span> </br>
+                        - до 20 тонн, объем до 60 куб. Стоимость: от <span class="red">25 руб./км</span> до <span class="red">30 руб./км.</span></p>
+                </div>
+            </div>
+
+
             <img src="/images/${city.urlName}.jpg" alt="грузоперевозки из ${city.gname}" style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
             <p class="descr">Вы хотите заказать грузоперевозки по маршруту ${route.name}? Предлагаем ознакомиться с нашими тарифами и особенностями нашей компании: <br/>
 
