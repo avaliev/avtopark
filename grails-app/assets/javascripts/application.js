@@ -72,6 +72,7 @@ function initHandlers() {
         userPhone=$("#user_phone").val();
         comment=$("#comment").val();
         city=$("#city_id").val();
+        clientType=$("#client_type").val();
 
         if ( userName==null || userName=='' || userPhone==null || userPhone=='' )  {
             // show error
@@ -79,7 +80,7 @@ function initHandlers() {
             $('#send-alert-suc').hide();
         } else {
             // submit ajax
-            $.post("main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment},
+            $.post("main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment, clientType:clientType},
                 function(data){
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();

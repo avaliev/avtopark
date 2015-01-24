@@ -27,7 +27,7 @@ environments {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
 //            url = "jdbc:h2:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            url = "jdbc:mysql://89.108.71.209:3306/perevozki?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://89.108.71.209:3306/perevozki_test?useUnicode=yes&characterEncoding=UTF-8"
         }
     }
     test {
@@ -40,7 +40,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://127.0.0.1:3306/perevozki?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://127.0.0.1:3306/perevozki_test?useUnicode=yes&characterEncoding=UTF-8"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true

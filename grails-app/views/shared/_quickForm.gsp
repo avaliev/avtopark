@@ -12,17 +12,18 @@
                     <label for="user_name">Пожалуйста, представьтесь:</label>
                     <g:textField id="user_name" class="form-control" name="userName" value="" placeholder="Ваше имя" />
                 </div>
-                <div class="form-group"  style="display:none" >
+
+                <div class="form-group">
+                    <label for="user_phone">Ваш контактный телефон:</label>
+                    <g:textField id="user_phone" class="form-control" name="phone" value="" placeholder="+79XXXXXXXXX" />
+                </div>
+                <div class="form-group"  style="" >
                     <label class="radio-inline">
-                        <input type="radio" name="client_type" value="ooo" checked="true"> <b> Юр. лицо </b>
+                        <input type="radio" name="client_type" value="ooo"> <b> Юр. лицо </b>
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="client_type" value="fiz"> <b>Физ. лицо </b>
                     </label>
-                </div>
-                <div class="form-group">
-                    <label for="user_phone">Ваш контактный телефон:</label>
-                    <g:textField id="user_phone" class="form-control" name="phone" value="" placeholder="+79XXXXXXXXX" />
                 </div>
                 <div class="form-group">
                     <label for="comment">Комментарий:</label>
