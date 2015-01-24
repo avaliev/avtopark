@@ -94,18 +94,10 @@
                         <li><a href="/">Главная</a></li>
                         <li><a href="/menu/request">Оставить заявку</a></li>
                         <li><a href="/menu/services">Услуги</a></li>
+                        <li><a href="/menu/prices">Тарифы</a></li>
                         <li><a href="/menu/about">О компании</a></li>
                         <li><a href="/menu/contacts">Контакты</a></li>
-                        <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
-                                                              href="#">Документы<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Скачать тарифы на перевозку</a></li>
-                                <li><a href="#">Лизенция</a></li>
-                                <li style="display: none">
-                                    <a href="documentation/index.html">Documentation <span
-                                            class="label label-danger">new</span></a></li>
-                            </ul>
-                        </li>
+                        <li><a href="/menu/docs">Документы</a></li>
                     </ul>
                 </div>
             </div>

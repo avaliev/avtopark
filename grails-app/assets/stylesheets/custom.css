@@ -216,3 +216,16 @@ section.header {
     font-weight: bold;
     color: #41afff;
 }
+.brown {
+    color: #A66262;
+}
+
+.red {
+    color : rgb(161, 28, 28);
+}
+
+.prices td {
+    text-align: center !important;
+    vertical-align: middle !important;
+    color: #0033ff;
+}

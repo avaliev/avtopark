@@ -16,7 +16,8 @@
 <div class="jumbotron">
     <div class="row">
 
-        <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
+        <div class="col-sm-1"></div>
+        <div class=" col-sm-9">
             <section class="hgroup">
                 <h1>О компании</h1>
 
