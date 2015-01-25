@@ -104,6 +104,7 @@
 
         <g:layoutBody/>
     </div>
+    <g:render template="/shared/modalWindow"></g:render>
 
     <footer>
         <section id="footer_teasers_wrapper">

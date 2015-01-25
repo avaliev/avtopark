@@ -17,7 +17,7 @@
     <div class="row">
 
         <div class="col-sm-1"></div>
-        <div class=" col-sm-9">
+        <div class=" col-sm-8">
             <section class="hgroup">
                 <h1>О компании</h1>
 
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">
+        <div class="col-sm-3">
             %{--<g:render template="/shared/quickForm"></g:render>--}%
             %{--<g:render template="/shared/calculator"></g:render>--}%
             <div style="float: right; width: 100%" id="vk_groups"></div>

@@ -5,7 +5,7 @@ import ru.avtopark.Settings
 class MyFilterFilters {
 
     def filters = {
-        main(controller: 'main', action: '*') {
+        main(controller: 'main', action: '*' , actionExclude : 'intent') {
             before = {
 
             }
@@ -18,7 +18,7 @@ class MyFilterFilters {
             }
         }
 
-        menu(controller: 'menu', action: '*' , actionExclude : 'intent') {
+        menu(controller: 'menu', action: '*') {
             before = {
 
             }

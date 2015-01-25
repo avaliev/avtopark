@@ -21,7 +21,7 @@
         %{--</div>--}%
 
         <div class="col-sm-1"></div>
-        <div class=" col-sm-9">
+        <div class=" col-sm-8">
             <section class="hgroup">
                 <h1>Контакты</h1>
                 <ul class="breadcrumb pull-right">
@@ -47,6 +47,11 @@
                     <img src="http://maps.googleapis.com/maps/api/staticmap?center=55.760293, 49.147683&zoom=15&size=700x400&markers=55.760293, 49.147683&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA"/>
                 </div>
             </div>
+        </div>
+        <div class="col-sm-3">
+            %{--<g:render template="/shared/quickForm"></g:render>--}%
+            %{--<g:render template="/shared/calculator"></g:render>--}%
+            <div style="float: right; width: 100%" id="vk_groups"></div>
         </div>
 
     </div>

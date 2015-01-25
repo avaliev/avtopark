@@ -89,6 +89,21 @@ function initHandlers() {
             });
         }
     });
+
+
+    $('.car-btn').click(function(){
+        $('#modal-form').modal();
+        $('.modal-title').text($(this).text());
+        carTypeComment=$(this).text();
+    });
+
+    $('#modal-form-button').click(function(){
+        var userName=$('.modal-body .user-name').val();
+        var userPhone=$('.modal-body .user-phone').val();
+        var city=$("#city_id").val();
+        var route=$("#route_id").val();
+        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:carTypeComment});
+    });
 }
 
 function makeMap() {
