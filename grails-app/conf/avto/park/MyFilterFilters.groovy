@@ -18,7 +18,7 @@ class MyFilterFilters {
             }
         }
 
-        menu(controller: 'menu', action: '*') {
+        menu(controller: 'menu', action: '*' , actionExclude : 'intent') {
             before = {
 
             }

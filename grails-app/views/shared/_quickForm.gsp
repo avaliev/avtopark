@@ -12,9 +12,9 @@
                     <label for="user_name">Пожалуйста, представьтесь:</label>
                     <g:textField id="user_name" class="form-control" name="userName" value="" placeholder="Ваше имя" />
                 </div>
-                <div class="form-group"  style="display:none" >
+                <div class="form-group" >
                     <label class="radio-inline">
-                        <input type="radio" name="client_type" value="ooo" checked="true"> <b> Юр. лицо </b>
+                        <input type="radio" name="client_type" value="ooo"> <b> Юр. лицо </b>
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="client_type" value="fiz"> <b>Физ. лицо </b>
