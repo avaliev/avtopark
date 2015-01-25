@@ -36,17 +36,12 @@
 <body>
 <div class="container-fluid">
     <header>
-        %{--<section class="top_bar">--}%
-        %{--<div class="container">--}%
-        %{--<div class="row">--}%
-        %{--<div class="tob_bar_right_col col-xs-12 col-sm-12 col-md-12" >--}%
-        %{--<g:if test="${contacts != null}">--}%
-        %{--<p style="font-size: 15px"><span class="glyphicon glyphicon-phone-alt"></span> ${contacts.phone} - Горячая линия!</p>--}%
-        %{--</g:if>--}%
-        %{--</div>--}%
-        %{--</div>--}%
-        %{--</div>--}%
-        %{--</section>--}%
+        <g:if test="${city!=null}">
+            <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"  />
+        </g:if>
+        <g:if test="${route!=null}">
+            <g:textField id="route_id" style="display:none" name="route_id" value="${route.id}"  />
+        </g:if>
         <section class="header">
             <div class="container header" style="height: 100px">
                 <div class="row">

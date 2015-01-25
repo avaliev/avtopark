@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group" >
                     <label class="radio-inline">
-                        <input type="radio" name="client_type" value="ooo"> <b> Юр. лицо </b>
+                        <input id="client_type" type="radio" name="client_type" value="ooo"> <b> Юр. лицо </b>
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="client_type" value="fiz"> <b>Физ. лицо </b>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label for="user_phone">Ваш контактный телефон:</label>
-                    <g:textField id="user_phone" class="form-control" name="phone" value="" placeholder="+79XXXXXXXXX" />
+                    <g:textField id="user_phone" class="form-control" name="phone" value=""/>
                 </div>
                 <div class="form-group">
                     <label for="comment">Комментарий:</label>
@@ -31,9 +31,7 @@
                 <div class="form-group">
                     <button type="button" class="btn btn-success" id="send-btn">Отправить</button>
                 </div>
-                <g:if test="${city!=null}">
-                    <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"  />
-                </g:if>
+
                 <div id="send-alert-suc" class="alert alert-success form-group" style="display: none">ОК, заявка отправлена!</div>
                 <div id="send-alert-err" class="alert alert-warning form-group" style="display: none">
                     А Вы заполнили необходимые поля о себе?</div>

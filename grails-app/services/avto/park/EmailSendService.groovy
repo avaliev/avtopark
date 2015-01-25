@@ -5,6 +5,7 @@ import grails.transaction.Transactional
 import groovyjarjarcommonscli.MissingArgumentException
 import ru.avtopark.City
 import ru.avtopark.Intent
+import ru.avtopark.Route
 import ru.avtopark.Settings
 
 /**
@@ -15,7 +16,7 @@ class EmailSendService {
 
     MailService mailService;
 
-    def sendEmail(Intent intent,Boolean isMainForm){
+    def sendEmail(Intent intent,Boolean isMainForm,City city,Route route){
 
         def forEmail=Settings.findByParam_key("email");
         StringBuffer buffer=new StringBuffer("");
@@ -23,9 +24,26 @@ class EmailSendService {
             buffer.append("Отправлена форма заявки на перевозку. \r\n")
         } else {
             buffer.append("Отправлена заявка на обратный звонок. \r\n")
+
+            if (route!=null) {
+                buffer.append("Cо страницы маршрута "+ route.name).append("\r\n");
+            } else
+            if (city!=null) {
+                buffer.append("Cо страницы города "+ city.name).append("\r\n");
+            }
         }
+
+
+
         buffer.append("Имя клиента: ").append(intent.userName).append("\r\n")
         buffer.append("Номер телефона: ").append(intent.phone).append("\r\n")
+
+        if (intent.clientType!=null) {
+            String type=intent.clientType.equals("fiz")?"Физ. лицо":"Юр. лицо";
+            buffer.append("Тип клиента: ").append(type).append("\r\n")
+        }
+
+
 
         if (intent.email!=null) {
             buffer.append("Email: ").append(intent.email).append("\r\n")
@@ -65,9 +83,16 @@ class EmailSendService {
     def String createIntent(Map params){
 
         String city_id=params.get("city_id");
-        City target=null;
+        String route_id=params.get("route_id")
+        City city=null;
+        Route route=null;
+
+
+        if (route_id!=null) {
+            route=Route.findById(Integer.parseInt(route_id))
+        } else
         if (city_id!=null) {
-            target=City.findById(Integer.parseInt(city_id));
+            city=City.findById(Integer.parseInt(city_id));
         }
 
         String userName=params.get('userName');
@@ -79,7 +104,7 @@ class EmailSendService {
         }
 
         Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),
-                phone: params.get('phone'), city: target, comment: params.get("comment"));
+                phone: params.get('phone'), city: city, clientType : params.get("clientType"), comment: params.get("comment"));
 
         if (params.get("isMainForm")) {
             intent.setDeparture(params.get("departure"))
@@ -90,6 +115,6 @@ class EmailSendService {
         }
         intent.save();
 
-        sendEmail(intent,Boolean.parseBoolean(params.get("isMainForm")))
+        sendEmail(intent,Boolean.parseBoolean(params.get("isMainForm")),city,route)
     }
 }
