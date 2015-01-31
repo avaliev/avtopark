@@ -49,9 +49,16 @@
                 <input disabled style="text-align: right" class="form-control" id="calc-total">
                 <div class="input-group-addon">рублей</div>
             </div>
+        <label>Рассчитать стоимость персонально:</label>
+        <div class="form-inline calc-form">
             <div class="form-group">
-                <a class="btn btn-primary pull-right" href="/menu/request">Рассчитать стоимость персонально</a>
+                <g:textField class="form-control user-name" name="userName" value="" placeholder="Ваше имя" />
             </div>
+            <div class="form-group">
+                <g:textField class="form-control user-phone" name="userPhone" value="" placeholder="Контактный телефон" />
+            </div>
+            <button type="button" id="calc-btn" class="btn btn-success">Уточнить стоимость</button>
+        </div>
     </div>
 </div>
 </div>

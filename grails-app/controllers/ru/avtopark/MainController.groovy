@@ -28,6 +28,8 @@ class MainController {
         city.routes.collect {
             it.urlName = '../gruzoperevozki/' + it.urlName;
         }
+
+
         city.routes=city.routes.sort ({ r -> r.name});
         render(view: 'city', model: [city: city, cities: cities, seo_content: city.getText()])
     }
@@ -52,10 +54,7 @@ class MainController {
         loadCities()
         def query = Route.where {
             urlName == params.get("route")
-        }
-//        Route route = lastCity.routes.find {
-//            route.urlName==params.get("route")
-//        }
+        };
         Route route = query.find();
 
         render(view: 'route', model: [route: route, city: route.departureCity, cities: cities])

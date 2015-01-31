@@ -104,16 +104,26 @@ function initHandlers() {
         var route=$("#route_id").val();
         $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:carTypeComment});
     });
+
+    $('#calc-btn').click(function(){
+        var userName=$('.calc-form .user-name').val();
+        var userPhone=$('.calc-form .user-phone').val();
+        var msg='Заявка с калькулятора';
+
+        if (typeof g1!='undefined') {
+            var city1=g1.options[g1.selectedIndex].text;
+            msg=msg+' Город отправки:'+city1;
+            if (typeof g2!='undefined') {
+                var city2=g2.options[g2.selectedIndex].text;
+                msg=msg+' Город доставки:'+city2;
+            }
+        } else {
+            var city=$("#city_id").val();
+            var route=$("#route_id").val();
+        }
+        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:msg});
+    });
 }
 
-function makeMap() {
-//    window.alert("makeMap!")
-//    var mapOptions = {
-//        zoom: 8,
-//        center: new google.maps.LatLng(55.7594591,49.1486698),
-//        mapTypeId: google.maps.MapTypeId.ROADMAP
-//    }
-//    var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-}
 
 
