@@ -121,7 +121,10 @@ function initHandlers() {
             var city=$("#city_id").val();
             var route=$("#route_id").val();
         }
-        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:msg});
+        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:msg},
+            function(data){
+                window.alert("Заявка отправлена! \r\n Спасибо!");
+            });
     });
 }
 
