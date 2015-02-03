@@ -18,31 +18,29 @@
 </head>
 
 <body>
-<div class="jumbotron">
-
     <div class="row">
 
-        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5 leftList">
+        <div class=" col-xs-2  leftList">
             <h4 class="txt-c">Направления из ${city.gname}</h4>
             <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
         </div>
 
 
-        <div class="col-lg-7 col-md-9 col-sm-9 col-xs-7">
+        <div class=" col-xs-7">
             <h3 class="txt-c">Грузоперевозки из ${city.gname} по России</h3>
-            <h4 class="txt-c red">Грузоперевозки из ${city.gname} по городам Росии догрузом или отдельным транспортом</h4>
+            <h4 class="txt-c red">Перевозки из ${city.gname} по городам Росии догрузом или отдельным транспортом</h4>
 
-            <div class="row">
-                <div class="col-sm-5">  <p style="font-size: 12px ;color : #124072; padding-left: 10px"><b>Сборный груз:</b> <span class="red">900 руб.,</span> доставка груза в течении 24 часов.<br>
-                    <b>Догруз:</b> <span class="red">от 1500 руб.,</span> доставка на следующий день.</p></div>
-                <div class="col-sm-7">
-                    <p style="font-size: 12px; padding-left: 10px; color : #124072"><b>Отдельная машина:</b><br>
-                        - до 2 тонн, объем до 18 куб. Стоимость: от <span class="red">12 руб./км</span> до <span class="red">15 руб./км.</span><br>
-                        - до 5 тонн, объем до 40 куб. Стоимость: от <span class="red">15 руб./км</span> до <span class="red">20 руб./км.</span><br>
-                        - до 10 тонн, объем до 60 куб. Стоимость: от <span class="red">20 руб./км</span> до <span class="red">25 руб./км.</span> </br>
-                        - до 20 тонн, объем до 60 куб. Стоимость: от <span class="red">25 руб./км</span> до <span class="red">30 руб./км.</span></p>
-                </div>
-            </div>
+            %{--<div class="row">--}%
+                %{--<div class=" 5">  <p style="font-size: 12px ;color : #124072; padding-left: 10px"><b>Сборный груз:</b> <span class="red">900 руб.,</span> доставка груза в течении 24 часов.<br>--}%
+                    %{--<b>Догруз:</b> <span class="red">от 1500 руб.,</span> доставка на следующий день.</p></div>--}%
+                %{--<div class=" 7">--}%
+                    %{--<p style="font-size: 12px; padding-left: 10px; color : #124072"><b>Отдельная машина:</b><br>--}%
+                        %{--- до 2 тонн, объем до 18 куб. Стоимость: от <span class="red">12 руб./км</span> до <span class="red">15 руб./км.</span><br>--}%
+                        %{--- до 5 тонн, объем до 40 куб. Стоимость: от <span class="red">15 руб./км</span> до <span class="red">20 руб./км.</span><br>--}%
+                        %{--- до 10 тонн, объем до 60 куб. Стоимость: от <span class="red">20 руб./км</span> до <span class="red">25 руб./км.</span> </br>--}%
+                        %{--- до 20 тонн, объем до 60 куб. Стоимость: от <span class="red">25 руб./км</span> до <span class="red">30 руб./км.</span></p>--}%
+                %{--</div>--}%
+            %{--</div>--}%
             <img src="/images/${city.urlName}.jpg" alt="грузоперевозки по России из ${city.gname}"
                  style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">
 
@@ -85,12 +83,10 @@
 
         </div>
 
-        <div class="col-lg-3 col-md-9 col-sm-9 col-xs-12">
+        <div class=" col-xs-3">
             <g:render template="/shared/quickForm"></g:render>
             %{--<div style="float: right; width: 100%" id="vk_groups"></div>--}%
         </div>
-
-    </div>
 </div>
 </body>
 </html>

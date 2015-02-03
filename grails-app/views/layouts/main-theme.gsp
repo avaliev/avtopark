@@ -7,7 +7,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    %{--<meta name="viewport" content="width=device-width, initial-scale=1.0">--}%
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title><g:layoutTitle default="Грузоперевозки по всей России"/></title>
     <g:layoutHead/>
@@ -45,22 +45,22 @@
         <section class="header">
             <div class="container header" style="height: 100px">
                 <div class="row">
-                    <div class="col-sm-2 logotip" >
+                    <div class="col-xs-2 logotip" >
                         <a class="" href="/">
                             <asset:image src="logo.gif"/></a>
                     </div>
 
-                    <div class="col-sm-3 header-text" >
+                    <div class="col-xs-3 header-text" >
                         Грузоперевозки по России </br>
                         автомобильным транспортом
                     </div>
 
-                    <div class="col-sm-3 russia-label">
+                    <div class="col-xs-3 russia-label">
                             <asset:image src="russia-label.png"/>
                     </div>
 
 
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
                         <div style="float: left">
                             <asset:image src="phone-icon.png"/>
                         </div>
@@ -100,8 +100,7 @@
 
     </header>
 
-    <div id="body-content">
-
+    <div id="body-content" class="container-fluid>
         <g:layoutBody/>
     </div>
     <g:render template="/shared/modalWindow"></g:render>
@@ -110,7 +109,7 @@
         <section id="footer_teasers_wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="footer_teaser col-sm-4 col-md-4">
+                    <div class="footer_teaser col-xs-4 col-xs-4">
                         <h4>Транспортная компания "Авто-парк"</h4>
                         <g:if test="${contacts != null}">
                             <p>${contacts.about}</p>
@@ -125,7 +124,7 @@
                         </g:if>
                     </div>
 
-                    <div class="footer_teaser col-sm-4 col-md-4">
+                    <div class="footer_teaser col-xs-4 col-xs-4">
                         <p>&nbsp;</p>
 
                         <p>&nbsp;</p>
@@ -137,7 +136,7 @@
                         <p><i class="fa fa-phone"></i> ${contacts.tel_moscow}</p>
                     </div>
 
-                    <div class="footer_teaser col-sm-4 col-md-4">
+                    <div class="footer_teaser col-xs-4 col-xs-4">
                         <p>&nbsp;</p>
 
                         <p>&nbsp;</p>
@@ -154,13 +153,10 @@
         <section class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-5 col-md-5">Copyright ©2014 all rights reserved</div>
-
-                    <div class="col-sm-2 col-md-2">
+                    <div class="col-xs-5 col-xs-5">Copyright ©2014 all rights reserved</div>
+                    <div class="col-xs-2 col-xs-2">
                         <g:render template="/shared/yametrika"></g:render>
-                    </div>
-
-                    <div class="text-right col-sm-5 col-md-5">Designed by <a href="http://vk.com/ajrat">Ayrat Valiev</a>
+                        <g:render template="/shared/ganalytics"></g:render>
                     </div>
                 </div>
             </div>
