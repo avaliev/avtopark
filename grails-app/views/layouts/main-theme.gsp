@@ -43,7 +43,7 @@
             <g:textField id="route_id" style="display:none" name="route_id" value="${route.id}"  />
         </g:if>
         <section class="header">
-            <div class="container header" style="height: 100px">
+            <div class="container header" style="height: auto">
                 <div class="row">
                     <div class="col-xs-2 logotip" >
                         <a class="" href="/">
@@ -55,7 +55,7 @@
                         автомобильным транспортом
                     </div>
 
-                    <div class="col-xs-3 russia-label">
+                    <div class="col-xs-2 russia-label">
                             <asset:image src="russia-label.png"/>
                     </div>
 
@@ -64,9 +64,9 @@
                         <div style="float: left">
                             <asset:image src="phone-icon.png"/>
                         </div>
-                        <p></p>
-                        <p class="phone-info">Горячая линия: 8-800-700-6798 <br>
-                            <small style="color: #000000; font-size: 12px">Звонок по России бесплатный!</small>
+                        <p class="phone-info">Горячая линия: <nobr>8-800-700-6798</nobr>  <br>
+                            <small>Звонок по России бесплатный!</small> <br>
+                            <small>Рабочие часы: Пн-Пт 8.30-18.00</small>
                         </p>
                         %{--<p style="float: right">Звонок по России бесплатный!</p>--}%
 
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="navbar navbar-default" role="navigation" style="margin: 15px">
                 <div class="navbar-header">
@@ -93,7 +93,9 @@
                         <li><a href="/menu/about">О компании</a></li>
                         <li><a href="/menu/contacts">Контакты</a></li>
                         <li><a href="/menu/docs">Документы</a></li>
+                        <li style="left: 10%;top: 10px;"> <button type="button" class="btn btn-warning car-btn">Консультация логиста</button></li>
                     </ul>
+
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@
   Date: 10.10.14
   Time: 16:52
 --%>
-    <div class="panel panel-primary" style="float: right; width: 100%">
+    <div id="quick-form" class="panel panel-primary" style="float: right; width: 100%">
         <div class="panel-heading">Оставить заявку на расчет стоимости сейчас (заказать звонок)</div>
         <div class="panel-body form-group">
             <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" role="form" >
@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label for="user_phone">Ваш контактный телефон:</label>
-                    <g:textField id="user_phone" class="form-control" name="phone" value=""/>
+                    <g:textField id="user_phone" class="form-control" name="phone" value="" placeholder="+79XXXXXXXXX"/>
                 </div>
                 <div class="form-group">
                     <label for="comment">Комментарий:</label>

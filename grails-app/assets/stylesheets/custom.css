@@ -71,7 +71,13 @@ nav {
     font-size: 16px;
     padding-left: 5px;
     color: #bc751a;
+    font-weight: bold;
     margin: 0px;
+}
+
+.phone-info small {
+    color: #000000; font-size: 12px;
+    font-weight: normal;
 }
 
 .leftList h3 {
@@ -142,12 +148,15 @@ div.modern {
     position: relative;
     display: inline-block;
     width: 100%;
+    color: #000000;
 }
 
 
 .panel.calculator {
     background-color: #E5DE77;
     background-color: #C8E7F1;
+    background-color: #428bca;
+    color: #ffffff;
 }
 
 #calc-btn {
@@ -228,4 +237,14 @@ section.header {
     text-align: center !important;
     vertical-align: middle !important;
     color: #0033ff;
+}
+
+#quick-form .panel-body {
+    background-color: #428bca;
+    border: none;
+}
+#quick-form {
+    background-color: #428bca;
+    color: #ffffff;
+    margin-top: 10px;
 }
