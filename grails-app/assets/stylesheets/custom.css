@@ -92,6 +92,8 @@ nav {
     background-color: #f0ecb6;
     border-radius: 5px 5px 5px 5px;
     padding-bottom: 15px;
+    padding-top: 5px;
+    margin-top: 10px;
 }
 
 .jumbotron .service_teasers p {
@@ -247,4 +249,12 @@ section.header {
     background-color: #428bca;
     color: #ffffff;
     margin-top: 10px;
+}
+
+.collage img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: none;
 }

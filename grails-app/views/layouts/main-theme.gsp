@@ -64,7 +64,7 @@
                         <div style="float: left">
                             <asset:image src="phone-icon.png"/>
                         </div>
-                        <p class="phone-info">Горячая линия: <nobr>8-800-700-6798</nobr>  <br>
+                        <p class="phone-info"> Горячая линия: <nobr>8-800-700-6798</nobr>  <br>
                             <small>Звонок по России бесплатный!</small> <br>
                             <small>Рабочие часы: Пн-Пт 8.30-18.00</small>
                         </p>
@@ -93,7 +93,7 @@
                         <li><a href="/menu/about">О компании</a></li>
                         <li><a href="/menu/contacts">Контакты</a></li>
                         <li><a href="/menu/docs">Документы</a></li>
-                        <li style="left: 10%;top: 10px;"> <button type="button" class="btn btn-warning car-btn">Консультация логиста</button></li>
+                        <li style="left: 10%;top: 10px;"> <button type="button" style="height: 40px" class="btn btn-warning car-btn">Бесплатная консультация логиста</button></li>
                     </ul>
 
                 </div>

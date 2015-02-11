@@ -18,13 +18,23 @@
 </head>
 
 <body>
+
     <div class="row">
-        <div class="col-xs-2 leftList">
-            <h4 class="txt-c">Грузоперевозки по городам</h4>
-            <g:render template="/shared/leftList" model="[list: cities]"></g:render>
+        <div class="col-xs-2" style="margin-top:5px; padding-right: 0px">
+            <img src="/images/zil2.jpg">
+            <div class="leftList">
+                <h4 class="txt-c">Грузоперевозки по городам</h4>
+                <g:render template="/shared/leftList" model="[list: cities]"></g:render>
+            </div>
+
         </div>
 
         <div class="col-xs-7 center">
+            <div class="row">
+                <div class="col-xs-12 collage">
+                    <img src="/images/collage-row.jpg">
+                </div>
+            </div>
             <h2 class="center-block txt-c">Грузоперевозки по всей России</h2>
 
             %{--<h4 class="txt-c red">Грузоперевозки по городам Росии догрузом или отдельным транспортом.</h4>--}%

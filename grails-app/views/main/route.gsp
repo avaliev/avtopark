@@ -18,12 +18,27 @@
 <body>
     <div class="row">
 
-        <div class="col-xs-2 leftList">
-            <h4 class="txt-c">Направления из ${city.gname}</h4>
-            <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
+        %{--<div class="col-xs-2 leftList">--}%
+
+            %{--<h4 class="txt-c">Направления из ${city.gname}</h4>--}%
+            %{--<g:render template="/shared/leftList" model="[list: city.routes]"></g:render>--}%
+        %{--</div>--}%
+
+        <div class="col-xs-2" style="margin-top:5px; padding-right: 0px">
+            <img src="/images/zil2.jpg">
+            <div class="leftList">
+                <h4 class="txt-c">Направления из ${city.gname}</h4>
+                <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
+            </div>
         </div>
 
+
         <div class="col-xs-7">
+            <div class="row">
+                <div class="col-xs-12 collage">
+                    <img src="/images/collage-row.jpg">
+                </div>
+            </div>
             <h3 class="txt-c">Грузоперевозки по маршруту ${route.name}</h3>
             <h4 class="txt-c red">Заказ отдельной машины для перевозок ${route.name}.</h4>
 
