@@ -31,7 +31,7 @@ class MainController {
 
 
         city.routes=city.routes.sort ({ r -> r.name});
-        render(view: 'city', model: [city: city, cities: cities, seo_content: city.getText()])
+        render(view: 'city', model: [city: city, cities: cities, seo_content: city.getText(), keyword: city.name ])
     }
 
 
@@ -57,7 +57,7 @@ class MainController {
         };
         Route route = query.find();
 
-        render(view: 'route', model: [route: route, city: route.departureCity, cities: cities])
+        render(view: 'route', model: [route: route, city: route.departureCity, cities: cities, keyword: route.name])
     }
 
     def loadCities(){

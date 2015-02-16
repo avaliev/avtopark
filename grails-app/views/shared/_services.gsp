@@ -8,7 +8,7 @@
 
             <div class="service_details col-sm-8 col-md-8">
                 <h2 class="section_header skincolored">Перевозки <b>газелью</b>
-                    ${city.name} <small>до 2 тонн, объем до 18 куб. длиной до 4 м.</small>
+                    ${keyword} <small>до 2 тонн, объем до 18 куб. длиной до 4 м.</small>
                 </h2>
                 <p class="txt-c price">от 12 до 15 <span>руб./км.</span></p>
                 <p><strong>Газель</strong> - этот автомобиль является довольно выгодным перевозчиком <strong>грузов до 2 тонн</strong>.
@@ -24,7 +24,7 @@
     <div class="service_teaser">
         <div class="row">
             <div class="service_details col-sm-8 col-md-8">
-                <h2 class="section_header skincolored">Перевозки <b>«Бычком»</b> (ЗИЛ) ${city.name} <small>до 5 тонн, объем до 40 куб. длиной до 6 м.</small>
+                <h2 class="section_header skincolored">Перевозки <b>«Бычком»</b> (ЗИЛ) ${keyword} <small>до 5 тонн, объем до 40 куб. длиной до 6 м.</small>
                 </h2>
                 <p class="txt-c price">от 15 до 20 <span>руб./км.</span></p>
                 <p><strong>ЗИЛ "Бычок"</strong> надежная машина для средних <strong>грузов общей массой до 5 тонн.</strong>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="service_details col-sm-8 col-md-8">
-                <h2 class="section_header skincolored">Перевозки <b>КАМАЗом</b>  ${city.name}  <small>до 10 тонн, объем до 60 куб.</small>
+                <h2 class="section_header skincolored">Перевозки <b>КАМАЗом</b>  ${keyword}  <small>до 10 тонн, объем до 60 куб.</small>
                 </h2>
                 <p class="txt-c price">от 20 до 25 <span>руб./км.</span></p>
                 <p><strong>КАМАЗы</strong> ценятся за высокую степень надежности и проходимости, которые давно являются лидерами на рынке междугородних грузоперевозок по России.
@@ -66,7 +66,7 @@
     <div class="service_teaser right">
         <div class="row">
             <div class="service_details col-sm-8 col-md-8">
-                <h2 class="section_header skincolored">Перевозки <b>фурой</b>  ${city.name}  <small>до 20 тонн, объем до 120 куб. длиной до 15 м.</small>
+                <h2 class="section_header skincolored">Перевозки <b>фурой</b>  ${keyword}  <small>до 20 тонн, объем до 120 куб. длиной до 15 м.</small>
                 </h2>
                 <p class="txt-c price">от 25 до 30 <span>руб./км.</span></p>
                 <p>Грузоперевозка <strong>фурами</strong> является очень удобным вариантом для перемещения габаритных и тяжеловесных объектов. Это транспортное средство предоставляет большие возможности для доставки строительных материалов и оборудования.

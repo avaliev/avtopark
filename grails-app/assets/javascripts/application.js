@@ -75,19 +75,28 @@ function initHandlers() {
         route=$("#route_id").val();
         clientType=$("input:radio[name='client_type']:checked").val();
 
+        if (userName==null || userName=='' ) {
+            window.alert("Вы не указали Ваше имя !");
+            return;
+        }
+        if (userPhone==null || userPhone=='' ){
+            window.alert("Вы не указали телефон !")
+            return;
+        }
 
-        if ( userName==null || userName=='' || userPhone==null || userPhone=='' )  {
-            // show error
-            $('#send-alert-err').show();
-            $('#send-alert-suc').hide();
-        } else {
+        //if ( userName==null || userName=='' || userPhone==null || userPhone=='' )  {
+        //    // show error
+        //    $('#send-alert-err').show();
+        //    $('#send-alert-suc').hide();
+        //} else {
             // submit ajax
+        $(this).attr('disabled','disabled');
             $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:comment, clientType:clientType},
                 function(data){
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();
             });
-        }
+        //}
     });
 
 
@@ -110,6 +119,14 @@ function initHandlers() {
         var userPhone=$('.calc-form .user-phone').val();
         var msg='Заявка с калькулятора';
 
+        if (userName==null || userName=='') {
+            window.alert("Вы не указали Ваше имя !");
+            return;
+        }
+        if (userPhone==null || userPhone=='' ){
+            window.alert("Вы не указали телефон !")
+            return;
+        }
         if (typeof g1!='undefined') {
             var city1=g1.options[g1.selectedIndex].text;
             msg=msg+' Город отправки:'+city1;
@@ -121,6 +138,13 @@ function initHandlers() {
             var city=$("#city_id").val();
             var route=$("#route_id").val();
         }
+
+        if (typeof tr!='undefined'){
+            var tran=tr.options[tr.selectedIndex].text;
+            msg=msg+'; Транспорт: ' + tran;
+        }
+
+        $(this).attr('disabled','disabled');
         $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:msg},
             function(data){
                 window.alert("Заявка отправлена! \r\n Спасибо!");
