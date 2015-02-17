@@ -34,7 +34,7 @@
 </head>
 
 <body>
-<div class="container-fluid">
+<div class="container">
     <header>
         <g:if test="${city!=null}">
             <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"  />
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <div class="container-fluid">
+        <div class="container">
 
             <div class="navbar navbar-default" role="navigation" style="margin: 15px">
                 <div class="navbar-header">
@@ -88,15 +88,16 @@
                     <ul class="nav navbar-nav" style="margin: auto">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/menu/request">Оставить заявку</a></li>
-                        <li><a href="/menu/services">Услуги</a></li>
-                        <li><a href="/menu/prices">Тарифы</a></li>
+                        <li><a href="/menu/services">Тарифы</a></li>
                         <li><a href="/menu/about">О компании</a></li>
                         <li><a href="/menu/contacts">Контакты</a></li>
                         <li><a href="/menu/docs">Документы</a></li>
-                        <li style="left: 10%;top: 10px;"> <button type="button" style="height: 40px" class="btn btn-warning car-btn">Бесплатная консультация логиста</button></li>
+                        <li style="left: 80f px;"> <button type="button" style="height: 50px" class="button_cons car-btn">Бесплатная консультация логиста</button></li>
                     </ul>
-
+                    %{--<button type="button" style="height: 50px; float: right" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
                 </div>
+
+
             </div>
         </div>
 

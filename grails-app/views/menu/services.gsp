@@ -39,7 +39,8 @@
                     <div class="service_details col-sm-8 col-md-8">
                         <h2 class="section_header skincolored">Перевозки <b>газелью</b> <small>до 2 тонн, объем до 18 куб. длиной до 4 м.</small>
                         </h2>
-                        <p class="txt-c price">от 12 до 15 <span>руб./км.</span></p>
+                        <p class="txt-c price"> от 12 до 15 <span>руб./км.</span> (межгород)</p>
+                        <p class="txt-c price">от 350 руб./час до 450 руб./час - по городу</p>
 
                         <p><strong>Газель</strong> - этот автомобиль является довольно выгодным перевозчиком <strong>грузов до 2 тонн</strong>.
                         Заказывая газель для перевозки, вы экономите, но в то же время получаете полноценную рабочую лошадку.
@@ -56,10 +57,12 @@
                 <div class="row">
 
 
-                    <div class="service_details col-sm-8 col-md-8 animated slideInLeft">
+                    <div class="service_details col-sm-8 col-md-8">
                         <h2 class="section_header skincolored">Перевозки <b>«Бычком»</b> (ЗИЛ) <small>до 5 тонн, объем до 40 куб. длиной до 6 м.</small>
                         </h2>
-                        <p class="txt-c price">от 15 до 20 <span>руб./км.</span></p>
+                        <p class="txt-c price">от 15 до 20 <span>руб./км.</span> (межгород)</p>
+                        <p class="txt-c price">от 450 руб./час до 650 руб./час - по городу</p>
+
                         <p><strong>ЗИЛ "Бычок"</strong> надежная машина для средних <strong>грузов общей массой до 5 тонн.</strong>
                             Бычок относится к самым востребованным и популярным грузовым автомобилям. Он отличается своими компактными размерами и высокой мощностью.
                             В автопарке компании имеются комфортабельные и маневренные грузовики Бычок. Главная сфера их применения – это перевозка различных грузов средней тоннажности.
@@ -74,7 +77,7 @@
                         <a class="btn btn-primary pull-right" href="/menu/request">Заказать "Бычок"</a>
                     </div>
 
-                    <div class="service_photo col-sm-4 col-md-4 wow animated slideInRight">
+                    <div class="service_photo col-sm-4 col-md-4">
                         %{--<figure style="background-image:url(images/zil.jpg)"></figure>--}%
                         <img src="/images/zil.jpg">
                     </div>
@@ -91,7 +94,8 @@
                     <div class="service_details col-sm-8 col-md-8">
                         <h2 class="section_header skincolored">Перевозки <b>КАМАЗом</b>  <small>до 10 тонн, объем до 60 куб.</small>
                         </h2>
-                        <p class="txt-c price">от 20 до 25 <span>руб./км.</span></p>
+                        <p class="txt-c price">от 20 до 25 <span>руб./км.</span> (межгород)</p>
+                        <p class="txt-c price"> 650 руб./час до 850 руб./час - по городу</p>
                         <p><strong>КАМАЗы</strong> ценятся за высокую степень надежности и проходимости, которые давно являются лидерами на рынке междугородних грузоперевозок по России.
                         Однако КАМАЗы характеризуются не только высокой проходимостью и выносливостью. Сюда нужно отнести универсальность этих грузовиков, ведь они могут работать, как при жарких климатических условиях, так и в северных широтах.
                             <b>Камаз</b> подойдет для перевозки фанеры, металла, стройматериалов или другого тяжеловесного груза. Хорошая проходимость в труднодоступных местах России.
@@ -106,10 +110,11 @@
 
             <div class="service_teaser right">
                 <div class="row">
-                    <div class="service_details col-sm-8 col-md-8 wow animated slideInLeft">
+                    <div class="service_details col-sm-8 col-md-8t">
                         <h2 class="section_header skincolored">Перевозки <b>фурой</b>  <small>до 20 тонн, объем до 120 куб. длиной до 15 м.</small>
                         </h2>
-                        <p class="txt-c price">от 25 до 30 <span>руб./км.</span></p>
+                        <p class="txt-c price">от 25 до 30 <span>руб./км.</span> (межгород)</p>
+                        <p class="txt-c price">от 850 руб./час до 950 руб./час - по городу</p>
                         <p>Грузоперевозка <strong>фурами</strong> является очень удобным вариантом для перемещения габаритных и тяжеловесных объектов. Это транспортное средство предоставляет большие возможности для доставки строительных материалов и оборудования.
                         У фур есть много преимуществ, куда относятся высокая грузоподъемность, отличная маневренность, удобная погрузка, разные габариты и гарантированная сохранность груза.
                         </p>
@@ -117,7 +122,7 @@
                         <a class="btn btn-primary pull-right" href="/menu/request">Заказать фуру</a>
                     </div>
 
-                    <div class="service_photo col-sm-4 col-md-4 wow animated slideInRight">
+                    <div class="service_photo col-sm-4 col-md-4">
                         <img src="/images/fura.jpg">
                     </div>
                 </div>
