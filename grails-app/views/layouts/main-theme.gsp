@@ -34,7 +34,7 @@
 </head>
 
 <body>
-<div class="container" style="width: 1300px">
+<div class="container">
     <header>
         <g:if test="${city!=null}">
             <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"  />
@@ -78,13 +78,7 @@
         <div class="container">
 
             <div class="navbar navbar-default" role="navigation" style="margin: 15px">
-                <div class="navbar-header">
-                    %{--<a class="navbar-brand" href="/">--}%
-                        %{--<asset:image src="logo.gif"/></a>--}%
-                    <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="nb_left pull-left"> <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span> </a>
-                </div>
-
-                <div class="collapse navbar-collapse">
+                <div>
                     <ul class="nav navbar-nav" style="margin: auto">
                         <li><a href="/">Главная</a></li>
                         <li><a href="/menu/request">Оставить заявку</a></li>
@@ -92,11 +86,11 @@
                         <li><a href="/menu/about">О компании</a></li>
                         <li><a href="/menu/contacts">Контакты</a></li>
                         <li><a href="/menu/docs">Документы</a></li>
-                        <li style="left: 130px;"> <button type="button" style="height: 50px" class="button_cons car-btn">Бесплатная консультация логиста</button></li>
                     </ul>
-                    %{--<button type="button" style="height: 50px; float: right" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
                 </div>
-
+                <div>
+                    <button type="button" style="height: 50px; float: right" class="button_cons car-btn">Бесплатная консультация логиста</button>
+                </div>
 
             </div>
         </div>

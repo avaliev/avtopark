@@ -1,4 +1,6 @@
-
+.container {
+    width: 1300px !important;
+}
 
 .brand {
     font-size: 150%;
