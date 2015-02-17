@@ -18,16 +18,15 @@
     <table  class="table docs" style="margin: auto; cellspacing : 10px">
         <tbody>
 
-
         <tr>
             <td>  <img src="/icons/pdf.png" width="25px" />
-                <a href="/docs/ustav.pdf"> Устав организации</a>
+                <a target="_blank" href="/docs/ustav.pdf"> Устав организации</a>
             </td>
 
         </tr>
         <tr>
             <td>  <img src="/icons/pdf.png" width="25px" />
-                <a href="/docs/ogrn.jpg">ОГРН</a>
+                <a target="_blank" href="/docs/ogrn.jpg">ОГРН</a>
             </td>
 
         </tr>

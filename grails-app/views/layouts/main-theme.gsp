@@ -34,7 +34,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container" style="width: 1300px">
     <header>
         <g:if test="${city!=null}">
             <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"  />
@@ -92,7 +92,7 @@
                         <li><a href="/menu/about">О компании</a></li>
                         <li><a href="/menu/contacts">Контакты</a></li>
                         <li><a href="/menu/docs">Документы</a></li>
-                        <li style="left: 80f px;"> <button type="button" style="height: 50px" class="button_cons car-btn">Бесплатная консультация логиста</button></li>
+                        <li style="left: 130px;"> <button type="button" style="height: 50px" class="button_cons car-btn">Бесплатная консультация логиста</button></li>
                     </ul>
                     %{--<button type="button" style="height: 50px; float: right" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
                 </div>
