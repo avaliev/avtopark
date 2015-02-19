@@ -5,31 +5,31 @@
   Time: 16:52
 --%>
     <div id="quick-form" class="panel panel-primary" style="float: right; width: 100%">
-        <div class="panel-heading" style="font-size: 16px">Оставить заявку на обратный звонок (сейчас)</div>
+        <div class="panel-heading" style="font-size: 16px">Обратный звонок </br> (консультант свяжется с Вами в ближайшее время)</div>
         <div class="panel-body form-group">
             <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" role="form" >
                 <div class="form-group">
                     <label for="user_name">Пожалуйста, представьтесь:</label>
                     <g:textField id="user_name" class="form-control" name="userName" value="" placeholder="Ваше имя" />
                 </div>
-                <div class="form-group" >
-                    <label class="radio-inline">
-                        <input id="client_type" type="radio" name="client_type" value="ooo"> <b> Юр. лицо </b>
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="client_type" value="fiz"> <b>Физ. лицо </b>
-                    </label>
-                </div>
+                %{--<div class="form-group" >--}%
+                    %{--<label class="radio-inline">--}%
+                        %{--<input id="client_type" type="radio" name="client_type" value="ooo"> <b> Юр. лицо </b>--}%
+                    %{--</label>--}%
+                    %{--<label class="radio-inline">--}%
+                        %{--<input type="radio" name="client_type" value="fiz"> <b>Физ. лицо </b>--}%
+                    %{--</label>--}%
+                %{--</div>--}%
                 <div class="form-group">
                     <label for="user_phone">Ваш контактный телефон:</label>
                     <g:textField id="user_phone" class="form-control" name="phone" value="" placeholder="+79XXXXXXXXX"/>
                 </div>
+                %{--<div class="form-group">--}%
+                    %{--<label for="comment">Комментарий:</label>--}%
+                    %{--<g:textField id="comment" class="form-control" name="comment" value="" placeholder="Ваше примечание" />--}%
+                %{--</div>--}%
                 <div class="form-group">
-                    <label for="comment">Комментарий:</label>
-                    <g:textField id="comment" class="form-control" name="comment" value="" placeholder="Ваше примечание" />
-                </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-success" id="send-btn">Отправить</button>
+                    <button style="width: 100%" type="button" class="btn btn-success" id="send-btn">Заказать консультацию &#8594;</button>
                 </div>
 
                 <div id="send-alert-suc" class="alert alert-success form-group" style="display: none">ОК, заявка отправлена!</div>
