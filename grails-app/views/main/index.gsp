@@ -220,6 +220,13 @@
 
         <div class="col-xs-3">
             <g:render template="/shared/quickForm"></g:render>
+
+            <div class="reis">
+               <b>Машин в рейсе: </b>  <span class="label label-info"></span>
+           </div>
+            <div class="vypol">
+                <b>Выполнено заявок за сегодня: </b>  <span class="label label-info"></span>
+            </div>
             <!-- VK Widget -->
             %{--<div style="float: right; width: 100%" id="vk_groups"></div>--}%
         </div>

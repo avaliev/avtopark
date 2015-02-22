@@ -67,6 +67,12 @@ function onChangeTransport(){
 function initHandlers() {
     mapService = new google.maps.DistanceMatrixService();
 
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    $(".reis span").text(getRandomInt(30,40))
+    $(".vypol span").text(getRandomInt(20,30))
+
     jQuery("#send-btn").click(function(){
         userName=$("#user_name").val();
         userPhone=$("#user_phone").val();
