@@ -2,6 +2,10 @@
     width: 1300px !important;
 }
 
+h1.txt-c {
+    font-size: 200%;
+}
+
 .brand {
     font-size: 150%;
     float: left;
