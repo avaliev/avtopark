@@ -44,7 +44,7 @@
                 <p>Телефон офиса в Казани:  <span class="blue">${contacts.tel_kazan}</span></p>
 
                 <div style="margin-top: 5%">
-                    <h4>Штаб-квартира:</h4>
+                    <h4>Главный офис:</h4>
                     <p>${contacts.address}</p>
                     <img src="http://maps.googleapis.com/maps/api/staticmap?center=55.760293, 49.147683&zoom=15&size=700x400&markers=55.760293, 49.147683&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA"/>
                 </div>

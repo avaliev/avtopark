@@ -62,13 +62,11 @@ nav {
 .leftList ul > li > a:hover,
 .leftList ul > li > a:focus {
     text-decoration: underline;
-    background-color: #f0ecb6;
 
 }
 
 .leftList ul > li > a {
-    color: blue;
-    color: #428bca;
+    color: #777777;
     margin-left: 5%;
 }
 
@@ -96,7 +94,6 @@ nav {
 }
 
 .leftList {
-    background-color: #f0ecb6;
     border-radius: 5px 5px 5px 5px;
     padding-bottom: 15px;
     padding-top: 5px;

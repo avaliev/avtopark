@@ -33,15 +33,14 @@ class MenuController {
         render( view: 'services')
     }
 
+    def pereezdy(){
+        render(view: 'pereezdy')
+    }
+
 
     def docs(){
         render(view: 'docs')
     }
-
-    def prices(){
-        render(view: 'prices');
-    }
-
 
     def about(){
 //        def maincontroller=grailsApplication.getArtefact("Controller","MainController");

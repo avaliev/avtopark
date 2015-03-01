@@ -84,7 +84,7 @@
                         <li><a href="/menu/request">Оставить заявку</a></li>
                         <li><a href="/menu/services">Тарифы</a></li>
                         <li><a href="/menu/about">О компании</a></li>
-                        <li><a href="/menu/docs">Документы</a></li>
+                        <li><a href="/menu/pereezdy">Переезды</a></li>
                     </ul>
                 </div>
                 <div>

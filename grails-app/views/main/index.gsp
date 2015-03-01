@@ -18,23 +18,23 @@
     </head>
 
 <body>
-
+   <div class="row">
+       <div class="col-xs-12"> <img  src="/images/collage.jpg"></div>
+   </div>
     <div class="row">
         <div class="col-xs-2" style="margin-top:5px; padding-right: 0px">
-            <img src="/images/zil2.jpg">
             <div class="leftList">
-                <h4 class="txt-c">Грузоперевозки по городам</h4>
                 <g:render template="/shared/leftList" model="[list: cities]"></g:render>
             </div>
 
         </div>
 
         <div class="col-xs-7 center">
-            <div class="row">
-                <div class="col-xs-12 collage">
-                    <img src="/images/collage-row.jpg">
-                </div>
-            </div>
+            %{--<div class="row">--}%
+                %{--<div class="col-xs-12 collage">--}%
+                    %{--<img src="/images/collage-row.jpg">--}%
+                %{--</div>--}%
+            %{--</div>--}%
             <h1 class="center-block txt-c">Грузоперевозки по всей России</h1>
 
             <p class="descr">Мы являемся транспортной компанией которая осуществляет <strong>грузоперевозки по России</strong> по всем направлениям.
@@ -242,7 +242,7 @@
 
         </div>
 
-        <div class="col-xs-3">
+        <div class="col-xs-3" style="margin-top:5px; padding-right: 0px">
             <g:render template="/shared/quickForm"></g:render>
 
             <div class="reis">
@@ -255,5 +255,6 @@
             %{--<div style="float: right; width: 100%" id="vk_groups"></div>--}%
         </div>
     </div>
+
 </body>
 </html>

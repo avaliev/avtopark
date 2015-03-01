@@ -17,16 +17,13 @@
 
 <body>
     <div class="row">
-        %{--<div class="col-xs-2 leftList">--}%
-
-            %{--<h4 class="txt-c">Направления из ${city.gname}</h4>--}%
-            %{--<g:render template="/shared/leftList" model="[list: city.routes]"></g:render>--}%
-        %{--</div>--}%
+        <div class="col-xs-12"> <img  src="/images/collage.jpg"></div>
+    </div>
+    <div class="row">
 
         <div class="col-xs-2" style="margin-top:5px; padding-right: 0px">
-            <img src="/images/zil2.jpg">
             <div class="leftList">
-                <h4 class="txt-c">Направления из ${city.gname}</h4>
+                <b>Направления из ${city.gname}</b>
                 <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
             </div>
         </div>
@@ -35,7 +32,6 @@
         <div class="col-xs-7">
             <div class="row">
                 <div class="col-xs-12 collage">
-                    <img src="/images/collage-row.jpg">
                 </div>
             </div>
             <h3 class="txt-c">Грузоперевозки ${route.name} удобно и эффективно</h3>
@@ -56,7 +52,7 @@
 
             %{--<img src="/images/${city.urlName}.jpg" alt="грузоперевозки из ${city.gname}" style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">--}%
             <div id="#routeId" hidden="hidden">${route.id}</div>
-            <p class="descr">Вы хотите заказать грузоперевозки по маршруту ${route.name}? Предлагаем ознакомиться с нашими тарифами и особенностями нашей компании: <br/>
+            <p class="descr">Вы хотите заказать грузоперевозки по маршруту <b>${route.name}? </b> Предлагаем ознакомиться с нашими тарифами и особенностями нашей компании: <br/>
                 Любые перевозки из ${route.departureCity.gname}
                 в ${route.destinationCity.name}  – это целый комплекс требуемых операций,
                 который должны составить основу подготовки к перевозке, правильный выбор
@@ -93,7 +89,7 @@
 
         <div class="col-xs-3">
             <g:render template="/shared/quickForm"></g:render>
-            %{--<div style="float: right; width: 100%" id="vk_groups"></div>--}%
+            <div style="float: right; width: 100%" id="vk_groups"></div>
         </div>
     </div>
 </body>

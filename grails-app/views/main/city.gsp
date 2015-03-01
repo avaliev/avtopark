@@ -18,44 +18,24 @@
 </head>
 
 <body>
+        <div class="row">
+            <div class="col-xs-12"> <img  src="/images/collage.jpg"></div>
+        </div>
     <div class="row">
 
-        %{--<div class=" col-xs-2  leftList">--}%
-            %{--<h4 class="txt-c">Направления из ${city.gname}</h4>--}%
-            %{--<g:render template="/shared/leftList" model="[list: city.routes]"></g:render>--}%
-        %{--</div>--}%
 
         <div class="col-xs-2" style="margin-top:5px; padding-right: 0px">
-            <img src="/images/zil2.jpg">
             <div class="leftList">
-                <h4 class="txt-c">Грузоперевозки по городам</h4>
+                %{--<h4 class="txt-c">Грузоперевозки по городам</h4>--}%
                 <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
             </div>
         </div>
 
 
         <div class=" col-xs-7">
-            <div class="row">
-                <div class="col-xs-12 collage">
-                    <img src="/images/collage-row.jpg">
-                </div>
-            </div>
+
             <h1 class="txt-c">Грузоперевозки из ${city.gname} по России</h1>
             <h4 class="txt-c blue">Перевозки из ${city.gname} по городам Росии догрузом или отдельным транспортом</h4>
-
-            %{--<div class="row">--}%
-                %{--<div class=" 5">  <p style="font-size: 12px ;color : #124072; padding-left: 10px"><b>Сборный груз:</b> <span class="red">900 руб.,</span> доставка груза в течении 24 часов.<br>--}%
-                    %{--<b>Догруз:</b> <span class="red">от 1500 руб.,</span> доставка на следующий день.</p></div>--}%
-                %{--<div class=" 7">--}%
-                    %{--<p style="font-size: 12px; padding-left: 10px; color : #124072"><b>Отдельная машина:</b><br>--}%
-                        %{--- до 2 тонн, объем до 18 куб. Стоимость: от <span class="red">12 руб./км</span> до <span class="red">15 руб./км.</span><br>--}%
-                        %{--- до 5 тонн, объем до 40 куб. Стоимость: от <span class="red">15 руб./км</span> до <span class="red">20 руб./км.</span><br>--}%
-                        %{--- до 10 тонн, объем до 60 куб. Стоимость: от <span class="red">20 руб./км</span> до <span class="red">25 руб./км.</span> </br>--}%
-                        %{--- до 20 тонн, объем до 60 куб. Стоимость: от <span class="red">25 руб./км</span> до <span class="red">30 руб./км.</span></p>--}%
-                %{--</div>--}%
-            %{--</div>--}%
-            %{--<img src="/images/${city.urlName}.jpg" alt="грузоперевозки по России из ${city.gname}"--}%
-                 %{--style="float: left ; margin-right: 10px; max-height: 200px; max-width: 250px">--}%
 
             <img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA" alt="перевозки ${city.name} газель, бычок" style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
 
@@ -64,7 +44,7 @@
             %{--<p class="descr">${city.descr1}</p>--}%
 
             <p class="descr">
-            Грузоперевозки из ${city.gname}. </br>
+            <b>Грузоперевозки из ${city.gname}.</b></br>
 
             Осуществление доставки грузов в срок является непременным условием
             нормального развития торговых отношений, что напрямую влияет на рост экономики и
@@ -150,7 +130,7 @@
 
         <div class=" col-xs-3">
             <g:render template="/shared/quickForm"></g:render>
-            %{--<div style="float: right; width: 100%" id="vk_groups"></div>--}%
+            <div style="float: right; width: 100%" id="vk_groups"></div>
         </div>
 </div>
 </body>
