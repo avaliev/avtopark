@@ -34,7 +34,9 @@ class MenuController {
     }
 
     def pereezdy(){
-        render(view: 'pereezdy')
+        def maincont=applicationContext.getBean("ru.avtopark.MainController")
+
+        render(view: 'pereezdy',  model : [cities: maincont.cities])
     }
 
 
@@ -45,7 +47,7 @@ class MenuController {
     def about(){
 //        def maincontroller=grailsApplication.getArtefact("Controller","MainController");
         def maincont=applicationContext.getBean("ru.avtopark.MainController")
-
+        maincont.loadCities();
         render( view : 'about', model : [cities: maincont.cities]);
     }
 

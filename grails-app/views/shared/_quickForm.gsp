@@ -5,7 +5,7 @@
   Time: 16:52
 --%>
     <div id="quick-form" class="panel panel-primary" style="float: right; width: 100%">
-        <div class="panel-heading" style="font-size: 16px">Обратный звонок </br> (консультант свяжется с Вами в ближайшее время)</div>
+        <div class="panel-heading" style="font-size: 16px"> <b>Заказать обратный звонок</b> </br> (консультант свяжется с Вами в ближайшее время)</div>
         <div class="panel-body form-group">
             <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" role="form" >
                 <div class="form-group">

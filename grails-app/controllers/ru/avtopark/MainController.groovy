@@ -60,13 +60,21 @@ class MainController {
         render(view: 'route', model: [route: route, city: route.departureCity, cities: cities, keyword: route.name])
     }
 
-    def loadCities(){
+    public def loadCities(){
         if (cities==null) {
             cities=City.list();
             cities.collect {
                 it.urlName = 'gorod/' + it.urlName
             }
+
+            cities.sort(new Comparator<City>() {
+                @Override
+                int compare(City o1, City o2) {
+                    return o1.name.compareTo(o2.name);
+                }
+            })
         }
+        return cities;
     }
 
 
