@@ -56,7 +56,7 @@ class MainController {
             urlName == params.get("route")
         };
         Route route = query.find();
-
+        route.departureCity.routes=route.departureCity.routes.sort({r->r.name});
         render(view: 'route', model: [route: route, city: route.departureCity, cities: cities, keyword: route.name])
     }
 

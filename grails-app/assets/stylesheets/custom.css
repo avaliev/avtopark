@@ -1,9 +1,9 @@
 .container {
-    width: 1300px !important;
+    width: 1400px !important;
 }
 
 h1.txt-c {
-    font-size: 200%;
+    font-size: 200% !important;
 }
 
 .brand {

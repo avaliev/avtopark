@@ -183,7 +183,14 @@
     VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
 </script>
 <script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>
+
 <link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">
-<script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js" charset="UTF-8"></script> <script type="text/javascript">var hunter_code="38cfb07d6bcf47514787d20cf2368c5e";</script>
+<script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js"
+        charset="UTF-8"></script> <script type="text/javascript">var hunter_code="38cfb07d6bcf47514787d20cf2368c5e";</script>
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+    (function(){ var widget_id = 'FiV2EOYNa8';
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
 </body>
 </html>
