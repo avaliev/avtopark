@@ -96,7 +96,7 @@
 
     </header>
 
-    <div id="body-content" class="container-fluid>
+    <div id="body-content" class="container-fluid">
         <g:layoutBody/>
     </div>
     <g:render template="/shared/modalWindow"></g:render>
@@ -183,6 +183,7 @@
     VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
 </script>
 <script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>
-
+<link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">
+<script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js" charset="UTF-8"></script> <script type="text/javascript">var hunter_code="38cfb07d6bcf47514787d20cf2368c5e";</script>
 </body>
 </html>
