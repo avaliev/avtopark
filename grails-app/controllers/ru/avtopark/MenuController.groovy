@@ -39,6 +39,14 @@ class MenuController {
         render(view: 'pereezdy',  model : [cities: maincont.cities])
     }
 
+    def pereezd1() {
+        render (view: 'pereezd1');
+    }
+
+    def pereezd2() {
+        render(view: 'pereezd2');
+    }
+
 
     def docs(){
         render(view: 'docs')

@@ -96,9 +96,10 @@ function initHandlers() {
         //    $('#send-alert-suc').hide();
         //} else {
             // submit ajax
-        $(this).attr('disabled','disabled');
+        //$(this).attr('disabled','disabled');
             $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:comment, clientType:clientType},
                 function(data){
+                    window.alert("Заявка отправлена!")
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();
             });

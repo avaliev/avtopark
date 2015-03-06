@@ -84,7 +84,14 @@
                         <li><a href="/menu/request">Оставить заявку</a></li>
                         <li><a href="/menu/services">Тарифы</a></li>
                         <li><a href="/menu/about">О компании</a></li>
-                        <li><a href="/menu/pereezdy">Переезды</a></li>
+                        <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
+                                                              href="#">Переезды<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/menu/pereezd1">Домашний переезд</a></li>
+                                <li><a href="/menu/pereezd2">Офисный переезд</a></li>
+                                <li><a href="/menu/pereezdy">Междугородние переезды</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div>
