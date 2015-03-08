@@ -6,6 +6,11 @@ h1.txt-c {
     font-size: 200% !important;
 }
 
+.preflist td {
+    font-size: 120%;
+    font-family: Helvetica;
+}
+
 .brand {
     font-size: 150%;
     float: left;

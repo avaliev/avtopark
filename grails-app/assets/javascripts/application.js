@@ -109,8 +109,16 @@ function initHandlers() {
 
     $('.car-btn').click(function(){
         $('#modal-form').modal();
+        window.alert(this.attr("href"));
         $('.modal-title').text($(this).text());
         carTypeComment=$(this).text();
+    });
+
+    $('.zakaz-btn').click(function(){
+
+        $('#modal-form').modal();
+
+        carTypeComment="Переезд: " + $('#pereezdt').text() + "; Машина:" + $(this).attr("car");
     });
 
     $('#modal-form-button').click(function(){

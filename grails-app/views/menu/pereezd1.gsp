@@ -19,25 +19,46 @@
     <h1 class="txt-c">Перевозка домашних вещей</h1>
 
 
-    <h3 class="txt-c">Быстро и надежно перевезем ваши вещи любой город России и СНГ</h3>
+    <h3 class="txt-c">Быстро и надежно перевезем ваши в любой город России и СНГ</h3>
 
     <div class="row">
-
-        <div class="col-xs-2"> </div>
+        <div style="display: none" id="pereezdt">домашний</div>
+        %{--<div class="col-xs-2"> </div>--}%
         <div class="col-xs-4">
             <img src="/images/kvart_pereezd.jpg" alt="переезд квартирный по России " height="300">
         </div>
-        <div class="col-xs-5"/>
+        <div class="col-xs-4"/>
         <br/>
-            <ul>
-                <h4>Наши преимущества</h4>
-                <li>Невысокая цена</li>
-                <li>Высокая скорость грузоперевозок</li>
-                <li>Гарантия сохранности грузов при транспортировке</li>
-                <li>Возможность выбора наиболее подходящего вида транспорта</li>
-            </ul>
+
+        <h3>Наши преимущества</h3>
+        <table class="preflist">
+            <colgroup>
+                <col  style="width: 10%;">
+                <col  style="width: 90%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td>&#10004;</td>
+                <td>Невысокая цена</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Высокая скорость грузоперевозок</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Гарантия сохранности грузов при транспортировке</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Возможность выбора наиболее подходящего вида транспорта</td>
+            </tr>
+            </tbody>
+        </table>
         </div>
-        <div class="col-xs-1"> </div>
+        <div class="col-xs-4">
+            <img src="/images/dom-pereezd.jpg" alt="переезд квартирный по России " height="300">
+        </div>
 
     </div>
 <br/> <br/> <br/>
@@ -55,17 +76,17 @@
             </div>
     </div>
     <div class="row">
-        <section class="portfolio_teasers_wrapper">
+        <section class="portfolio_teasers_wrapper" id="zakaz">
             <h2 class="fancy section_header">Наш автопарк</h2>
             <div class="portfolio_strict row">
                 <div class="col-sm-4 col-md-4">
-                    <div class="portfolio_item"> <a href="/menu/request" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                    <div class="portfolio_item"> <a href="#zakaz" class="zakaz-btn" car="газель" data-path-hover="M 180,190 0,158 0,0 180,0 z">
                         <figure style="background-image:url(/images/newgazel.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
                             <figcaption>
-                                <p>Газель характеризуется большой маневренностью и хорошо подходит для городских перевозок</p>
+                                <p>Газель характеризуется большой маневренностью и хорошо подходит для городских перевозок. Недорогая машина грузоподъемностью 2 тонны </p>
                                 <div class="view_button">Заказать</div>
                             </figcaption>
                         </figure>
@@ -76,14 +97,14 @@
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4">
-                    <div class="portfolio_item"> <a href="/menu/request" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                    <div class="portfolio_item"> <a href="#zakaz" car="бычок" class="zakaz-btn" data-path-hover="M 180,190 0,158 0,0 180,0 z">
                         <figure style="background-image:url(/images/zil2.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
                             <figcaption>
-                                <p>ЗИЛ явялется оптимальным перевозчиком любых видов перевозок. Грузоподъемность до 5 тонн.</p>
-                                <div class="view_button">Заказать</div>
+                                <p>ЗИЛ явялется оптимальным перевозчиком любых видов перевозок. Грузоподъемность до 5 тонн. </p>
+                                <div class="view_button car-btn">Заказать</div>
                             </figcaption>
                         </figure>
                     </a>
@@ -93,13 +114,13 @@
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4">
-                    <div class="portfolio_item"> <a href="/menu/request" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                        <figure style="background-image:url(/images/fura2.jpg)">
+                    <div class="portfolio_item"> <a href="#zakaz" class="zakaz-btn" car="фура" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                        <figure style="background-image:url(/images/fura3.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
                             <figcaption>
-                                <p>Грузоперевозка фурами является очень удобным вариантом для перемещения габаритных и тяжеловесных объектов</p>
+                                <p>Грузоперевозка фурами является очень удобным вариантом для перемещения габаритных и тяжеловесных объектов. ( до 20 тонн)</p>
                                 <div class="view_button">Заказать</div>
                             </figcaption>
                         </figure>
@@ -113,7 +134,7 @@
         </section>
     </div>
     <div class="row">
-        <div class="service_details col-xs-8">
+        <div class="service_details col-xs-6">
             <h2 class="section_header skincolored">Домашние переезды
             </h2>
             <p class="descr">
@@ -127,6 +148,9 @@
             Вы можете позвонить нам еще на этапе планирования переезда чтобы узнать все моменты, нюансы и конечно же цены.
             Мы представим грузчиков, самую оптимальную грузомашину, так же обеспечив Вас полезными советами для переезда которые помогут сохранить особо важные вещи или технику.
             </p>
+        </div>
+        <div class="col-xs-6">
+            <g:render template="/shared/calculatornew"></g:render>
         </div>
     </div>
 

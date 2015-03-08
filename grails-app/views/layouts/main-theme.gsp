@@ -156,7 +156,7 @@
         <section class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-5 col-xs-5">Copyright ©2014 all rights reserved</div>
+                    <div class="col-xs-5 col-xs-5"> ©2014-2015 Материалы  сайта защищены законом об авторских правах</div>
                     <div class="col-xs-2 col-xs-2">
                         <g:render template="/shared/yametrika"></g:render>
                         <g:render template="/shared/ganalytics"></g:render>
