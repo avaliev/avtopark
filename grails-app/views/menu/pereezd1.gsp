@@ -24,19 +24,21 @@
     <div class="row">
         <div style="display: none" id="pereezdt">домашний</div>
         %{--<div class="col-xs-2"> </div>--}%
-        <div class="col-xs-4">
+        <div class="col-xs-3">
             <img src="/images/kvart_pereezd.jpg" alt="переезд квартирный по России " height="300">
         </div>
-        <div class="col-xs-4"/>
-        <br/>
+        <div class="col-xs-5"/>
 
-        <h3>Наши преимущества</h3>
         <table class="preflist">
             <colgroup>
                 <col  style="width: 10%;">
                 <col  style="width: 90%;">
             </colgroup>
             <tbody>
+            <tr>
+                <td></td>
+                <td> <h3>Наши преимущества</h3></td>
+            </tr>
             <tr>
                 <td>&#10004;</td>
                 <td>Невысокая цена</td>
@@ -52,6 +54,10 @@
             <tr>
                 <td>&#10004;</td>
                 <td>Возможность выбора наиболее подходящего вида транспорта</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Система скидок лояльным клиентам</td>
             </tr>
             </tbody>
         </table>
@@ -115,7 +121,7 @@
                 </div>
                 <div class="col-sm-4 col-md-4">
                     <div class="portfolio_item"> <a href="#zakaz" class="zakaz-btn" car="фура" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                        <figure style="background-image:url(/images/fura3.jpg)">
+                        <figure style="background-image:url(/images/fura-2.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
@@ -133,8 +139,20 @@
             </div>
         </section>
     </div>
+<div class="row">
+    <div class="col-xs-6">
+        <h2 class="txt-c">Рассчитайте стоимость перевозки ваших вещей прямо сейчас</h2>
+        <div align="center">
+            <img src="/images/big_arrow.png">
+        </div>
+
+    </div>
+    <div class="col-xs-6">
+        <g:render template="/shared/calculatornew"></g:render>
+    </div>
+</div>
     <div class="row">
-        <div class="service_details col-xs-6">
+        <div class="service_details col-xs-12">
             <h2 class="section_header skincolored">Домашние переезды
             </h2>
             <p class="descr">
@@ -148,9 +166,6 @@
             Вы можете позвонить нам еще на этапе планирования переезда чтобы узнать все моменты, нюансы и конечно же цены.
             Мы представим грузчиков, самую оптимальную грузомашину, так же обеспечив Вас полезными советами для переезда которые помогут сохранить особо важные вещи или технику.
             </p>
-        </div>
-        <div class="col-xs-6">
-            <g:render template="/shared/calculatornew"></g:render>
         </div>
     </div>
 

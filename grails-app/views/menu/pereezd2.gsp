@@ -28,15 +28,16 @@
         <img src="/images/office.jpg" alt="переезд квартирный по России " height="300"></div>
 
     <div class="col-xs-4">
-    <br/>
-
-    <h3>Наши преимущества</h3>
     <table class="preflist">
         <colgroup>
             <col style="width: 10%;">
             <col style="width: 90%;">
         </colgroup>
         <tbody>
+        <tr>
+            <td></td>
+            <td> <h3>Наши преимущества</h3></td>
+        </tr>
         <tr>
             <td>&#10004;</td>
             <td>Невысокая цена</td>
@@ -52,6 +53,10 @@
         <tr>
             <td>&#10004;</td>
             <td>Возможность выбора наиболее подходящего вида транспорта</td>
+        </tr>
+        <tr>
+            <td>&#10004;</td>
+            <td>Система скидок лояльным клиентам</td>
         </tr>
         </tbody>
     </table>
@@ -152,9 +157,21 @@
         </div>
     </section>
 </div>
+<div class="row">
+    <div class="col-xs-6">
+        <h2 class="txt-c">Рассчитайте стоимость перевозки ваших вещей прямо сейчас</h2>
+        <div align="center">
+            <img src="/images/big_arrow.png">
+        </div>
+
+    </div>
+    <div class="col-xs-6">
+        <g:render template="/shared/calculatornew"></g:render>
+    </div>
+</div>
 
 <div class="row">
-    <div class="service_details col-xs-6">
+    <div class="service_details col-xs-12">
         <h2 class="section_header skincolored">Офисные переезды
 
         </h2>
@@ -183,9 +200,7 @@
         </p>
     </div>
 
-    <div class="col-xs-6">
-        <g:render template="/shared/calculatornew"></g:render>
-    </div>
+
 </div>
 </body>
 </html>

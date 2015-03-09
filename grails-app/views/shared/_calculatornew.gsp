@@ -1,5 +1,5 @@
 <div class="panel calculator" id="calculator">
-    <h3 class="txt-c" style="height: 20%">Расчет стоимости для отправки отдельным транспортом</h3>
+    <h3 class="txt-c" style="height: 20%">Калькулятор</h3>
     <div class="panel-body form-group" >
         <div class="form-group">
             <label>Город отправки:</label>
