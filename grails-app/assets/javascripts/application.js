@@ -108,7 +108,6 @@ function initHandlers() {
 
     $('.car-btn').click(function(){
         $('#modal-form').modal();
-        window.alert(this.attr("href"));
         $('.modal-title').text($(this).text());
         carTypeComment=$(this).text();
     });

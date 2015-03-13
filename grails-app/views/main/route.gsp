@@ -17,11 +17,11 @@
 
 <body>
     <div class="row">
-        <div class="col-xs-12"> <img  src="/images/collage.jpg"></div>
+        <div id="collage-row" class="col-xs-12"> <img  src="/images/collage.jpg"></div>
     </div>
     <div class="row">
 
-        <div class="col-xs-2" style="margin-top:5px; padding-right: 0px">
+        <div id="leftList"  class="col-xs-2" style="margin-top:5px; padding-right: 0px">
             <div class="leftList">
                 <b>Направления из ${city.gname}</b>
                 <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>

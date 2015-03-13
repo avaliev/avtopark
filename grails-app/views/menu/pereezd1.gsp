@@ -24,10 +24,10 @@
     <div class="row">
         <div style="display: none" id="pereezdt">домашний</div>
         %{--<div class="col-xs-2"> </div>--}%
-        <div class="col-xs-3">
-            <img src="/images/kvart_pereezd.jpg" alt="переезд квартирный по России " height="300">
+        <div class="col-xs-4">
+            <img src="/images/kvart_pereezd.jpg" alt="переезд квартирный по России "  height="300" width="400">
         </div>
-        <div class="col-xs-5"/>
+        <div class="col-xs-4"/>
 
         <table class="preflist">
             <colgroup>
@@ -141,9 +141,9 @@
     </div>
 <div class="row">
     <div class="col-xs-6">
-        <h2 class="txt-c">Рассчитайте стоимость перевозки ваших вещей прямо сейчас</h2>
+        <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
         <div align="center">
-            <img src="/images/big_arrow.png">
+            <img style="margin-left: 18%" src="/images/big_arrow.png">
         </div>
 
     </div>

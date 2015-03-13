@@ -3,6 +3,10 @@
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+
+<!--[if IE 8 ]>
+ <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js" xmlns="http://www.w3.org/1999/html"><!--<![endif]-->
 <head>
@@ -27,7 +31,6 @@
     <link rel="stylesheet" href="${request.contextPath}/restart_v3/fonts/font-awesome/css/font-awesome.min.css"
           media="screen">
     <script type="text/javascript" src="${request.contextPath}/restart_v3/js/modernizr.custom.48287.js"></script>
-
     <script>
         $(document).ready(initHandlers);
     </script>
@@ -78,7 +81,8 @@
             <div class="navbar navbar-default" role="navigation" style="margin: 15px">
                 %{--<div class="navbar-header"> <button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button> </div>--}%
                 <div class="navbar-header">
-                <button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button>
+                %{--<button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
+                <button class="btn btn-success btn-lg car-btn">Бесплатная консультация логиста</button>
                     <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="nb_left pull-left">
                         <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span> </a></div>
@@ -108,7 +112,7 @@
 
     </header>
 
-    <div id="body-content" class="container-fluid">
+    <div>
         <g:layoutBody/>
     </div>
     <g:render template="/shared/modalWindow"></g:render>
@@ -185,8 +189,11 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/wow.min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/snap.svg-min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
-<script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>
-
+%{--<script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>--}%
+%{--<script type="text/javascript" src="${request.contextPath}/respond.min.js"></script>--}%
+<!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
 <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>

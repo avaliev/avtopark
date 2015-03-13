@@ -28,7 +28,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 nav,
 section,
@@ -760,6 +759,17 @@ pre code {
   .container {
     width: 1170px;
   }
+}
+@media (min-width: 1300px) {
+    .container {
+        width: 1270px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1370px;
+    }
 }
 .container-fluid {
   margin-right: auto;
@@ -7015,7 +7025,6 @@ ul.portfolio_filters li .active a:hover {
   line-height: 22px;
 }
 .portfolio_masonry .portfolio_item a .overlay i {
-  background: url(images/backgrounds/wild_oliva__light.png);
   border-radius: 50%;
   padding: 10px;
   line-height: 33px;
@@ -7057,7 +7066,6 @@ ul.portfolio_filters li .active a:hover {
   position: relative;
   left: 3px;
   top: 5px;
-  background: url(images/portfolio/rating_stars.png);
 }
 .rating.r0 {
   background-position: 0 240px;
@@ -7454,7 +7462,7 @@ li.media a.media-date span {
   display: block;
   width: 60px;
   height: 60px;
-  border: solid 0px #33333;
+  border: solid 0px #333333;
   overflow: hidden;
   border-radius: 6px;
 }

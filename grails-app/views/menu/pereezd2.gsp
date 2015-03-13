@@ -159,9 +159,9 @@
 </div>
 <div class="row">
     <div class="col-xs-6">
-        <h2 class="txt-c">Рассчитайте стоимость перевозки ваших вещей прямо сейчас</h2>
+        <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
         <div align="center">
-            <img src="/images/big_arrow.png">
+            <img style="margin-left: 18%" src="/images/big_arrow.png">
         </div>
 
     </div>
