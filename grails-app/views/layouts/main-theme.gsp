@@ -56,7 +56,7 @@
                         автомобильным транспортом
                     </div>
 
-                    <div class="col-xs-2 russia-label">
+                    <div class="col-xs-2 russia-label" style="top: -10px">
                             <asset:image src="russia-label.png"/>
                     </div>
 
@@ -88,6 +88,7 @@
                         <li><a href="/menu/request">Оставить заявку</a></li>
                         <li><a href="/menu/services">Тарифы</a></li>
                         <li><a href="/menu/about">О компании</a></li>
+                        <li><a href="/menu/docs">Документы</a></li>
                         <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
                                                               href="#">Переезды<span class="caret"></span></a>
                             <ul class="dropdown-menu">
