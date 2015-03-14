@@ -39,12 +39,12 @@ class MenuController {
 
     def pereezd1() {
         def maincont=applicationContext.getBean("ru.avtopark.MainController")
-        render (view: 'pereezd1',  model : [cities: maincont.cities]);
+        render (view: 'pereezd1',  model : [cities: maincont.loadCities()]);
     }
 
     def pereezd2() {
         def maincont=applicationContext.getBean("ru.avtopark.MainController")
-        render(view: 'pereezd2',  model : [cities: maincont.cities]);
+        render(view: 'pereezd2',  model : [cities: maincont.loadCities()]);
     }
 
 

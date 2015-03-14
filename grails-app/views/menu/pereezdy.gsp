@@ -18,7 +18,7 @@
 <body>
 <div class="jumbotron">
     <h1 class="txt-c">Междугородние переезды автомобильным транспортом</h1>
-
+    <p style="display: none" id="page-name">междугородние переезды</p>
 
     <div class="row">
         <div class="col-xs-9">

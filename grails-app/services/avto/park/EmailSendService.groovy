@@ -16,7 +16,7 @@ class EmailSendService {
 
     MailService mailService;
 
-    def sendEmail(Intent intent,Boolean isMainForm,City city,Route route){
+    def sendEmail(Intent intent,Boolean isMainForm){
 
         def forEmail=Settings.findByParam_key("email");
         StringBuffer buffer=new StringBuffer("");
@@ -24,16 +24,7 @@ class EmailSendService {
             buffer.append("Отправлена форма заявки на перевозку. \r\n")
         } else {
             buffer.append("Отправлена заявка на обратный звонок. \r\n")
-
-            if (route!=null) {
-                buffer.append("Cо страницы маршрута "+ route.name).append("\r\n");
-            } else
-            if (city!=null) {
-                buffer.append("Cо страницы города "+ city.name).append("\r\n");
-            }
         }
-
-
 
         buffer.append("Имя клиента: ").append(intent.userName).append("\r\n")
         buffer.append("Номер телефона: ").append(intent.phone).append("\r\n")
@@ -43,7 +34,9 @@ class EmailSendService {
             buffer.append("Тип клиента: ").append(type).append("\r\n")
         }
 
-
+        if (intent.page!=null){
+            buffer.append("Страница: ").append(intent.page).append("\r\n")
+        }
 
         if (intent.email!=null) {
             buffer.append("Email: ").append(intent.email).append("\r\n")
@@ -83,14 +76,9 @@ class EmailSendService {
     def String createIntent(Map params){
 
         String city_id=params.get("city_id");
-        String route_id=params.get("route_id")
+
         City city=null;
-        Route route=null;
 
-
-        if (route_id!=null) {
-            route=Route.findById(Integer.parseInt(route_id))
-        } else
         if (city_id!=null) {
             city=City.findById(Integer.parseInt(city_id));
         }
@@ -104,7 +92,7 @@ class EmailSendService {
         }
 
         Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),
-                phone: params.get('phone'), city: city, clientType : params.get("clientType"), comment: params.get("comment"));
+                phone: params.get('phone'), city: city, clientType : params.get("clientType"), comment: params.get("comment") , page: params.get("pageType"));
 
         if (params.get("isMainForm")) {
             intent.setDeparture(params.get("departure"))
@@ -115,6 +103,6 @@ class EmailSendService {
         }
         intent.save();
 
-        sendEmail(intent,Boolean.parseBoolean(params.get("isMainForm")),city,route)
+        sendEmail(intent,Boolean.parseBoolean(params.get("isMainForm")))
     }
 }

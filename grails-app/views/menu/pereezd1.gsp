@@ -22,7 +22,7 @@
     <h3 class="txt-c">Быстро и надежно перевезем ваши в любой город России и СНГ</h3>
 
     <div class="row">
-        <div style="display: none" id="pereezdt">домашний</div>
+        <p style="display: none" id="page-name">домашний переезд</p>
         %{--<div class="col-xs-2"> </div>--}%
         <div class="col-xs-4">
             <img src="/images/kvart_pereezd.jpg" alt="переезд квартирный по России "  height="300" width="400">
@@ -87,7 +87,7 @@
             <div class="portfolio_strict row">
                 <div class="col-sm-4 col-md-4">
                     <div class="portfolio_item"> <a href="#zakaz" class="zakaz-btn" car="газель" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                        <figure style="background-image:url(/images/newgazel.jpg)">
+                        <figure style="background-image:url(/images/newgazel.jpg);  background-size: 100px 100px;">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>

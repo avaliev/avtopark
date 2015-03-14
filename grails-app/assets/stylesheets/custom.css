@@ -308,7 +308,7 @@ section.header {
     background-image: -o-linear-gradient(top, #4ba614, #008c00);
     background-image: linear-gradient(to bottom, #4ba614, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .button_cons:hover{

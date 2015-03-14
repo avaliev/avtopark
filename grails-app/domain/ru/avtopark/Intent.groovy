@@ -13,6 +13,7 @@ class Intent {
     String volume;
     String comment;
     String clientType;
+    String page;
     // from which city page was sent intent
     City city;
 
@@ -25,5 +26,6 @@ class Intent {
         email nullable: true;
         volume nullable: true
         clientType nullable: true;
+        page nullable: true;
     }
 }
