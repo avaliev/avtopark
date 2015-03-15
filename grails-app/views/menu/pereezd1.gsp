@@ -87,7 +87,7 @@
             <div class="portfolio_strict row">
                 <div class="col-sm-4 col-md-4">
                     <div class="portfolio_item"> <a href="#zakaz" class="zakaz-btn" car="газель" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                        <figure style="background-image:url(/images/newgazel.jpg);  background-size: 100px 100px;">
+                        <figure style="background-image:url(/images/newgazel.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
