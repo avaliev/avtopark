@@ -1,6 +1,6 @@
 databaseChangeLog = {
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-1") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-1") {
 		createTable(tableName: "city") {
 			column(autoIncrement: "true", name: "id", type: "bigint") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "cityPK")
@@ -26,7 +26,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-2") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-2") {
 		createTable(tableName: "intent") {
 			column(autoIncrement: "true", name: "id", type: "bigint") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "intentPK")
@@ -58,6 +58,8 @@ databaseChangeLog = {
 				constraints(nullable: "false")
 			}
 
+			column(name: "term", type: "varchar(255)")
+
 			column(name: "user_name", type: "varchar(255)") {
 				constraints(nullable: "false")
 			}
@@ -68,7 +70,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-3") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-3") {
 		createTable(tableName: "route") {
 			column(autoIncrement: "true", name: "id", type: "bigint") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "routePK")
@@ -100,7 +102,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-4") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-4") {
 		createTable(tableName: "settings") {
 			column(autoIncrement: "true", name: "id", type: "bigint") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "settingsPK")
@@ -120,7 +122,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-5") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-5") {
 		createTable(tableName: "transport") {
 			column(autoIncrement: "true", name: "id", type: "bigint") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "transportPK")
@@ -142,39 +144,39 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-9") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-9") {
 		createIndex(indexName: "FK_bbyw97opl7hms8p7rpdqr9iy6", tableName: "intent") {
 			column(name: "city_id")
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-10") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-10") {
 		createIndex(indexName: "FK_95ctvhkyhf9mw155s56e4aior", tableName: "route") {
 			column(name: "departure_city_id")
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-11") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-11") {
 		createIndex(indexName: "FK_puqsojmyhppxovvj9g3q21204", tableName: "route") {
 			column(name: "destination_city_id")
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-12") {
-		createIndex(indexName: "param_key_uniq_1426344212681", tableName: "settings", unique: "true") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-12") {
+		createIndex(indexName: "param_key_uniq_1426519920869", tableName: "settings", unique: "true") {
 			column(name: "param_key")
 		}
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-6") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-6") {
 		addForeignKeyConstraint(baseColumnNames: "city_id", baseTableName: "intent", constraintName: "FK_bbyw97opl7hms8p7rpdqr9iy6", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "city", referencesUniqueColumn: "false")
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-7") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-7") {
 		addForeignKeyConstraint(baseColumnNames: "departure_city_id", baseTableName: "route", constraintName: "FK_95ctvhkyhf9mw155s56e4aior", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "city", referencesUniqueColumn: "false")
 	}
 
-	changeSet(author: "Айрат (generated)", id: "1426344212724-8") {
+	changeSet(author: "Айрат (generated)", id: "1426519920918-8") {
 		addForeignKeyConstraint(baseColumnNames: "destination_city_id", baseTableName: "route", constraintName: "FK_puqsojmyhppxovvj9g3q21204", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "city", referencesUniqueColumn: "false")
 	}
 }

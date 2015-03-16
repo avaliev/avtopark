@@ -7,7 +7,9 @@ class MyFilterFilters {
     def filters = {
         main(controller: 'main', action: '*' , actionExclude : 'intent') {
             before = {
-
+                if (params.get("utm_term")!=null) {
+                    session.setAttribute("utm_term",params.get("utm_term"));
+                }
             }
             after = { Map model ->
                 addContacts(model)
@@ -20,6 +22,9 @@ class MyFilterFilters {
 
         menu(controller: 'menu', action: '*') {
             before = {
+                if (params.get("utm_term")!=null) {
+                    session.setAttribute("utm_term",params.get("utm_term"));
+                }
 
             }
             after = { Map model ->

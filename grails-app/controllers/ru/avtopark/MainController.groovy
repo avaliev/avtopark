@@ -2,6 +2,7 @@ package ru.avtopark
 
 import avto.park.EmailSendService
 import avto.park.FriendlyUrlService
+import avto.park.UserSessionScopedService
 
 import java.util.logging.Level
 import java.util.logging.Logger
@@ -39,7 +40,7 @@ class MainController {
 
         try {
             // send email
-            emailSendService.createIntent(params)
+            emailSendService.createIntent(params,session.getAttribute("utm_term"))
         } catch (Exception e) {
             e.printStackTrace()
             Logger.getLogger("Main").log(Level.SEVERE, e.message)

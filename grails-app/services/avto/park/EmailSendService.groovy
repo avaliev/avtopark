@@ -38,6 +38,10 @@ class EmailSendService {
             buffer.append("Страница: ").append(intent.page).append("\r\n")
         }
 
+        if (intent.term!=null){
+            buffer.append("Пришел с запроса: ").append(intent.term).append("\r\n")
+        }
+
         if (intent.email!=null) {
             buffer.append("Email: ").append(intent.email).append("\r\n")
         }
@@ -73,7 +77,7 @@ class EmailSendService {
     }
 
 
-    def String createIntent(Map params){
+    def String createIntent(Map params,String utm_term){
 
         String city_id=params.get("city_id");
 
@@ -92,7 +96,7 @@ class EmailSendService {
         }
 
         Intent intent=new Intent(userName: params.get('userName'),intentDate: new Date(),
-                phone: params.get('phone'), city: city, clientType : params.get("clientType"), comment: params.get("comment") , page: params.get("pageType"));
+                phone: params.get('phone'), city: city, clientType : params.get("clientType"), comment: params.get("comment"), term: utm_term, page: params.get("pageType"));
 
         if (params.get("isMainForm")) {
             intent.setDeparture(params.get("departure"))
