@@ -196,7 +196,7 @@
 <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>
-%{--
+
 <script type="text/javascript" src="http://vk.com/js/api/openapi.js?115"></script>
 <script type="text/javascript">
     VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
@@ -211,6 +211,6 @@
     (function(){ var widget_id = 'FiV2EOYNa8';
         var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
 <!-- {/literal} END JIVOSITE CODE -->
---}%
+
 </body>
 </html>
