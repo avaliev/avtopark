@@ -113,10 +113,12 @@ function initHandlers() {
         $('#modal-form').modal();
         $('.modal-title').text($(this).text());
         carTypeComment=$(this).text();
+        yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
     });
 
     $('.zakaz-btn').click(function(){
         $('#modal-form').modal();
+        yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
         carTypeComment="Машина:" + $(this).attr("car");
     });
 
@@ -127,6 +129,7 @@ function initHandlers() {
         var route=$("#route_id").val();
         var page=$('#page-name').text();
         $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:carTypeComment,pageType:page});
+        yaCounter28224696.reachGoal('WINDOW_FORM_SUBMIT');
     });
 
     $('#calc-btn').click(function(){
@@ -166,6 +169,7 @@ function initHandlers() {
                 $('#send-btn').removeAttr('disabled');
                 window.alert("Заявка отправлена! \r\n Спасибо!");
             });
+        yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 }
 

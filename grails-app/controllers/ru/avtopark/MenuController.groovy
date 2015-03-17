@@ -8,6 +8,8 @@ class MenuController {
 
     def EmailSendService emailSendService;
 
+    def phone_yandex;
+
     def index() {
         // how to map
         render params*.toString()
@@ -30,19 +32,23 @@ class MenuController {
     }
 
     def services(){
+        replacePhone()
         render( view: 'services')
     }
 
     def pereezdy(){
+        replacePhone()
         render(view: 'pereezdy')
     }
 
     def pereezd1() {
+        replacePhone()
         def maincont=applicationContext.getBean("ru.avtopark.MainController")
         render (view: 'pereezd1',  model : [cities: maincont.loadCities()]);
     }
 
     def pereezd2() {
+        replacePhone()
         def maincont=applicationContext.getBean("ru.avtopark.MainController")
         render(view: 'pereezd2',  model : [cities: maincont.loadCities()]);
     }
@@ -64,6 +70,16 @@ class MenuController {
         def maincont=applicationContext.getBean("ru.avtopark.MainController")
 
         render( view : 'contacts', model : [cities: maincont.cities]);
+    }
+
+
+    public  def replacePhone(){
+        if (phone_yandex==null) {
+            if ("yandex".equals(params.get("utm_source"))){
+                def value=Settings.findByParam_key("phone_yandex");
+                phone_yandex=value.param_value;
+            }
+        }
     }
 
 }

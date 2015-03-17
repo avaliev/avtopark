@@ -64,7 +64,8 @@
 
 
                     <div class="col-xs-4">
-                        <p class="phone-info">   <i style="margin-right: 10px" class="fa fa-phone fa-lg"></i> Горячая линия: <nobr>8-800-700-6798</nobr> <br>
+                        <p class="phone-info">   <i style="margin-right: 10px" class="fa fa-phone fa-lg"></i> Горячая линия: <nobr>
+                        <g:if test="${phoneYa!=null}">${phoneYa}</g:if><g:else>8-800-700-6798</g:else></nobr> <br>
                         <small>Звонок по России бесплатный!</small> <br>
                         <small><i class="fa fa-envelope"></i> ${contacts.email}</small> <br/>
                         </p>
@@ -190,9 +191,6 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
 %{--<script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>--}%
 %{--<script type="text/javascript" src="${request.contextPath}/respond.min.js"></script>--}%
-<!--[if lt IE 9]>
-    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
-<![endif]-->
 <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>
@@ -201,7 +199,7 @@
 <script type="text/javascript">
     VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
 </script>
-<script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>
+%{--<script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>--}%
 
 <link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">
 <script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js"
