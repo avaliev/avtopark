@@ -96,7 +96,7 @@ function initHandlers() {
         //    $('#send-alert-suc').hide();
         //} else {
             // submit ajax
-        //$(this).attr('disabled','disabled');
+
             $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment,pageType:page},
                 function(data){
                     window.alert("Заявка отправлена!")
@@ -105,7 +105,7 @@ function initHandlers() {
                     $('#send-btn').removeAttr('disabled');
 
             });
-        //}
+        yaCounter28224696.reachGoal('RECALL_FORM');
     });
 
 
