@@ -83,10 +83,12 @@ function initHandlers() {
         //clientType=$("input:radio[name='client_type']:checked").val();
         if (userName==null || userName=='' ) {
             window.alert("Вы не указали Ваше имя !");
+            $('#send-btn').removeAttr('disabled');
             return;
         }
         if (userPhone==null || userPhone=='' ){
             window.alert("Вы не указали телефон !")
+            $('#send-btn').removeAttr('disabled');
             return;
         }
 
@@ -139,10 +141,12 @@ function initHandlers() {
         $('#calc-btn').attr('disabled','disabled');
         if (userName==null || userName=='') {
             window.alert("Вы не указали Ваше имя !");
+            $('#calc-btn').removeAttr('disabled');
             return;
         }
         if (userPhone==null || userPhone=='' ){
             window.alert("Вы не указали телефон !")
+            $('#calc-btn').removeAttr('disabled');
             return;
         }
         if (typeof g1!='undefined') {
@@ -166,7 +170,7 @@ function initHandlers() {
         $(this).attr('disabled','disabled');
         $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, pageType:page, comment:msg},
             function(data){
-                $('#send-btn').removeAttr('disabled');
+                $('#calc-btn').removeAttr('disabled');
                 window.alert("Заявка отправлена! \r\n Спасибо!");
             });
         yaCounter28224696.reachGoal('CALC_SUBMIT');

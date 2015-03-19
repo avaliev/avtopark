@@ -1,9 +1,6 @@
 package ru.avtopark
 
 import avto.park.EmailSendService
-import avto.park.FriendlyUrlService
-import avto.park.UserSessionScopedService
-
 import java.util.logging.Level
 import java.util.logging.Logger
 
