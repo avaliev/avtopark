@@ -79,11 +79,11 @@
     <div class="col-xs-3">
         <input style="display: none" id="user_name" class="form-control" name="userName" value="<офисный переезд>"
                type="text"/>
-        <input name="phone" id="user_phone" class="form-control" type="text" placeholder="Ваш номер телефона">
+        <input name="phone" id="user_phone" class="form-control user-phone" type="text" placeholder="Ваш номер телефона">
     </div>
 
     <div class="col-xs-3">
-        <button style="width: 100%" type="button" class="btn btn-success" id="send-btn">Узнать у специалиста</button>
+        <button style="width: 100%" type="button" class="btn btn-danger" id="send-btn">Узнать у специалиста</button>
     </div>
 
     <div class="col-xs-3">

@@ -82,7 +82,7 @@
                 %{--<div class="navbar-header"> <button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button> </div>--}%
                 <div class="navbar-header">
                 %{--<button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
-                <button class="btn btn-success btn-lg car-btn">Бесплатная консультация логиста</button>
+                <button class="btn btn-danger btn-lg car-btn">Бесплатная консультация логиста</button>
                     <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="nb_left pull-left">
                         <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span> </a></div>
@@ -189,6 +189,8 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/wow.min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/snap.svg-min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
+<script type="text/javascript" src="${request.contextPath}/js/jquery.maskedinput.min.js"></script>
+
 %{--<script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>--}%
 %{--<script type="text/javascript" src="${request.contextPath}/respond.min.js"></script>--}%
 <!--[if lt IE 9]>
@@ -197,7 +199,7 @@
 <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>
-%{--
+
 <script type="text/javascript" src="http://vk.com/js/api/openapi.js?115"></script>
 <script type="text/javascript">
     VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
@@ -212,6 +214,6 @@
     (function(){ var widget_id = 'FiV2EOYNa8';
         var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
 <!-- {/literal} END JIVOSITE CODE -->
---}%
+
 </body>
 </html>

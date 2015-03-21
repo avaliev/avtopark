@@ -69,8 +69,12 @@ function initHandlers() {
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    $(".reis span").text(getRandomInt(30,40))
-    $(".vypol span").text(getRandomInt(20,30))
+    $(".reis span").text(getRandomInt(30,40));
+    $(".vypol span").text(getRandomInt(20,30));
+
+    jQuery(function($){
+        $(".user-phone").mask("+7 (999) 999-9999");
+    });
 
     jQuery("#send-btn").click(function(){
         userName=$("#user_name").val();
@@ -85,7 +89,7 @@ function initHandlers() {
             return;
         }
         if (userPhone==null || userPhone=='' ){
-            window.alert("Вы не указали телефон !")
+            window.alert("Вы не указали телефон !");
             return;
         }
 
@@ -98,7 +102,7 @@ function initHandlers() {
         //$(this).attr('disabled','disabled');
             $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:comment, clientType:clientType},
                 function(data){
-                    window.alert("Заявка отправлена!")
+                    window.alert("Заявка отправлена!");
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();
             });
@@ -137,7 +141,7 @@ function initHandlers() {
             return;
         }
         if (userPhone==null || userPhone=='' ){
-            window.alert("Вы не указали телефон !")
+            window.alert("Вы не указали телефон !");
             return;
         }
         if (typeof g1!='undefined') {

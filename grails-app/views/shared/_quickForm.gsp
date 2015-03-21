@@ -22,14 +22,14 @@
                 %{--</div>--}%
                 <div class="form-group">
                     <label for="user_phone">Ваш контактный телефон:</label>
-                    <g:textField id="user_phone" class="form-control" name="phone" value="" placeholder="+79XXXXXXXXX"/>
+                    <g:textField id="user_phone" class="form-control user-phone" type="tel" name="phone" value="" placeholder="Ваш номер телефона"/>
                 </div>
                 %{--<div class="form-group">--}%
                     %{--<label for="comment">Комментарий:</label>--}%
                     %{--<g:textField id="comment" class="form-control" name="comment" value="" placeholder="Ваше примечание" />--}%
                 %{--</div>--}%
                 <div class="form-group">
-                    <button style="width: 100%" type="button" class="btn btn-success" id="send-btn">Заказать консультацию &#8594;</button>
+                    <button style="width: 100%" type="button" class="btn btn-danger" id="send-btn">Заказать консультацию &#8594;</button>
                 </div>
 
                 <div id="send-alert-suc" class="alert alert-success form-group" style="display: none">ОК, заявка отправлена!</div>
