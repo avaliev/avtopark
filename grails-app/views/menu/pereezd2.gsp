@@ -23,7 +23,7 @@
 <h3 class="txt-c">Осуществляем офисные переезды по всей России и СНГ</h3>
 
 <div class="row">
-    <div style="display: none" id="pereezdt">офисный</div>
+    <p style="display: none" id="page-name">офисный переезд</p>
     <div class="col-xs-4">
         <img src="/images/office.jpg" alt="переезд квартирный по России " height="300"></div>
 

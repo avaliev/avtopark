@@ -28,7 +28,7 @@
             </div>
 
         </div>
-
+        <p style="display: none" id="page-name">главная</p>
         <div class="col-xs-7 center">
             %{--<div class="row">--}%
                 %{--<div class="col-xs-12 collage">--}%

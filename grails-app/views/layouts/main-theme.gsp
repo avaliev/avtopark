@@ -3,16 +3,11 @@
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-
-<!--[if IE 8 ]>
- <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-  <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js" xmlns="http://www.w3.org/1999/html"><!--<![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title><g:layoutTitle default="Грузоперевозки по всей России"/></title>
     <g:layoutHead/>
@@ -34,6 +29,10 @@
     <script>
         $(document).ready(initHandlers);
     </script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
@@ -65,7 +64,8 @@
 
 
                     <div class="col-xs-4">
-                        <p class="phone-info">   <i style="margin-right: 10px" class="fa fa-phone fa-lg"></i> Горячая линия: <nobr>8-800-700-6798</nobr> <br>
+                        <p class="phone-info">   <i style="margin-right: 10px" class="fa fa-phone fa-lg"></i> Горячая линия:
+                        <span class="nobr ya-phone">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>8-800-700-6798</g:else> </span>  <br>
                         <small>Звонок по России бесплатный!</small> <br>
                         <small><i class="fa fa-envelope"></i> ${contacts.email}</small> <br/>
                         </p>
@@ -128,7 +128,7 @@
 
                             <p><i class="fa fa-map-marker"></i> ${contacts.address}</p>
 
-                            <p><i class="fa fa-phone"></i> ${contacts.phone}</p>
+                            <p><i class="fa fa-phone"></i> <span class="ya-phone"> ${contacts.phone}</span></p>
 
                             <p><i class="fa fa-print"></i> ${contacts.fax}</p>
 
@@ -193,9 +193,6 @@
 
 %{--<script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>--}%
 %{--<script type="text/javascript" src="${request.contextPath}/respond.min.js"></script>--}%
-<!--[if lt IE 9]>
-    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
-<![endif]-->
 <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>
@@ -204,7 +201,7 @@
 <script type="text/javascript">
     VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
 </script>
-<script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>
+%{--<script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>--}%
 
 <link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">
 <script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js"

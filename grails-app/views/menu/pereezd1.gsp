@@ -22,7 +22,7 @@
     <h3 class="txt-c">Быстро и надежно перевезем ваши в любой город России и СНГ</h3>
 
     <div class="row">
-        <div style="display: none" id="pereezdt">домашний</div>
+        <p style="display: none" id="page-name">домашний переезд</p>
         %{--<div class="col-xs-2"> </div>--}%
         <div class="col-xs-4">
             <img src="/images/kvart_pereezd.jpg" alt="переезд квартирный по России "  height="300" width="400">

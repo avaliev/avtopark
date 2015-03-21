@@ -77,18 +77,22 @@ function initHandlers() {
     });
 
     jQuery("#send-btn").click(function(){
+
+        $('#send-btn').attr('disabled','disabled');
         userName=$("#user_name").val();
         userPhone=$("#user_phone").val();
         comment=$("#comment").val();
         city=$("#city_id").val();
-        route=$("#route_id").val();
-        clientType=$("input:radio[name='client_type']:checked").val();
-
+        page=$('#page-name').text();
+        //clientType=$("input:radio[name='client_type']:checked").val();
         if (userName==null || userName=='' ) {
             window.alert("Вы не указали Ваше имя !");
+            $('#send-btn').removeAttr('disabled');
             return;
         }
         if (userPhone==null || userPhone=='' ){
+            window.alert("Вы не указали телефон !")
+            $('#send-btn').removeAttr('disabled');
             window.alert("Вы не указали телефон !");
             return;
         }
@@ -99,14 +103,16 @@ function initHandlers() {
         //    $('#send-alert-suc').hide();
         //} else {
             // submit ajax
-        //$(this).attr('disabled','disabled');
-            $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:comment, clientType:clientType},
+
+            $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment,pageType:page},
                 function(data){
-                    window.alert("Заявка отправлена!");
+                    window.alert("Заявка отправлена!")
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();
+                    $('#send-btn').removeAttr('disabled');
+
             });
-        //}
+        yaCounter28224696.reachGoal('RECALL_FORM');
     });
 
 
@@ -114,13 +120,13 @@ function initHandlers() {
         $('#modal-form').modal();
         $('.modal-title').text($(this).text());
         carTypeComment=$(this).text();
+        yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
     });
 
     $('.zakaz-btn').click(function(){
-
         $('#modal-form').modal();
-
-        carTypeComment="Переезд: " + $('#pereezdt').text() + "; Машина:" + $(this).attr("car");
+        yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
+        carTypeComment="Машина:" + $(this).attr("car");
     });
 
     $('#modal-form-button').click(function(){
@@ -128,19 +134,24 @@ function initHandlers() {
         var userPhone=$('.modal-body .user-phone').val();
         var city=$("#city_id").val();
         var route=$("#route_id").val();
-        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:carTypeComment});
+        var page=$('#page-name').text();
+        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:carTypeComment,pageType:page});
+        yaCounter28224696.reachGoal('WINDOW_FORM_SUBMIT');
     });
 
     $('#calc-btn').click(function(){
         var userName=$('.calc-form .user-name').val();
         var userPhone=$('.calc-form .user-phone').val();
         var msg='Заявка с калькулятора';
-
+        $('#calc-btn').attr('disabled','disabled');
         if (userName==null || userName=='') {
             window.alert("Вы не указали Ваше имя !");
+            $('#calc-btn').removeAttr('disabled');
             return;
         }
         if (userPhone==null || userPhone=='' ){
+            window.alert("Вы не указали телефон !")
+            $('#calc-btn').removeAttr('disabled');
             window.alert("Вы не указали телефон !");
             return;
         }
@@ -160,12 +171,15 @@ function initHandlers() {
             var tran=tr.options[tr.selectedIndex].text;
             msg=msg+'; Транспорт: ' + tran;
         }
+        var page=$('#page-name').text();
 
         $(this).attr('disabled','disabled');
-        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:msg},
+        $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, pageType:page, comment:msg},
             function(data){
+                $('#calc-btn').removeAttr('disabled');
                 window.alert("Заявка отправлена! \r\n Спасибо!");
             });
+        yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 }
 
