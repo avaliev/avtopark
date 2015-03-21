@@ -4,9 +4,9 @@
   Date: 10.10.14
   Time: 16:52
 --%>
-    <div id="quick-form" class="panel panel-primary" style="float: right; width: 100%">
+    <div id="quick-form" class="panel panel-primary" style="float: right; width: 100% ;">
         <div class="panel-heading" style="font-size: 16px"> <b>Заказать обратный звонок</b> </br> (консультант свяжется с Вами в ближайшее время)</div>
-        <div class="panel-body form-group">
+        <div class="panel-body form-group" style="color:#000000">
             <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" role="form" >
                 <div class="form-group">
                     <label for="user_name">Пожалуйста, представьтесь:</label>

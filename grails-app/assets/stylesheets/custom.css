@@ -269,11 +269,11 @@ section.header {
 }
 
 #quick-form .panel-body {
-    background-color: #428bca;
+    /*background-color: #428bca;*/
     border: none;
 }
 #quick-form {
-    background-color: #428bca;
+    /*background-color: #428bca;*/
     color: #ffffff;
     margin-top: 10px;
 }

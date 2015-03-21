@@ -79,7 +79,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-8">
-                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="submit" class="btn btn-danger">Отправить</button>
             </div>
         </div>
         <input type="text" style="display: none" class="form-control" id="main_form_flag" name="isMainForm" value="true">
