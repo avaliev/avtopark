@@ -91,9 +91,8 @@ function initHandlers() {
             return;
         }
         if (userPhone==null || userPhone=='' ){
-            window.alert("Вы не указали телефон !")
-            $('#send-btn').removeAttr('disabled');
             window.alert("Вы не указали телефон !");
+            $('#send-btn').removeAttr('disabled');
             return;
         }
 
@@ -106,7 +105,7 @@ function initHandlers() {
 
             $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city,comment:comment,pageType:page},
                 function(data){
-                    window.alert("Заявка отправлена!")
+                    window.alert("Заявка отправлена!");
                 $('#send-alert-suc').show();
                 $('#send-alert-err').hide();
                     $('#send-btn').removeAttr('disabled');
@@ -150,9 +149,8 @@ function initHandlers() {
             return;
         }
         if (userPhone==null || userPhone=='' ){
-            window.alert("Вы не указали телефон !")
-            $('#calc-btn').removeAttr('disabled');
             window.alert("Вы не указали телефон !");
+            $('#calc-btn').removeAttr('disabled');
             return;
         }
         if (typeof g1!='undefined') {
