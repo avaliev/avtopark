@@ -33,7 +33,7 @@
     </div>
     <div class=" col-xs-7">
 
-        <h1 class="txt-c">Грузоперевозки из ${city.gname} по России</h1>
+        <h1 class="txt-c font150">Грузоперевозки из ${city.gname} по России быстро и недорого</h1>
         <h4 class="txt-c blue">Перевозки из ${city.gname} по городам Росии догрузом или отдельным транспортом</h4>
 
         <img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA"

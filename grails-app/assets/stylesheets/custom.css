@@ -301,3 +301,7 @@ section.header {
 .nobr {
     white-space: nowrap;
 }
+
+h1.font150  {
+    font-size: 170% !important;
+}

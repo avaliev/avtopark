@@ -34,7 +34,7 @@
                 <div class="col-xs-12 collage">
                 </div>
             </div>
-            <h3 class="txt-c">Грузоперевозки ${route.name} удобно и эффективно</h3>
+            <h1 class="txt-c font150">Грузоперевозки ${route.name} быстро и недорого</h1>
             <h4 class="txt-c blue">Заказ отдельной машины для перевозок ${route.name}.</h4>
 
             <div class="row">
