@@ -182,7 +182,7 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/wow.min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/snap.svg-min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
-<script type="text/javascript" src="${request.contextPath}/js/jquery.maskedinput.min.js"></script>
+%{--<script type="text/javascript" src="${request.contextPath}/js/jquery.maskedinput.min.js"></script>--}%
 
 %{--<script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>--}%
 %{--<script type="text/javascript" src="${request.contextPath}/respond.min.js"></script>--}%

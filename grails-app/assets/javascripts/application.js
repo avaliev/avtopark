@@ -72,9 +72,20 @@ function initHandlers() {
     $(".reis span").text(getRandomInt(30,40));
     $(".vypol span").text(getRandomInt(20,30));
 
-    jQuery(function($){
-        $(".user-phone").mask("+7 (999) 999-9999");
+    $(".user-phone").attr('placeholder','+7-(XXX)-XXX-XXXX');
+
+    $('.user-phone').bind("enterKey",function(e){
+        jQuery("#send-btn").click();
     });
+
+    $('input').keyup(function(e){
+        if(e.keyCode == 13)
+        {
+            $(this).trigger("enterKey");
+        }
+    });
+
+
 
     jQuery("#send-btn").click(function(){
 
