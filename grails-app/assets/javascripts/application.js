@@ -122,6 +122,14 @@ function initHandlers() {
                     $('#send-btn').removeAttr('disabled');
 
             });
+
+
+
+        $.post("http://brainbattle.ru/amo/gefest/amosend.php",{name:userName,phone:userPhone},
+        function(data){
+            console.log("CRM response: "+data);
+        });
+
         yaCounter28224696.reachGoal('RECALL_FORM');
     });
 
@@ -146,6 +154,11 @@ function initHandlers() {
         var route=$("#route_id").val();
         var page=$('#page-name').text();
         $.post("/main/intent",{userName:userName,phone:userPhone,city_id:city, route_id: route, comment:carTypeComment,pageType:page});
+
+        $.post("http://brainbattle.ru/amo/gefest/amosend.php",{name:userName,phone:userPhone},
+            function(data){
+                console.log("CRM response: "+data);
+            });
         yaCounter28224696.reachGoal('WINDOW_FORM_SUBMIT');
     });
 
@@ -188,6 +201,12 @@ function initHandlers() {
                 $('#calc-btn').removeAttr('disabled');
                 window.alert("Заявка отправлена! \r\n Спасибо!");
             });
+
+        $.post("http://brainbattle.ru/amo/gefest/amosend.php",{name:userName,phone:userPhone},
+            function(data){
+                console.log("CRM response: "+data);
+            });
+
         yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 }
