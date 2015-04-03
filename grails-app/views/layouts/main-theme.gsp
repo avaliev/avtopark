@@ -65,7 +65,7 @@
 
                     <div class="col-xs-4">
                         <p class="phone-info">   <i style="margin-right: 10px" class="fa fa-phone fa-lg"></i> Горячая линия:
-                        <span class="nobr ya-phone">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>8-800-700-6798</g:else> </span>  <br>
+                        <span class="nobr ya-phone">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span>  <br>
                         <small>Звонок по России бесплатный!</small> <br>
                         <small><i class="fa fa-envelope"></i> ${contacts.email}</small> <br/>
                         </p>
