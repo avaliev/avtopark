@@ -10,6 +10,7 @@ class MainController {
 
     def EmailSendService emailSendService;
 
+
     def cities;
 
     def phone_yandex;
@@ -31,7 +32,6 @@ class MainController {
             it.urlName = '../gruzoperevozki/' + it.urlName;
         }
 
-
         city.routes=city.routes.sort ({ r -> r.name});
         render(view: 'city', model: [city: city, cities: cities, seo_content: city.getText(), keyword: city.name , phoneYa : phone_yandex ])
     }
@@ -42,6 +42,8 @@ class MainController {
         try {
             // send email
             emailSendService.createIntent(params,session.getAttribute("utm_term"))
+
+
         } catch (Exception e) {
             e.printStackTrace()
             Logger.getLogger("Main").log(Level.SEVERE, e.message)
