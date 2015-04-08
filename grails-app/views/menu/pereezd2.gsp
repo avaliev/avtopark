@@ -36,7 +36,7 @@
         <tbody>
         <tr>
             <td></td>
-            <td> <h3>Наши преимущества</h3></td>
+            <td> <h3 style="margin-left: 10%">Наши преимущества</h3></td>
         </tr>
         <tr>
             <td>&#10004;</td>
@@ -161,7 +161,7 @@
     <div class="col-xs-6">
         <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
         <div align="center">
-            <img style="margin-left: 18%" src="/images/big_arrow.png">
+            <img style="margin-left: 27%; width: 40%" src="/images/big_arrow.png">
         </div>
 
     </div>

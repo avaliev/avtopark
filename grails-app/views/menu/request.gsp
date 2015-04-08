@@ -17,7 +17,7 @@
 <body>
 <div class="jumbotron">
     <h2 class="text-center">Оформить заявку на расчет стоимости перевозки</h2>
-    <form class="form-horizontal" role="form" action="/menu/intent" method="post">
+    <form class="form-horizontal" id="full_form" role="form" action="/menu/intent" method="post">
         <p class="col-sm-offset-2 col-sm-10">Контактная информация</p>
         <div class="form-group">
             <label for="user_name" class="col-sm-2 control-label">Ваше имя</label>
@@ -27,9 +27,9 @@
         </div>
 
         <div class="form-group">
-            <label for="phone" class="col-sm-2 control-label">Номер телефона</label>
+            <label for="user_phone" class="col-sm-2 control-label">Номер телефона</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="phone" name="phone">
+                <input type="text" class="form-control" id="user_phone" name="phone">
             </div>
         </div>
 
@@ -79,10 +79,10 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-8">
-                <button type="submit" class="btn btn-danger">Отправить</button>
+                <button  id="main_form_btn" type="submit" class="btn btn-danger">Отправить</button>
             </div>
         </div>
-        <input type="text" style="display: none" class="form-control" id="main_form_flag" name="isMainForm" value="true">
+        <input type="text" style="display: none" class="form-control" name="isMainForm" value="true">
     </form>
 </div>
 </body>
