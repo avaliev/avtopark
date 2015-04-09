@@ -123,7 +123,7 @@ function initHandlers() {
     $('.car-btn').click(function () {
         $('#modal-form').modal();
         $('.modal-title').text($(this).text());
-        carTypeComment = $(this).text();
+        carTypeComment = "Машина:" + $(this).attr("car");
         yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
     });
 
@@ -199,7 +199,7 @@ function initHandlers() {
                 name: userName,
                 phone: userPhone,
                 page :  page,
-                special: "Заявка с калькулятора",
+                special: msg,
                 utm_term: keyword
             },
             function (data) {
@@ -262,6 +262,7 @@ function initHandlers() {
     function setYaKeyWord(){
         var url=window.location.search;
         var ind=url.lastIndexOf("utm_term=");
+        keyword="";
         if (ind>0) {
             var keywordStart=ind+"utm_term=".length;
             var ind2=url.indexOf("&",keywordStart);
