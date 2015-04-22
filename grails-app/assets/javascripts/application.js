@@ -272,7 +272,6 @@ function initHandlers() {
             else {
                 keyword=url.substr(keywordStart);
             }
-            window.alert(keyword);
         }
     }
 
