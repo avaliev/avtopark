@@ -88,7 +88,6 @@ function initHandlers() {
 
 
     jQuery("#send-btn").click(function () {
-
         $('#send-btn').attr('disabled', 'disabled');
         userName = $("#user_name").val();
         userPhone = $("#user_phone").val();
@@ -97,9 +96,8 @@ function initHandlers() {
         page = $('#page-name').text();
         //clientType=$("input:radio[name='client_type']:checked").val();
 
-        if (!checkNamePhone(userName, userPhone,'#send-btn'))
+        if (!checkNamePhone(userName, userPhone, '#send-btn'))
             return;
-
 
         $.post("/main/intent", {userName: userName, phone: userPhone, city_id: city, comment: comment, pageType: page},
             function (data) {
@@ -110,28 +108,42 @@ function initHandlers() {
 
             });
 
-        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {name: userName, phone: userPhone, page: page, utm_term: keyword},
+        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
+                name: userName,
+                phone: userPhone,
+                page: page,
+                special: "Обратный звонок",
+                utm_term: keyword
+            },
             function (data) {
-                console.log("success");
-                console.log(data);
+                console.log("success response from CRM");
             }
         );
         yaCounter28224696.reachGoal('RECALL_FORM');
     });
 
 
+    // modal window request
     $('.car-btn').click(function () {
         $('#modal-form').modal();
         $('.modal-title').text($(this).text());
-        carTypeComment = "Машина:" + $(this).attr("car");
+        if (typeof $(this).attr("car") != 'undefined') {
+            carTypeComment = "Машина: " + $(this).attr("car");
+            spec="Кнопка заказа автомобиля";
+        } else {
+            carTypeComment="Бесплатная консультация логиста";
+            spec ="Бесплатная консультация логиста"
+        }
+
         yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
     });
 
     $('.zakaz-btn').click(function () {
         $('#modal-form').modal();
         yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
-        carTypeComment = "Машина:" + $(this).attr("car");
+        carTypeComment = "Машина: " + $(this).attr("car");
     });
+
 
     $('#modal-form-button').click(function () {
         var userName = $('.modal-body .user-name').val();
@@ -146,23 +158,31 @@ function initHandlers() {
             route_id: route,
             comment: carTypeComment,
             pageType: page
-        },function(data){
+        }, function (data) {
             window.alert("Заявка отправлена! \r\n Спасибо!");
         });
-        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {name: userName, phone: userPhone, page: page, utm_term: keyword},
+        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
+                name: userName,
+                phone: userPhone,
+                page: page,
+                special: spec,
+                volume: carTypeComment,
+                utm_term: keyword
+            },
             function (data) {
-                console.log("success");
+                console.log("success response from CRM");
             }
         );
         yaCounter28224696.reachGoal('WINDOW_FORM_SUBMIT');
     });
 
+    // request from calculator
     $('#calc-btn').click(function () {
         var userName = $('.calc-form .user-name').val();
         var userPhone = $('.calc-form .user-phone').val();
         var msg = 'Заявка с калькулятора';
 
-        if (!checkNamePhone(userName, userPhone,'#calc-btn'))
+        if (!checkNamePhone(userName, userPhone, '#calc-btn'))
             return;
 
         if (typeof g1 != 'undefined') {
@@ -198,29 +218,33 @@ function initHandlers() {
         $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
                 name: userName,
                 phone: userPhone,
-                page :  page,
-                special: msg,
+                loading : city1,
+                unloading: city2,
+                volume : tran,
+                page: page,
+                special: "Заявка с калькулятора",
                 utm_term: keyword
             },
             function (data) {
-                console.log("success");
+                console.log("success response from CRM");
             }
         );
         yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 
+    // full request form
     $("#full_form").submit(function (event) {
 
         var userName = $("#user_name").val();
         var userPhone = $("#user_phone").val();
-        var email= $("#email").val();
-        var destination= $("#destination").val();
+        var email = $("#email").val();
+        var destination = $("#destination").val();
         var departure = $("#departure").val();
-        var weight=$("weight").val();
-        var volume=$("#volume").val();
-        var comment= $("#comment").val();
+        var weight = $("weight").val();
+        var volume = $("#volume").val();
+        var comment = $("#comment").val();
 
-        if (!checkNamePhone(userName,userPhone,"#main_form_btn")) {
+        if (!checkNamePhone(userName, userPhone, "#main_form_btn")) {
             event.preventDefault();
             return;
         }
@@ -228,21 +252,21 @@ function initHandlers() {
         $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
                 name: userName,
                 phone: userPhone,
-                email : email,
-                page :  "Форма заявки",
+                email: email,
+                page: "Форма заявки",
                 special: comment,
-                loading : departure,
-                unloading : destination,
-                weight : weight,
-                volume : volume
+                loading: departure,
+                unloading: destination,
+                weight: weight,
+                volume: volume
             },
             function (data) {
-                console.log("success");
+                console.log("success response from CRM");
             }
         )
     });
 
-    function checkNamePhone(userName, userPhone,btnId) {
+    function checkNamePhone(userName, userPhone, btnId) {
         // проверяет имя и телефон, соответ формы и работает с кнопкой
 
         $(btnId).attr('disabled', 'disabled');
@@ -259,18 +283,18 @@ function initHandlers() {
         return true;
     }
 
-    function setYaKeyWord(){
-        var url=window.location.search;
-        var ind=url.lastIndexOf("utm_term=");
-        keyword="";
-        if (ind>0) {
-            var keywordStart=ind+"utm_term=".length;
-            var ind2=url.indexOf("&",keywordStart);
-            if (ind2>0) {
-                keyword=url.substr(keywordStart,ind2-keywordStart);
+    function setYaKeyWord() {
+        var url = window.location.search;
+        var ind = url.lastIndexOf("utm_term=");
+        keyword = "";
+        if (ind > 0) {
+            var keywordStart = ind + "utm_term=".length;
+            var ind2 = url.indexOf("&", keywordStart);
+            if (ind2 > 0) {
+                keyword = url.substr(keywordStart, ind2 - keywordStart);
             }
             else {
-                keyword=url.substr(keywordStart);
+                keyword = url.substr(keywordStart);
             }
         }
     }
