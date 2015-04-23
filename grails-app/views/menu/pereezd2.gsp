@@ -70,12 +70,7 @@
 
 </div>
 <br/> <br/> <br/>
-<div class="row">
-    <div class="col-xs-3"><img src="/images/i5years.png" width="50%"></div>
-    <div class="col-xs-3"><img src="/images/ioffice.png" width="50%"></div>
-    <div class="col-xs-3"><img src="/images/isotrd.png" width="50%"></div>
-    <div class="col-xs-3"><img src="/images/icars.png" width="50%"></div>
-</div>
+
 <div class="row">
     <h3 class="txt-c">Не знаете какой транспорт необходим для вашего груза?</h3>
 
@@ -93,6 +88,13 @@
 
     <div class="col-xs-3">
     </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-3"><img src="/images/i5years.png" width="50%"></div>
+    <div class="col-xs-3"><img src="/images/ioffice.png" width="50%"></div>
+    <div class="col-xs-3"><img src="/images/isotrd.png" width="50%"></div>
+    <div class="col-xs-3"><img src="/images/icars.png" width="50%"></div>
 </div>
 
 <div class="row">
