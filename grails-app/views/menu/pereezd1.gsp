@@ -96,7 +96,7 @@
             <div class="portfolio_strict row">
                 <div class="col-sm-4 col-md-4">
                     <div class="portfolio_item"> <a href="#zakaz" class="zakaz-btn" car="газель" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                        <figure style="background-image:url(/images/newgazel.jpg)">
+                        <figure style="background-image:url(/images/gazel.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-sm-4 col-md-4">
                     <div class="portfolio_item"> <a href="#zakaz" car="бычок" class="zakaz-btn" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                        <figure style="background-image:url(/images/zil2.jpg)">
+                        <figure style="background-image:url(/images/zil.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="col-sm-4 col-md-4">
                     <div class="portfolio_item"> <a href="#zakaz" class="zakaz-btn" car="фура" data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                        <figure style="background-image:url(/images/fura-2.jpg)">
+                        <figure style="background-image:url(/images/fura.jpg)">
                             <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                                 <path d="M 180,0 0,0 0,0 180,0 z"/>
                             </svg>
