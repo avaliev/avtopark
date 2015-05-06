@@ -21,7 +21,7 @@
 <p style="display: none" id="page-name">${city.name}</p>
 
 <div class="row">
-    <div id="collage-row" class="col-xs-12"><img src="/images/Collage1.jpg"></div>
+    <div id="collage-row" class="col-xs-12"><img src="/images/collage6.jpg"></div>
 </div>
 
 <div class="row">
