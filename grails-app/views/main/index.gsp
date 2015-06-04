@@ -252,7 +252,7 @@
                 <b>Выполнено заявок за сегодня: </b>  <span class="label label-info"></span>
             </div>
             <!-- VK Widget -->
-            %{--<div style="float: right; width: 100%" id="vk_groups"></div>--}%
+            <div style="float: right; width: 100% ; margin-top: 30px; margin-right: 10px" id="vk_groups"></div>
         </div>
     </div>
 
