@@ -16,7 +16,7 @@ class EmailSendService {
 
     MailService mailService;
 
-    def sendEmail(Intent intent,Boolean isMainForm){
+    def sendEmail(Intent intent,Boolean isMainForm,Map<String,String> params){
 
         def forEmail=Settings.findByParam_key("email");
         StringBuffer buffer=new StringBuffer("");
@@ -67,6 +67,15 @@ class EmailSendService {
             buffer.append("Объем: ").append(intent.volume).append("\r\n")
         }
 
+        if (params!=null) {
+            for (String key in params.keySet()){
+                String value=params.get(key);
+                buffer.append(key+":").append(value).append("\r\n")
+            }
+        }
+
+
+
         mailService.sendMail {
             async true
             from 'admin@rfperevozki.ru'
@@ -77,7 +86,7 @@ class EmailSendService {
     }
 
 
-    def String createIntent(Map params,String utm_term){
+    def String createIntent(Map params,String utm_term,Map<String,String> sessionParams){
 
         String city_id=params.get("city_id");
 
@@ -107,6 +116,7 @@ class EmailSendService {
         }
         intent.save();
 
-        sendEmail(intent,Boolean.parseBoolean(params.get("isMainForm")))
+
+        sendEmail(intent,Boolean.parseBoolean(params.get("isMainForm")),sessionParams)
     }
 }

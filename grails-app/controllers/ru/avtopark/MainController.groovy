@@ -41,8 +41,7 @@ class MainController {
 
         try {
             // send email
-            emailSendService.createIntent(params,session.getAttribute("utm_term"))
-
+            emailSendService.createIntent(params,session.getAttribute("utm_term"),session.getAttribute("param_map"));
 
         } catch (Exception e) {
             e.printStackTrace()

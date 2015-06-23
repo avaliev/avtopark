@@ -64,10 +64,10 @@
 
 
                     <div class="col-xs-4">
-                        <p class="phone-info">   <i style="margin-right: 10px" class="fa fa-phone fa-lg"></i> Горячая линия:
-                        <span class="nobr ya-phone">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span>  <br>
-                        <small>Звонок по России бесплатный!</small> <br>
-                        <small><i class="fa fa-envelope"></i> ${contacts.email}</small> <br/>
+                        <p class="phone-info">   <i style="margin-right: 10px;" class="fa fa-phone fa-3x"></i>
+                        <span class="nobr ya-phone" style="font-size: 230%; margin-top: -20px">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span>  <br>
+                        %{--<small>Звонок по России бесплатный!</small> <br>--}%
+                        %{--<small><i class="fa fa-envelope"></i> ${contacts.email}</small> <br/>--}%
                         </p>
                         %{--<p style="float: right">Звонок по России бесплатный!</p>--}%
 

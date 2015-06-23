@@ -20,7 +20,7 @@ class MenuController {
 
     def intent() {
         try {
-            emailSendService.createIntent(params,session.getAttribute("utm_term"));
+            emailSendService.createIntent(params,session.getAttribute("utm_term"),session.getAttribute("param_map"));
             render(view: 'request_ok');
         }  catch (IllegalArgumentException e) {
             render(view: 'request_fail', model: [ message: e.message ])
