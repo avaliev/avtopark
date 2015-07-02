@@ -62,16 +62,12 @@
                             <asset:image src="russia-label.png"/>
                     </div>
                     <div class="col-xs-4">
-                        <p class="phone-info">
-                        <small>Звонок по России бесплатный!</small> <br>
+                        <p class="phone-info" style="margin-top: -20px">
+                        <small style="font-size: 15px">Звонок по России бесплатный!</small> <br>
                         <i style="margin-right: 10px;" class="fa fa-phone fa-3x"></i>
-
-                        <span class="nobr ya-phone" style="font-size: 230%; margin-top: -20px">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span>  <br>
-
-                        <small style="color: #369fff"><i class="fa fa-envelope"></i> <a href="mailto:${contacts.email}" target="_top">${contacts.email}</a></small> <br/>
+                        <span class="nobr ya-phone" style="font-size: 230%; margin-top: -20px">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span><br>
+                        <small style="color: #369fff"><i class="fa fa-envelope"></i> <a style="font-size: 15px" href="mailto:${contacts.email}" target="_top">${contacts.email}</a></small> <br/>
                         </p>
-                        %{--<p style="float: right">Звонок по России бесплатный!</p>--}%
-
                     </div>
                 </div>
             </div>
