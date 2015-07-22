@@ -151,6 +151,12 @@ function initHandlers() {
         var city = $("#city_id").val();
         var route = $("#route_id").val();
         var page = $('#page-name').text();
+
+        if (!checkNamePhone(userName, userPhone, "#modal-form-button")) {
+            return;
+        }
+
+
         $.post("/main/intent", {
             userName: userName,
             phone: userPhone,
@@ -235,6 +241,8 @@ function initHandlers() {
     // full request form
     $("#full_form").submit(function (event) {
 
+        event.preventDefault();
+
         var userName = $("#user_name").val();
         var userPhone = $("#user_phone").val();
         var email = $("#email").val();
@@ -262,6 +270,7 @@ function initHandlers() {
             },
             function (data) {
                 console.log("success response from CRM");
+                $("#full_form").submit();
             }
         )
     });
