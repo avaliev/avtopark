@@ -129,10 +129,10 @@ function initHandlers() {
         $('.modal-title').text($(this).text());
         if (typeof $(this).attr("car") != 'undefined') {
             carTypeComment = "Машина: " + $(this).attr("car");
-            spec="Кнопка заказа автомобиля";
+            spec = "Кнопка заказа автомобиля";
         } else {
-            carTypeComment="Бесплатная консультация логиста";
-            spec ="Бесплатная консультация логиста"
+            carTypeComment = "Бесплатная консультация логиста";
+            spec = "Бесплатная консультация логиста"
         }
 
         yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
@@ -224,9 +224,9 @@ function initHandlers() {
         $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
                 name: userName,
                 phone: userPhone,
-                loading : city1,
+                loading: city1,
                 unloading: city2,
-                volume : tran,
+                volume: tran,
                 page: page,
                 special: "Заявка с калькулятора",
                 utm_term: keyword
@@ -238,11 +238,8 @@ function initHandlers() {
         yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 
-    // full request form
-    $("#full_form").submit(function (event) {
 
-        event.preventDefault();
-
+    $("#main_form_btn").click(function(){
         var userName = $("#user_name").val();
         var userPhone = $("#user_phone").val();
         var email = $("#email").val();
@@ -253,11 +250,14 @@ function initHandlers() {
         var comment = $("#comment").val();
 
         if (!checkNamePhone(userName, userPhone, "#main_form_btn")) {
-            event.preventDefault();
-            return;
+            return false;
         }
 
-        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
+        console.log("before request to CRM");
+        $.ajax({
+            method: POST,
+            url: "http://brainbattle.ru/amo/gefest/amosend.php",
+            data: {
                 name: userName,
                 phone: userPhone,
                 email: email,
@@ -267,13 +267,16 @@ function initHandlers() {
                 unloading: destination,
                 weight: weight,
                 volume: volume
-            },
-            function (data) {
-                console.log("success response from CRM");
-                $("#full_form").submit();
             }
-        )
+
+        }).always(function(a,text,b){
+            console.log("callback for request from CRM");
+            console.log(text);
+            $("#full_form").submit();
+        });
+
     });
+
 
     function checkNamePhone(userName, userPhone, btnId) {
         // проверяет имя и телефон, соответ формы и работает с кнопкой
@@ -289,6 +292,7 @@ function initHandlers() {
             $(btnId).removeAttr('disabled');
             return false;
         }
+        $(btnId).removeAttr('disabled');
         return true;
     }
 
