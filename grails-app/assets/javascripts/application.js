@@ -238,6 +238,8 @@ function initHandlers() {
         yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 
+    // флаг для работы с главной формы
+    submitted=false;
 
     $("#full_form").submit(function(event){
 
