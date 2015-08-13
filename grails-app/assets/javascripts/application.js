@@ -239,21 +239,19 @@ function initHandlers() {
     });
 
 
-    $("#main_form_btn").click(function(){
-        var userName = $("#user_name").val();
-        var userPhone = $("#user_phone").val();
-        var email = $("#email").val();
-        var destination = $("#destination").val();
-        var departure = $("#departure").val();
-        var weight = $("weight").val();
-        var volume = $("#volume").val();
-        var comment = $("#comment").val();
+    $("#full_form").submit(function(event){
+
+        $("#main_form_btn").attr("disabled","disabled");
 
         if (!checkNamePhone(userName, userPhone, "#main_form_btn")) {
             return false;
         }
+        if (submitted) {
+            return true;
+        } else {
+            event.preventDefault();
+        }
 
-        console.log("before request to CRM");
         $.ajax({
             method: POST,
             url: "http://brainbattle.ru/amo/gefest/amosend.php",
@@ -272,9 +270,11 @@ function initHandlers() {
         }).always(function(a,text,b){
             console.log("callback for request from CRM");
             console.log(text);
+            submitted=true;
             $("#full_form").submit();
         });
 
+        return false;
     });
 
 
