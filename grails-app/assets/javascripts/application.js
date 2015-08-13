@@ -265,7 +265,7 @@ function initHandlers() {
         }
 
         $.ajax({
-            method: POST,
+            method: 'POST',
             url: "http://brainbattle.ru/amo/gefest/amosend.php",
             data: {
                 name: userName,
