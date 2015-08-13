@@ -243,6 +243,16 @@ function initHandlers() {
 
         $("#main_form_btn").attr("disabled","disabled");
 
+        var userName = $("#user_name").val();
+        var userPhone = $("#user_phone").val();
+        var email = $("#email").val();
+        var destination = $("#destination").val();
+        var departure = $("#departure").val();
+        var weight = $("weight").val();
+        var volume = $("#volume").val();
+        var comment = $("#comment").val();
+
+
         if (!checkNamePhone(userName, userPhone, "#main_form_btn")) {
             return false;
         }
