@@ -2,7 +2,6 @@ package avto.park
 
 import grails.transaction.Transactional
 
-@Transactional
 class FriendlyUrlService {
 
     def serviceMethod() {
