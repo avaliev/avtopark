@@ -1,0 +1,4 @@
+test_job: 
+    script : 
+         - "touch test_file"
+         -  "echo ddd  >>  test_file"
