@@ -1,4 +1,5 @@
-test_job: 
+test_job:
+    stage: build 
     script : 
          - "touch test_file"
          -  "echo ddd  >>  test_file"
