@@ -187,9 +187,12 @@
         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>
 
-<script type="text/javascript" src="http://vk.com/js/api/openapi.js?115"></script>
+<script type="text/javascript" src="http://vk.com/js/api/openapi.js?135"></script>
+%{--<script type="text/javascript">--}%
+    %{--VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);--}%
+%{--</script>--}%
 <script type="text/javascript">
-    VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);
+    VK.Widgets.CommunityMessages("vk_community_messages", 80951489, {shown: "1"});
 </script>
 %{--<script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>--}%
 
