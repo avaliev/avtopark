@@ -95,7 +95,7 @@
             <div class="vypol">
                 <b>Выполнено заявок за сегодня: </b>  <span class="label label-info"></span>
             </div>
-            <div style="float: right; width: 100% ; margin-top: 30px; margin-right: 10px" id="vk_groups"></div>
+            <div style="float: right; width: 100% ; margin-top: 30px; margin-right: 10px" id="vk_community_messages"></div>
         </div>
     </div>
 </body>
