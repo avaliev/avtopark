@@ -64,8 +64,8 @@
                     <div class="col-xs-4">
                         <p class="phone-info" style="margin-top: -20px">
                         %{--<small style="font-size: 15px">Звонок по России бесплатный!</small> <br>--}%
-                        <i style="margin-right: 10px;" class="fa fa-phone fa-3x"></i>
-                        <span class="nobr ya-phone" style="font-size: 230%; margin-top: -20px">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span><br>
+                        <i style="margin-right: 10px; position: relative; top: 10px" class="fa fa-phone fa-3x"></i>
+                        <span class="nobr ya-phone" style="font-size: 200%; margin-top: -20px">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span><br>
                         <small style="color: #369fff"><i class="fa fa-envelope"></i> <a style="font-size: 15px" href="mailto:${contacts.email}" target="_top">${contacts.email}</a></small> <br/>
                         </p>
                     </div>
@@ -79,7 +79,7 @@
                 %{--<div class="navbar-header"> <button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button> </div>--}%
                 <div class="navbar-header">
                 %{--<button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
-                <button class="btn btn-danger btn-lg car-btn">Бесплатная консультация логиста</button>
+                <button class="btn btn-success btn-lg car-btn">Бесплатная консультация логиста</button>
                     <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="nb_left pull-left">
                         <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span> </a></div>
@@ -100,10 +100,6 @@
                         </li>
                     </ul>
                 </div>
-                %{--<div>--}%
-                    %{--<button type="button" style="height: 50px; float: right" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
-                %{--</div>--}%
-
             </div>
         </div>
 
@@ -155,7 +151,7 @@
         <section class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-5 col-xs-5"> ©2014-2015 Материалы  сайта защищены законом об авторских правах</div>
+                    <div class="col-xs-5 col-xs-5"> ©2014-2017 Материалы  сайта защищены законом об авторских правах</div>
                     <div class="col-xs-2 col-xs-2">
                         <g:render template="/shared/yametrika"></g:render>
                         <g:render template="/shared/ganalytics"></g:render>
@@ -166,9 +162,6 @@
     </footer>
 </div>
 
-%{--<script src="http://code.jquery.com/jquery-latest.min.js"></script>--}%
-%{--<script>window.jQuery || document.write('<script src="${request.contextPath}/restart_v3/js/jquery-1.9.0.min.js"><\/script>')</script>--}%
-%{--<script src="${request.contextPath}/restart_v3/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>--}%
 <script src="${request.contextPath}/restart_v3/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="${request.contextPath}/restart_v3/js/woothemes-FlexSlider-06b12f8/jquery.flexslider-min.js"></script>
 <script src="${request.contextPath}/restart_v3/js/prettyPhoto_3.1.5/jquery.prettyPhoto.js" type="text/javascript"
@@ -179,22 +172,11 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/wow.min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/snap.svg-min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
-%{--<script type="text/javascript" src="${request.contextPath}/js/jquery.maskedinput.min.js"></script>--}%
-
-%{--<script type="text/javascript" src="${request.contextPath}/restart_v3/js/collapser.js"></script>--}%
-%{--<script type="text/javascript" src="${request.contextPath}/respond.min.js"></script>--}%
 <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
 </script>
 
 <script type="text/javascript" src="http://vk.com/js/api/openapi.js?135"></script>
-%{--<script type="text/javascript">--}%
-    %{--VK.Widgets.Group("vk_groups", {mode: 0, width: "250", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 80951489);--}%
-%{--</script>--}%
-<script type="text/javascript">
-    VK.Widgets.CommunityMessages("vk_community_messages", 80951489, {shown: "1"});
-</script>
-%{--<script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>--}%
 
 <link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">
 <script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js"

@@ -12,16 +12,16 @@
     <meta name="layout" content="main-theme"/>
     <title>Грузоперевозки из ${city.gname} по России. Быстро  и недорого. Все виды транспорта.</title>
     <meta name="description"
-          content="Грузоперевозки из ${city.gname} по городам России. Догруз, сборный груз, офисные и квартирные переезды. Автопарк газелей, камазов, фур. Узнать стоимость перевозки 8-800-700-6798">
-    <meta name="keywords"
-          content="грузоперевозки из ${city.gname}, перевозки, доставка грузов, догруз, сборный груз, стоимость перевозки">
+          content="
+          Догруз, сборный груз, офисные и квартирные переезды.
+          Автопарк газелей, камазов, фур. Узнать стоимость перевозки ${contacts.phone}">
 </head>
 
 <body>
 <p style="display: none" id="page-name">${city.name}</p>
 
 <div class="row">
-    <div id="collage-row" class="col-xs-12"><img src="/images/collage6.jpg"></div>
+    <div id="collage-row" class="col-xs-12"><img src="/images/collage.jpg"></div>
 </div>
 
 <div class="row">

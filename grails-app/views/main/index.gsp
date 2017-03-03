@@ -12,9 +12,9 @@
 <head>
     <meta name="layout" content="main-theme"/>
     <title>Грузоперевозки по России</title>
-    <meta name="keywords" content="грузоперевозки по России автомобильным транспортом">
     <meta name="description"
-          content="Грузоперевозки по России - быстро и недорого. Грузоперевозки по России отдельным транспортом, догрузом, перевозка сборных грузов.">
+          content="Грузоперевозки по России - быстро и недорого. Узнать стоимость - ${contacts.phone}
+          Грузоперевозки по России отдельным транспортом, догрузом, перевозка сборных грузов.">
     </head>
 
 <body>
@@ -22,14 +22,14 @@
        <div id="collage-row" class="col-xs-12"> <img  src="/images/collage6.jpg"></div>
    </div>
     <div class="row">
-        <div id="leftList" class="col-xs-2" style="margin-top:5px; padding-right: 0px">
-            <div class="leftList">
-                <g:render template="/shared/leftList" model="[list: cities]"></g:render>
-            </div>
+        %{--<div id="leftList" class="col-sm-2" style="margin-top:5px; padding-right: 0px">--}%
+            %{--<div class="leftList">--}%
+                %{--<g:render template="/shared/leftList" model="[list: cities]"></g:render>--}%
+            %{--</div>--}%
 
-        </div>
+        %{--</div>--}%
         <p style="display: none" id="page-name">главная</p>
-        <div class="col-xs-7 center">
+        <div class="col-xs-9 center">
             %{--<div class="row">--}%
                 %{--<div class="col-xs-12 collage">--}%
                     %{--<img src="/images/collage-row.jpg">--}%
@@ -253,6 +253,11 @@
             </div>
             <!-- VK Widget -->
             <div style="float: right; width: 100% ; margin-top: 30px; margin-right: 10px" id="vk_community_messages"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="leftList">
+            <g:render template="/shared/leftList" model="[list: cities]"></g:render>
         </div>
     </div>
 

@@ -121,6 +121,7 @@ nav {
     padding-bottom: 15px;
     padding-top: 5px;
     margin-top: 10px;
+    display: inline;
 }
 
 .jumbotron .service_teasers p {
@@ -308,4 +309,8 @@ section.header {
 
 h1.font150  {
     font-size: 170% !important;
+}
+
+.btn-danger {
+    background-color: #297013 !important;
 }
