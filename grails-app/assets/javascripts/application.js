@@ -190,19 +190,10 @@ function initHandlers() {
 
         if (!checkNamePhone(userName, userPhone, '#calc-btn'))
             return;
+        var city1 = $("#autocomplete1").val();
+        var city2 = $("#autocomplete2").val();
 
-        if (typeof g1 != 'undefined') {
-            var city1 = g1.options[g1.selectedIndex].text;
-            msg = msg + ' Город отправки:' + city1;
-            if (typeof g2 != 'undefined') {
-                var city2 = g2.options[g2.selectedIndex].text;
-                msg = msg + ' Город доставки:' + city2;
-            }
-        } else {
-            var city = $("#city_id").val();
-            var route = $("#route_id").val();
-        }
-
+        tr = document.getElementById("ktr");
         if (typeof tr != 'undefined') {
             var tran = tr.options[tr.selectedIndex].text;
             msg = msg + '; Транспорт: ' + tran;
@@ -212,8 +203,8 @@ function initHandlers() {
         $.post("/main/intent", {
                 userName: userName,
                 phone: userPhone,
-                city_id: city,
-                route_id: route,
+                departure: city1,
+                destination: city2,
                 pageType: page,
                 comment: msg
             },
@@ -239,11 +230,11 @@ function initHandlers() {
     });
 
     // флаг для работы с главной формы
-    submitted=false;
+    submitted = false;
 
-    $("#full_form").submit(function(event){
+    $("#full_form").submit(function (event) {
 
-        $("#main_form_btn").attr("disabled","disabled");
+        $("#main_form_btn").attr("disabled", "disabled");
 
         var userName = $("#user_name").val();
         var userPhone = $("#user_phone").val();
@@ -279,10 +270,10 @@ function initHandlers() {
                 volume: volume
             }
 
-        }).always(function(a,text,b){
+        }).always(function (a, text, b) {
             console.log("callback for request from CRM");
             console.log(text);
-            submitted=true;
+            submitted = true;
             $("#full_form").submit();
         });
 

@@ -44,42 +44,39 @@
         <g:if test="${route != null}">
             <g:textField id="route_id" style="display:none" name="route_id" value="${route.id}"/>
         </g:if>
-        <section class="header">
-            <div class="header" style="height: auto">
-                <div class="row">
-                    <div class="col-sm-2 logotip">
-                        <a class="" href="/">
-                            <asset:image src="logo.gif"/></a>
-                    </div>
+        <section class="header" style="height: auto">
+            <div class="row">
+                <div class="col-sm-2 logotip" style="display: block">
+                    <a class="" href="/" style="display: block">
+                        <asset:image src="logo.gif"/></a>
+                </div>
 
-                    <div class="col-sm-2">
-                        <p class="logist-btn car-btn">Бесплатная консультация логиста</p>
-
-                    </div>
-
-                    <div class="col-sm-3">
-                        <p class="phone-info" style="">
-                            <i style="margin-right: 10px; position: relative; top: 10px" class="fa fa-phone fa-2x"></i>
-                            <span class="nobr ya-phone" style="font-size: 170%; margin-top: -20px"><g:if
-                                    test="${phoneYa != null}">${phoneYa}</g:if><g:else>${contacts.phone}</g:else></span><br>
-                            <small style="color: #369fff"><i class="fa fa-envelope"></i>
-                                <a style="font-size: 15px" href="mailto:${contacts.email}"
-                                   target="_top">${contacts.email}</a>
-                            </small> <br/>
-                        </p>
-                    </div>
-
-                    <div class="col-sm-3 header-text">
-                        Грузоперевозки по России </br>
-                        автомобильным транспортом
-                    </div>
-
-                    <div class="col-sm-2 russia-label" style="top: -10px">
-                        <asset:image src="russia-label.png"/>
-                    </div>
-
+                <div class="col-sm-2">
+                    <p class="logist-btn car-btn">Бесплатная консультация логиста</p>
 
                 </div>
+
+                <div class="col-sm-3">
+                    <p class="phone-info" style="">
+                        <i style="margin-right: 10px; position: relative; top: 10px" class="fa fa-phone fa-2x"></i>
+                        <span class="nobr ya-phone" style="font-size: 170%; margin-top: -20px"><g:if
+                                test="${phoneYa != null}">${phoneYa}</g:if><g:else>${contacts.phone}</g:else></span><br>
+                        <small style="color: #369fff"><i class="fa fa-envelope"></i>
+                            <a style="font-size: 15px" href="mailto:${contacts.email}"
+                               target="_top">${contacts.email}</a>
+                        </small> <br/>
+                    </p>
+                </div>
+
+                <div class="col-sm-3 header-text">
+                    Грузоперевозки по России </br>
+                    автомобильным транспортом
+                </div>
+
+                <div class="col-sm-2 russia-label" style="top: -10px">
+                    <asset:image src="russia-label.png"/>
+                </div>
+
             </div>
         </section>
 
@@ -126,59 +123,54 @@
     </div>
     <g:render template="/shared/modalWindow"></g:render>
 
-    <footer>
-        <section id="footer_teasers_wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="footer_teaser col-xs-4 col-xs-4">
-                        <h4>Транспортная компания "Авто-парк"</h4>
-                        <g:if test="${contacts != null}">
-                            <p>${contacts.about}</p>
+    <footer style="padding: 10px;">
+        <div class="row">
+            <div class="footer_teaser col-sm-4">
+                <h4>Транспортная компания "Авто-парк"</h4>
+                <g:if test="${contacts != null}">
+                    <p>${contacts.about}</p>
 
-                            <p><i class="fa fa-map-marker"></i> ${contacts.address}</p>
+                    <p><i class="fa fa-map-marker"></i> ${contacts.address}</p>
 
-                            <p><i class="fa fa-phone"></i> <span class="ya-phone">${contacts.phone}</span></p>
+                    <p><i class="fa fa-phone"></i> <span class="ya-phone">${contacts.phone}</span></p>
 
-                            <p><i class="fa fa-print"></i> ${contacts.fax}</p>
+                    <p><i class="fa fa-print"></i> ${contacts.fax}</p>
 
-                            <p><i class="fa fa-envelope"></i> ${contacts.email}</p>
-                        </g:if>
-                    </div>
-
-                    <div class="footer_teaser col-xs-4 col-xs-4">
-                        <p>&nbsp;</p>
-
-                        <p>Телефон офиса в Москве:</p>
-
-                        <p><i class="fa fa-phone"></i> ${contacts.tel_moscow}</p>
-
-                        <p>Телефон офиса в Санкт-Петербурге:</p>
-
-                        <p><i class="fa fa-phone"></i> ${contacts.tel_spb}</p>
-                    </div>
-
-                    <div class="footer_teaser col-xs-4 col-xs-4">
-                        <p>&nbsp;</p>
-                        <h5>Принимаем к оплате:</h5>
-
-                        <p><img width="50%" src="/images/epay1.png"></p>
-
-                    </div>
-                </div>
+                    <p><i class="fa fa-envelope"></i> ${contacts.email}</p>
+                </g:if>
             </div>
-        </section>
-        <section class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-5 col-xs-5">©2014-2017 Материалы  сайта защищены законом об авторских правах</div>
 
-                    <g:if env="production">
-                        <div class="col-xs-2 col-xs-2">
-                            <g:render template="/shared/yametrika"></g:render>
-                            <g:render template="/shared/ganalytics"></g:render>
-                        </div>
-                    </g:if>
-                </div>
+            <div class="footer_teaser col-sm-4">
+                <p>&nbsp;</p>
+
+                <p>Телефон офиса в Москве:</p>
+
+                <p><i class="fa fa-phone"></i> ${contacts.tel_moscow}</p>
+
+                <p>Телефон офиса в Санкт-Петербурге:</p>
+
+                <p><i class="fa fa-phone"></i> ${contacts.tel_spb}</p>
+            </div>
+
+            <div class="footer_teaser col-sm-4">
+                <p>&nbsp;</p>
+                <h5>Принимаем к оплате:</h5>
+
+                <p><img width="50%" src="/images/epay1.png"></p>
+
+            </div>
+        </div>
+    </section>
+        <section class="copyright">
+            <div class="row">
+                <div class="col-sm-5">©2014-2017 Материалы  сайта защищены законом об авторских правах</div>
+
+                <g:if env="production">
+                    <div class="col-xs-2 col-xs-2">
+                        <g:render template="/shared/yametrika"></g:render>
+                        <g:render template="/shared/ganalytics"></g:render>
+                    </div>
+                </g:if>
             </div>
         </section>
     </footer>
