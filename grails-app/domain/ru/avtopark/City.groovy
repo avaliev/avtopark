@@ -12,35 +12,26 @@ class City {
     String name;
     String urlName;
     String gname;
-    String descr;
-    String descr1;
 
     static hasMany = [routes: Route];
     static mappedBy = [routes: "departureCity"]
 
     static constraints = {
         gname nullable: true
-        descr nullable: true
-        descr1 nullable: true
     }
 
-    static mapping = {
-        descr type: 'text'
-        descr1 type: 'text'
-    }
+    public static void initData() {
 
-    public static void initData(){
-
-        File dir=new File("./web-app/goroda");
+        File dir = new File("./web-app/goroda");
         if (dir.exists() && dir.isDirectory()) {
-            File[] files=dir.listFiles();
-            for (File file:files){
+            File[] files = dir.listFiles();
+            for (File file : files) {
                 try {
-                    FileReader reader=new FileReader(file.getPath());
+                    FileReader reader = new FileReader(file.getPath());
                     BufferedReader br = new BufferedReader(reader);
-                    City city=new City();
-                    int ind=file.getName().indexOf('.');
-                    city.setUrlName(file.getName().substring(0,ind));
+                    City city = new City();
+                    int ind = file.getName().indexOf('.');
+                    city.setUrlName(file.getName().substring(0, ind));
                     city.setName(br.readLine());
                     city.setGenitiveName(br.readLine());
 //                    city.setDescr(br.readLine());
@@ -53,7 +44,7 @@ class City {
                 } catch (IOException e) {
                     e.printStackTrace();
                     Logger.getLogger(City.class).error(e);
-                } catch (Exception e){
+                } catch (Exception e) {
                     Logger.getLogger(City.class).error(e)
                 }
 
@@ -64,11 +55,11 @@ class City {
 
     public String getText() {
 
-        Path file=FileSystems.getDefault().getPath("web-app","text","goroda",id.toString(),"text.txt")
+        Path file = FileSystems.getDefault().getPath("web-app", "text", "goroda", id.toString(), "text.txt")
 
         if (Files.exists(file)) {
-            byte[] bytes=Files.readAllBytes(file);
-            String str=new String(bytes);
+            byte[] bytes = Files.readAllBytes(file);
+            String str = new String(bytes);
             return str;
         }
         return null;

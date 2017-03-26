@@ -52,7 +52,7 @@
             <div class="form-group">
                 <g:textField class="form-control user-phone" name="userPhone" value="" placeholder="Контактный телефон" />
             </div>
-            <button type="button" id="calc-btn" class="btn btn-danger">Уточнить стоимость</button>
+            <button type="button" id="calc-btn" class="btn btn-success">Уточнить стоимость</button>
         </div>
     </div>
 </div>

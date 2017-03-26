@@ -16,54 +16,53 @@
 </head>
 
 <body>
-
 <h1 class="txt-c">Перевозки для компаний</h1>
-
 
 <h3 class="txt-c">Осуществляем офисные переезды по всей России и СНГ</h3>
 
 <div class="row">
     <p style="display: none" id="page-name">офисный переезд</p>
+
     <div class="col-xs-4">
         <img src="/images/office.jpg" alt="переезд квартирный по России " height="300"></div>
 
     <div class="col-xs-4">
-    <table class="preflist">
-        <colgroup>
-            <col style="width: 10%;">
-            <col style="width: 90%;">
-        </colgroup>
-        <tbody>
-        <tr>
-            <td></td>
-            <td> <h3 style="margin-left: 10%">Наши преимущества</h3></td>
-        </tr>
-        <tr>
-            <td>&#10004;</td>
-            <td>Невысокая цена</td>
-        </tr>
-        <tr>
-            <td>&#10004;</td>
-            <td>Высокая скорость грузоперевозок</td>
-        </tr>
-        <tr>
-            <td>&#10004;</td>
-            <td>Гарантия сохранности грузов при транспортировке</td>
-        </tr>
-        <tr>
-            <td>&#10004;</td>
-            <td>Возможность выбора наиболее подходящего вида транспорта</td>
-        </tr>
-        <tr>
-            <td>&#10004;</td>
-            <td>Система скидок лояльным клиентам</td>
-        </tr>
-        </tbody>
-    </table>
+        <table class="preflist">
+            <colgroup>
+                <col style="width: 10%;">
+                <col style="width: 90%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td></td>
+                <td><h3 style="margin-left: 10%">Наши преимущества</h3></td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Невысокая цена</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Высокая скорость грузоперевозок</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Гарантия сохранности грузов при транспортировке</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Возможность выбора наиболее подходящего вида транспорта</td>
+            </tr>
+            <tr>
+                <td>&#10004;</td>
+                <td>Система скидок лояльным клиентам</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
-<div class="col-xs-4">
-    <img src="/images/office2.jpg" alt="переезд квартирный по России " height="300"></div>
+    <div class="col-xs-4">
+        <img src="/images/office2.jpg" alt="переезд квартирный по России " height="300"></div>
 </div>
 
 <div class="col-xs-1"></div>
@@ -79,7 +78,8 @@
     <div class="col-xs-3">
         <input style="display: none" id="user_name" class="form-control" name="userName" value="<офисный переезд>"
                type="text"/>
-        <input name="phone" id="user_phone" class="form-control user-phone" type="text" placeholder="Ваш номер телефона">
+        <input name="phone" id="user_phone" class="form-control user-phone" type="text"
+               placeholder="Ваш номер телефона">
     </div>
 
     <div class="col-xs-3">
@@ -90,10 +90,14 @@
     </div>
 </div>
 <br/> <br/> <br/>
+
 <div class="row">
     <div class="col-xs-3"><img src="/images/i5years.png" width="50%"></div>
+
     <div class="col-xs-3"><img src="/images/ioffice.png" width="50%"></div>
+
     <div class="col-xs-3"><img src="/images/isotrd.png" width="50%"></div>
+
     <div class="col-xs-3"><img src="/images/icars.png" width="50%"></div>
 </div>
 
@@ -103,8 +107,9 @@
 
         <div class="portfolio_strict row">
             <div class="col-sm-4 col-md-4">
-                <div class="portfolio_item"><a href="#zakaz" class="zakaz-btn" car="газель"  data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                    <figure style="background-image:url(/images/gazel.jpg)">
+                <div class="portfolio_item"><a href="#zakaz" class="zakaz-btn" car="газель"
+                                               data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                    <figure style="background-image:url(/images/gazel1.jpg)">
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M 180,0 0,0 0,0 180,0 z"/>
                         </svg>
@@ -123,8 +128,9 @@
             </div>
 
             <div class="col-sm-4 col-md-4">
-                <div class="portfolio_item"><a href="#zakaz" class="zakaz-btn" car="бычок"  data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                    <figure style="background-image:url(/images/zil.jpg)">
+                <div class="portfolio_item"><a href="#zakaz" class="zakaz-btn" car="бычок"
+                                               data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                    <figure style="background-image:url(/images/zil1.jpg)">
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M 180,0 0,0 0,0 180,0 z"/>
                         </svg>
@@ -143,8 +149,9 @@
             </div>
 
             <div class="col-sm-4 col-md-4">
-                <div class="portfolio_item"><a href="#zakaz" class="zakaz-btn" car="фура"  data-path-hover="M 180,190 0,158 0,0 180,0 z">
-                    <figure style="background-image:url(/images/fura.jpg)">
+                <div class="portfolio_item"><a href="#zakaz" class="zakaz-btn" car="фура"
+                                               data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                    <figure style="background-image:url(/images/fura1.jpg)">
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M 180,0 0,0 0,0 180,0 z"/>
                         </svg>
@@ -164,16 +171,19 @@
         </div>
     </section>
 </div>
+
 <div class="row">
     <div class="col-xs-6">
         <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
+
         <div align="center">
             <img style="margin-left: 27%; width: 40%" src="/images/big_arrow.png">
         </div>
 
     </div>
+
     <div class="col-xs-6">
-        <g:render template="/shared/calculatornew"></g:render>
+        <g:render template="/shared/freeCityCalc"></g:render>
     </div>
 </div>
 
@@ -182,32 +192,8 @@
         <h2 class="section_header skincolored">Офисные переезды
 
         </h2>
-
-        <p class="descr">
-            Очень часто переезд представляется нам как некий хаос: повсеместно
-            разбросанные мешки с вещами, везде расставленные ящики с документами и
-            папками, разобранная мебель и бегающие туда-сюда работники с перепуганными
-            глазами.</br>
-            Практически на каждого человека предстоящий переезд оказывает негативное
-            влияние, а, зачастую, даже оборачивается депрессией. Да, работа эта отнимает массу
-            сил и времени. Но, одно дело переезжать с квартиры на квартиру, и нечто иное -
-            <b>офисный переезд</b>. </br>
-            При перемене месторасположения офиса основное - это быстро собрать все
-            собрать, перевезти на новое место и в сжатые сроки наладить работу.
-            Да не так легко сделать, как сказать.
-            Готовиться к переезду нужно заблаговременно и всё хорошо спланировать. В
-            идеале устраивать переезд лучше всего в пятницу: так вы убережёте себя от
-            бесконечного потока клиентов. До переезда нужно будет определиться: будете ли вы
-            заказывать услуги компаний, занимающихся организацией переездов.</br>
-            Хорошим помощником при <b>офисном переезде</b> послужит <b>мувинговая компания.</b></br>
-            В услуги таких компаний входит: предоставление рекомендаций по упаковке
-            документов, офисной техники и по обустройству нового офисного помещения, погрузо-
-            разгрузочные работы и непосредственно транспортировка всех вещей с места на
-            место.
-        </p>
+        <g:render template="/shared/pereezdText2"></g:render>
     </div>
-
-
 </div>
 </body>
 </html>

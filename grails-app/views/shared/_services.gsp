@@ -3,7 +3,7 @@
     <div class="service_teaser">
         <div class="row">
             <div class="service_photo col-sm-4 col-md-4">
-                <img src="/images/gazel.jpg">
+                <img src="/images/gazel1.jpg">
             </div>
 
             <div class="service_details col-sm-8 col-md-8">
@@ -17,7 +17,7 @@
                 Представленное авто позволяет перевозить любые грузы массой до 1,5 тонн.
                 Кроме этого Газель характеризуется низким расходом топлива и наличием необходимых автозапчастей, что, в свою очередь, позволяет предоставлять авто по низким ценам.
                 </p>
-                <button class="btn btn-danger pull-right car-btn" car="газель" >Узнать подробнее</button>
+                <button class="btn btn-success pull-right car-btn" car="газель" >Узнать подробнее</button>
             </div>
         </div>
     </div>
@@ -32,10 +32,10 @@
                 Кузов бычка варьируется от 17 до 27 кубов. Другой характерной особенностью представленного авто является его отличная маневренность. Бычок позволяет свободно проезжать и разворачиваться на городских улочках.
                 Несмотря на то, что стоимость бычка обычно превосходит цену за аренду газели, его способность перевозить большее количество грузов значительно выше.
                 </p>
-                <button class="btn btn-danger pull-right car-btn"  car="бычок">Узнать подробнее</button>
+                <button class="btn btn-success pull-right car-btn"  car="бычок">Узнать подробнее</button>
             </div>
             <div class="service_photo col-sm-4 col-md-4">
-                <img src="/images/zil.jpg">
+                <img src="/images/zil1.jpg">
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
     <div class="service_teaser right">
         <div class="row">
             <div class="service_photo col-sm-4 col-md-4">
-                <img src="/images/kamaz.jpg">
+                <img src="/images/kamaz1.jpg">
             </div>
 
             <div class="service_details col-sm-8 col-md-8">
@@ -54,7 +54,7 @@
                 А благодаря различной модификации авто возникает возможность оборудовать выбранный <strong>КАМАЗ</strong> соответствующим образом.
                 Стоит отметить, что для тех, кто выбирает оперативные и качественные перевозки, <strong>КАМАЗ</strong> подходит самым лучшим образом. С его помощью производится транспортировка промышленных грузов, строительных материалов, мебели, аппаратуры и продуктов питания.
                 </p>
-                <button class="btn btn-danger pull-right car-btn"  car="камаз">Узнать подробнее</button>
+                <button class="btn btn-success pull-right car-btn"  car="камаз">Узнать подробнее</button>
             </div>
         </div>
     </div>
@@ -70,11 +70,11 @@
                 На сегодняшний день для офисных и квартирных переездов заказ фуры набирает все большую популярность. Их вместительные полуприцепы позволяют свободно разместить мебель, технику и прочие бытовые и интерьерные предметы.
                 Особо такое удобство перевозок наблюдается при междугородних переездах. Ко всему прочему они отличаются своей экономичностью в плане расхода топлива.
                 </p>
-                <button class="btn btn-danger pull-right car-btn" car="фура">Узнать подробнее</button>
+                <button class="btn btn-success pull-right car-btn" car="фура">Узнать подробнее</button>
             </div>
 
             <div class="service_photo col-sm-4 col-md-4">
-                <img src="/images/fura.jpg">
+                <img src="/images/fura1.jpg">
             </div>
         </div>
     </div>

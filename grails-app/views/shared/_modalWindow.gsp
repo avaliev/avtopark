@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="modal-form-button" data-dismiss="modal" class="btn btn-danger">Отправить</button>
+                    <button type="button" id="modal-form-button" data-dismiss="modal" class="btn btn-success">Отправить</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

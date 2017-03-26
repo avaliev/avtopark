@@ -1,5 +1,5 @@
-    <ul class="nav nav-pills nav-stacked leftList">
+    <div class="leftList">
         <g:each in="${list}" var="obj">
-            <li><a href="${obj.urlName}">${obj.name}</a></li>
+            <a href="/gorod/${obj.urlName}">${obj.name}</a>
         </g:each>
-    </ul>
+    </div>

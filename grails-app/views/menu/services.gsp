@@ -33,7 +33,7 @@
             <div class="service_teaser">
                 <div class="row">
                     <div class="service_photo col-sm-4 col-md-4">
-                        <img src="/images/gazel.jpg">
+                        <img src="/images/gazel1.jpg">
                     </div>
 
                     <div class="service_details col-sm-8 col-md-8">
@@ -78,8 +78,8 @@
                     </div>
 
                     <div class="service_photo col-sm-4 col-md-4">
-                        %{--<figure style="background-image:url(images/zil.jpg)"></figure>--}%
-                        <img src="/images/zil.jpg">
+                        %{--<figure style="background-image:url(images/zil1.jpg)"></figure>--}%
+                        <img src="/images/zil1.jpg">
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
             <div class="service_teaser right">
                 <div class="row">
                     <div class="service_photo col-sm-4 col-md-4">
-                        <img src="/images/kamaz.jpg">
+                        <img src="/images/kamaz1.jpg">
                     </div>
 
                     <div class="service_details col-sm-8 col-md-8">
@@ -123,7 +123,7 @@
                     </div>
 
                     <div class="service_photo col-sm-4 col-md-4">
-                        <img src="/images/fura.jpg">
+                        <img src="/images/fura1.jpg">
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="service_details col-sm-8 col-md-8">
-                        <h2 class="section_header skincolored"><b>Звоните: 8-800-700-6798</b>
+                        <h2 class="section_header skincolored"><b>Звоните: ${contacts.phone}</b>
                         </h2>
 
                         <p>Наши услуги: <strong>Квартирные и офисные переезды по России</strong>, <strong>грузоперевозки газелью</strong>, <strong>грузоперевозки бычком</strong>,

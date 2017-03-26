@@ -183,7 +183,7 @@ function initHandlers() {
     });
 
     // request from calculator
-    $('#calc-btn').click(function () {
+    $('#free-calc-btn').click(function () {
         var userName = $('.calc-form .user-name').val();
         var userPhone = $('.calc-form .user-phone').val();
         var msg = 'Заявка с калькулятора';

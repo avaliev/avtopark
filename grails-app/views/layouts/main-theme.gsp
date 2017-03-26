@@ -7,7 +7,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title><g:layoutTitle default="Грузоперевозки по всей России"/></title>
     <g:layoutHead/>
@@ -33,77 +33,93 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
-<div class="container">
+<div class="container-fluid">
     <header>
-        <g:if test="${city!=null}">
-            <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"  />
+        <g:if test="${city != null}">
+            <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"/>
         </g:if>
-        <g:if test="${route!=null}">
-            <g:textField id="route_id" style="display:none" name="route_id" value="${route.id}"  />
+        <g:if test="${route != null}">
+            <g:textField id="route_id" style="display:none" name="route_id" value="${route.id}"/>
         </g:if>
         <section class="header">
-            <div class="container header" style="height: auto">
+            <div class="header" style="height: auto">
                 <div class="row">
-                    <div class="col-xs-2 logotip" >
+                    <div class="col-sm-2 logotip">
                         <a class="" href="/">
                             <asset:image src="logo.gif"/></a>
                     </div>
 
-                    <div class="col-xs-3 header-text" >
+                    <div class="col-sm-2">
+                        <p class="logist-btn car-btn">Бесплатная консультация логиста</p>
+
+                    </div>
+
+                    <div class="col-sm-3">
+                        <p class="phone-info" style="">
+                            <i style="margin-right: 10px; position: relative; top: 10px" class="fa fa-phone fa-2x"></i>
+                            <span class="nobr ya-phone" style="font-size: 170%; margin-top: -20px"><g:if
+                                    test="${phoneYa != null}">${phoneYa}</g:if><g:else>${contacts.phone}</g:else></span><br>
+                            <small style="color: #369fff"><i class="fa fa-envelope"></i>
+                                <a style="font-size: 15px" href="mailto:${contacts.email}"
+                                   target="_top">${contacts.email}</a>
+                            </small> <br/>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-3 header-text">
                         Грузоперевозки по России </br>
                         автомобильным транспортом
                     </div>
 
-                    <div class="col-xs-2 russia-label" style="top: -10px">
-                            <asset:image src="russia-label.png"/>
+                    <div class="col-sm-2 russia-label" style="top: -10px">
+                        <asset:image src="russia-label.png"/>
                     </div>
-                    <div class="col-xs-4">
-                        <p class="phone-info" style="margin-top: -20px">
-                        %{--<small style="font-size: 15px">Звонок по России бесплатный!</small> <br>--}%
-                        <i style="margin-right: 10px; position: relative; top: 10px" class="fa fa-phone fa-3x"></i>
-                        <span class="nobr ya-phone" style="font-size: 200%; margin-top: -20px">  <g:if test="${phoneYa!=null}"> ${phoneYa}</g:if><g:else>${contacts.phone}</g:else> </span><br>
-                        <small style="color: #369fff"><i class="fa fa-envelope"></i> <a style="font-size: 15px" href="mailto:${contacts.email}" target="_top">${contacts.email}</a></small> <br/>
-                        </p>
-                    </div>
+
+
                 </div>
             </div>
         </section>
 
-        <div class="container">
-
-            <div class="navbar navbar-default" role="navigation" style="margin: 15px">
-                %{--<div class="navbar-header"> <button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button> </div>--}%
-                <div class="navbar-header">
+        <div class="navbar navbar-default" role="navigation" style="margin: 15px">
+            %{--<div class="navbar-header"> <button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button> </div>--}%
+            <div class="navbar-header pull-left">
                 %{--<button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
-                <button class="btn btn-success btn-lg car-btn">Бесплатная консультация логиста</button>
-                    <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="nb_left pull-left">
-                        <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span> </a></div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav pull-right">
-                        <li><a href="/">Главная</a></li>
-                        <li><a href="/menu/request">Оставить заявку</a></li>
-                        <li><a href="/menu/services">Тарифы</a></li>
-                        <li><a href="/menu/about">О компании</a></li>
-                        <li><a href="/menu/docs">Документы</a></li>
-                        <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
-                                                              href="#">Переезды<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/menu/pereezd1">Домашний переезд</a></li>
-                                <li><a href="/menu/pereezd2">Офисный переезд</a></li>
-                                <li><a href="/menu/pereezdy">Междугородние переезды</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse"
+                   data-target=".navbar-collapse">
+                    <span class="nb_left pull-left">
+                        <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span></a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav pull-left">
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/menu/request">Оставить заявку</a></li>
+                    <li><a href="/menu/services">Тарифы</a></li>
+                    <li><a href="/menu/about">О компании</a></li>
+                    <li><a href="/menu/docs">Документы</a></li>
+                    %{--<li><a href="/menu/pereezd1">Домашний переезд</a></li>--}%
+                    %{--<li><a href="/menu/pereezd2">Офисный переезд</a></li>--}%
+                    %{--<li><a href="/menu/pereezdy">Междугородние переезды</a></li>--}%
+                    <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
+                                                          href="#">Переезды<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/menu/pereezd1">Домашний переезд</a></li>
+                            <li><a href="/menu/pereezd2">Офисный переезд</a></li>
+                            <li><a href="/menu/pereezdy">Междугородние переезды</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
 
     </header>
+
+    <div class="row">
+        <div id="collage-row" class="col-sm-12"><img style="width:100%" src="/images/collage.png"></div>
+    </div>
 
     <div>
         <g:layoutBody/>
@@ -121,7 +137,7 @@
 
                             <p><i class="fa fa-map-marker"></i> ${contacts.address}</p>
 
-                            <p><i class="fa fa-phone"></i> <span class="ya-phone"> ${contacts.phone}</span></p>
+                            <p><i class="fa fa-phone"></i> <span class="ya-phone">${contacts.phone}</span></p>
 
                             <p><i class="fa fa-print"></i> ${contacts.fax}</p>
 
@@ -131,8 +147,11 @@
 
                     <div class="footer_teaser col-xs-4 col-xs-4">
                         <p>&nbsp;</p>
+
                         <p>Телефон офиса в Москве:</p>
+
                         <p><i class="fa fa-phone"></i> ${contacts.tel_moscow}</p>
+
                         <p>Телефон офиса в Санкт-Петербурге:</p>
 
                         <p><i class="fa fa-phone"></i> ${contacts.tel_spb}</p>
@@ -141,8 +160,8 @@
                     <div class="footer_teaser col-xs-4 col-xs-4">
                         <p>&nbsp;</p>
                         <h5>Принимаем к оплате:</h5>
-                        <p><img width="50%" src="/images/epay1.png"></p>
 
+                        <p><img width="50%" src="/images/epay1.png"></p>
 
                     </div>
                 </div>
@@ -151,17 +170,21 @@
         <section class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-5 col-xs-5"> ©2014-2017 Материалы  сайта защищены законом об авторских правах</div>
-                    <div class="col-xs-2 col-xs-2">
-                        <g:render template="/shared/yametrika"></g:render>
-                        <g:render template="/shared/ganalytics"></g:render>
-                    </div>
+                    <div class="col-xs-5 col-xs-5">©2014-2017 Материалы  сайта защищены законом об авторских правах</div>
+
+                    <g:if env="production">
+                        <div class="col-xs-2 col-xs-2">
+                            <g:render template="/shared/yametrika"></g:render>
+                            <g:render template="/shared/ganalytics"></g:render>
+                        </div>
+                    </g:if>
                 </div>
             </div>
         </section>
     </footer>
 </div>
 
+<script src="${request.contextPath}/kladr/jquery.kladr.min.js" type="text/javascript"></script>
 <script src="${request.contextPath}/restart_v3/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="${request.contextPath}/restart_v3/js/woothemes-FlexSlider-06b12f8/jquery.flexslider-min.js"></script>
 <script src="${request.contextPath}/restart_v3/js/prettyPhoto_3.1.5/jquery.prettyPhoto.js" type="text/javascript"
@@ -173,19 +196,7 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/snap.svg-min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
 <script type="text/javascript"
-        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCKphaC2szjwNn0RPk-oCNdZJn6zEYePCQ&sensor=true">
+        src="http://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCaHIKLGChzdf1aZA92V65TkAukRqBQrZc&sensor=true&libraries=places">
 </script>
-
-<script type="text/javascript" src="http://vk.com/js/api/openapi.js?135"></script>
-
-<link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">
-<script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js"
-        charset="UTF-8"></script> <script type="text/javascript">var hunter_code="38cfb07d6bcf47514787d20cf2368c5e";</script>
-<!-- BEGIN JIVOSITE CODE {literal} -->
-<script type='text/javascript'>
-    (function(){ var widget_id = 'FiV2EOYNa8';
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
-<!-- {/literal} END JIVOSITE CODE -->
-
 </body>
-</html>
+</html>AIzaSyCaHIKLGChzdf1aZA92V65TkAukRqBQrZc

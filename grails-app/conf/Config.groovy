@@ -62,6 +62,7 @@ grails {
     }
 }
 
+grails.plugin.databasemigration.updateOnStart = true
 
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration

@@ -18,7 +18,9 @@ class MainController {
     def index() {
         replacePhone()
         loadCities()
-        render(view: 'index', model: [cities: cities,phoneYa : phone_yandex])
+
+        def tlist=Transport.list();
+        render(view: 'index', model: [cities: cities, tlist: tlist, phoneYa : phone_yandex])
 
     }
 
@@ -32,8 +34,10 @@ class MainController {
             it.urlName = '../gruzoperevozki/' + it.urlName;
         }
 
+        def tlist=Transport.list();
+
         city.routes=city.routes.sort ({ r -> r.name});
-        render(view: 'city', model: [city: city, cities: cities, seo_content: city.getText(), keyword: city.name , phoneYa : phone_yandex ])
+        render(view: 'city', model: [city: city, cities: cities, tlist: tlist,  seo_content: city.getText(), keyword: city.name , phoneYa : phone_yandex ])
     }
 
 
