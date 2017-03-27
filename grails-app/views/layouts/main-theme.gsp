@@ -36,7 +36,7 @@
 </head>
 
 <body>
-<div class="container-fluid">
+<div class="container-fluid" style="min-width: 400px">
     <header>
         <g:if test="${city != null}">
             <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"/>
@@ -46,17 +46,17 @@
         </g:if>
         <section class="header" style="height: auto">
             <div class="row">
-                <div class="col-sm-2 logotip" style="display: block">
+                <div class="col-xs-6 col-sm-2 logotip" style="display: block">
                     <a class="" href="/" style="display: block">
                         <asset:image src="logo.gif"/></a>
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-xs-6 col-sm-2">
                     <p class="logist-btn car-btn">Бесплатная консультация логиста</p>
 
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-xs-6 col-sm-3">
                     <p class="phone-info" style="">
                         <i style="margin-right: 10px; position: relative; top: 10px" class="fa fa-phone fa-2x"></i>
                         <span class="nobr ya-phone" style="font-size: 170%; margin-top: -20px"><g:if
@@ -68,12 +68,12 @@
                     </p>
                 </div>
 
-                <div class="col-sm-3 header-text">
+                <div class="col-xs-6 col-sm-3 header-text">
                     Грузоперевозки по России </br>
                     автомобильным транспортом
                 </div>
 
-                <div class="col-sm-2 russia-label" style="top: -10px">
+                <div class="col-xs-6 col-sm-2 russia-label">
                     <asset:image src="russia-label.png"/>
                 </div>
 

@@ -15,9 +15,6 @@
 </head>
 
 <body>
-<div class="row">
-    <div id="collage-row" class="col-xs-12"><img src="/images/collage.png"></div>
-</div>
 <div class="row" style="margin: 10px">
     <h2>Перевозки ${transport.gname} из ${city.gname}</h2>
 

@@ -51,7 +51,19 @@
 
         <div id="#routeId" hidden="hidden">${route.id}</div>
 
-        <g:render template="/shared/freeCityCalc"></g:render>
+        <div class="row">
+            <div class="col-sm-5">
+                <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
+                <div align="center">
+                    <img style="margin-left: 27%; width: 40%" src="/images/big_arrow.png">
+                </div>
+
+            </div>
+            <div class="col-sm-7">
+                <g:render template="/shared/freeCityCalc"></g:render>
+
+            </div>
+        </div>
 
         <p class="descr">Вы хотите заказать грузоперевозки по маршруту <b>${route.name}?</b> Предлагаем ознакомиться с нашими тарифами и особенностями нашей компании: <br/>
             Любые перевозки из ${route.departureCity.gname}

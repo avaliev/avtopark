@@ -196,6 +196,7 @@ div.modern {
     /*background-color: #808080;*/
     /*border-color: #808080;*/
     /*float: right;*/
+    box-shadow: 0px 0px 10px white
 }
 
 .input-group {
@@ -348,4 +349,8 @@ h1.font150 {
 
 #calculator {
     box-shadow: -5px 5px 15px #292222;
+}
+
+.btn-success {
+    box-shadow: 0px 0px 10px white
 }
