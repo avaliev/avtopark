@@ -20,7 +20,7 @@
 </div>
 
 <div class="row" style="margin: 10px">
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6">
         <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
 
         <div align="center">
@@ -29,7 +29,7 @@
 
     </div>
 
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6">
         <g:render template="/shared/freeCityCalc"></g:render>
     </div>
 

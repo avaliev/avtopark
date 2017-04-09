@@ -13,6 +13,7 @@ class CustomPage {
 
     static constraints = {
         content nullable: true
+        url unique: true
     }
 
     static mapping = {

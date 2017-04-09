@@ -18,10 +18,9 @@ class MainController {
     def index() {
         replacePhone()
         loadCities()
-
-        def tlist=Transport.list();
-        render(view: 'index', model: [cities: cities, tlist: tlist, phoneYa : phone_yandex])
-
+        def pages = CustomPage.list();
+        def tlist = Transport.list();
+        render(view: 'index', model: [cities: cities, pages: pages, tlist: tlist, phoneYa: phone_yandex])
     }
 
 
@@ -30,14 +29,10 @@ class MainController {
         loadCities()
         String url = params.get("city");
         City city = City.findByUrlName(url);
-        city.routes.collect {
-            it.urlName = '../gruzoperevozki/' + it.urlName;
-        }
-
-        def tlist=Transport.list();
-
-        city.routes=city.routes.sort ({ r -> r.name});
-        render(view: 'city', model: [city: city, cities: cities, tlist: tlist,  seo_content: city.getText(), keyword: city.name , phoneYa : phone_yandex ])
+        def pages = CustomPage.list();
+        def tlist = Transport.list();
+        city.routes = city.routes.sort({ r -> r.name });
+        render(view: 'city', model: [city: city, cities: cities, pages: pages, tlist: tlist, seo_content: city.getText(), keyword: city.name, phoneYa: phone_yandex])
     }
 
 
@@ -45,7 +40,7 @@ class MainController {
 
         try {
             // send email
-            emailSendService.createIntent(params,session.getAttribute("utm_term"),session.getAttribute("param_map"));
+            emailSendService.createIntent(params, session.getAttribute("utm_term"), session.getAttribute("param_map"));
 
         } catch (Exception e) {
             e.printStackTrace()
@@ -63,18 +58,15 @@ class MainController {
         def query = Route.where {
             urlName == params.get("route")
         };
+        def pages = CustomPage.list();
         Route route = query.find();
-        route.departureCity.routes=route.departureCity.routes.sort({r->r.name});
-        render(view: 'route', model: [route: route, city: route.departureCity, cities: cities, keyword: route.name, phoneYa : phone_yandex])
+        //route.departureCity.routes = route.departureCity.routes.sort({ r -> r.name });
+        render(view: 'route', model: [route: route, city: route.departureCity, cities: cities, keyword: route.name, phoneYa: phone_yandex])
     }
 
-    public def loadCities(){
-        if (cities==null) {
-            cities=City.list();
-            cities.collect {
-                it.urlName = 'gorod/' + it.urlName
-            }
-
+    public def loadCities() {
+        if (cities == null) {
+            cities = City.list();
             cities.sort(new Comparator<City>() {
                 @Override
                 int compare(City o1, City o2) {
@@ -85,11 +77,11 @@ class MainController {
         return cities;
     }
 
-    public  def replacePhone(){
-        if (phone_yandex==null) {
-            if ("yandex".equals(params.get("utm_source"))){
-                def value=Settings.findByParam_key("phone_yandex");
-                phone_yandex=value.param_value;
+    public def replacePhone() {
+        if (phone_yandex == null) {
+            if ("yandex".equals(params.get("utm_source"))) {
+                def value = Settings.findByParam_key("phone_yandex");
+                phone_yandex = value.param_value;
             }
         }
     }

@@ -221,13 +221,16 @@
         </div>
 
         <g:render template="/shared/transportList"></g:render>
+        <g:render template="/shared/custompages"></g:render>
+
+
         <!-- VK Widget -->
         <div style="float: right; width: 100% ; margin-top: 30px; margin-right: 10px" id="vk_community_messages"></div>
     </div>
 </div>
 
 <div class="row">
-    <g:render template="/shared/leftList" model="[list: cities]"></g:render>
+    <g:render template="/shared/citiesList" model="[list: cities]"></g:render>
 </div>
 
 </body>

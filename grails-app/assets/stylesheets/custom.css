@@ -79,13 +79,13 @@ nav {
     background: #000000 !important;
 }
 
-.leftList ul > li > a:hover,
-.leftList ul > li > a:focus {
+.routesList ul > li > a:hover,
+.routesList ul > li > a:focus {
     text-decoration: underline;
 
 }
 
-.leftList ul > li > a {
+.routesList ul > li > a {
     color: #777777;
     margin-left: 5%;
 }
@@ -107,15 +107,15 @@ nav {
     font-weight: normal;
 }
 
-.leftList h3 {
+.routesList h3 {
     width: 100%;
 }
 
-.leftList .nav > li > a {
+.routesList .nav > li > a {
     padding: 0;
 }
 
-.leftList {
+.routesList {
     border-radius: 5px 5px 5px 5px;
     padding-bottom: 15px;
     padding-top: 5px;
@@ -248,7 +248,7 @@ section.header {
     background-color: rgb(214, 237, 240)
 }
 
-.leftList ul li a {
+.routesList ul li a {
     font-size: 90%;
 }
 
@@ -327,7 +327,7 @@ h1.font150 {
 }
 
 .tr-ref {
-    /* font-size: 18px; */
+     font-size: 18px;
 }
 
 .logist-btn {
@@ -353,4 +353,14 @@ h1.font150 {
 
 .btn-success {
     box-shadow: 0px 0px 10px white
+}
+
+ul.custom-p-l {
+    list-style-type: circle;
+}
+
+.custom-p-l a {
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
 }

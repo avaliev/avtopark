@@ -33,13 +33,11 @@
             <label for="metatag">Meta tag description (не более 100 символов)</label>
             <input required name="page.metaTag" value="${page.metaTag}" type="text" class="form-control" id="metatag">
         </div>
-        <textarea name="page.content" required class="form-control" content="${page.content}" rows="3"
-                  placeholder="Текст страницы">
-
-        </textarea>
+        <textarea name="page.content" required class="form-control" rows="3"
+                  placeholder="Текст страницы">${page.content}</textarea>
         <br/>
         <br/>
-        <button type="submit" class="btn btn-default">Create</button>
+        <button type="submit" class="btn btn-default">Сохранить</button>
 
     </form>
 </div>

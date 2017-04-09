@@ -58,11 +58,13 @@
         <div class="row">
             <div class="col-sm-5">
                 <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
+
                 <div align="center">
                     <img style="margin-left: 27%; width: 40%" src="/images/big_arrow.png">
                 </div>
 
             </div>
+
             <div class="col-sm-7">
                 <g:render template="/shared/freeCityCalc"></g:render>
 
@@ -136,13 +138,13 @@
         </div>
 
         <g:render template="/shared/transportList"></g:render>
+        <g:render template="/shared/custompages"></g:render>
 
-        <div style="float: right; width: 100% ; margin-top: 30px; margin-right: 10px" id="vk_community_messages"></div>
     </div>
 </div>
 
 <div class="row">
-    <g:render template="/shared/leftList" model="[list: city.routes]"></g:render>
+    <g:render template="/shared/routesList" model="[list: city.routes]"></g:render>
 </div>
 </body>
 </html>
