@@ -1,13 +1,14 @@
-package ru.avtopark
+package avto.park
 
 import grails.test.mixin.TestFor
+import ru.avtopark.PageController
 import spock.lang.Specification
 
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(CustompageController)
-class CustompageControllerSpec extends Specification {
+@TestFor(PageController)
+class PageControllerSpec extends Specification {
 
     def setup() {
     }

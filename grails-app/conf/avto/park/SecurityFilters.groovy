@@ -3,10 +3,10 @@ package avto.park
 class SecurityFilters {
 
     def filters = {
-        all(controller: 'CustomPage', action: '*') {
+        all(controller: 'custompage', action: '*') {
             before = {
-                if (!session.user && actionName != "login") {
-                    redirect(controller: "user", action: "login")
+                if (!session.admin) {
+                    redirect(url: "/login")
                     return false
                 }
             }

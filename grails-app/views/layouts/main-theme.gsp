@@ -56,7 +56,7 @@
 
                 </div>
 
-                <div class="col-xs-6 col-sm-3">
+                <div class="col-xs-12 col-sm-3">
                     <p class="phone-info" style="">
                         <i style="margin-right: 10px; position: relative; top: 10px" class="fa fa-phone fa-2x"></i>
                         <span class="nobr ya-phone" style="font-size: 170%; margin-top: -20px"><g:if
@@ -84,10 +84,10 @@
             %{--<div class="navbar-header"> <button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button> </div>--}%
             <div class="navbar-header pull-left">
                 %{--<button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
-                <a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse"
+                <button class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse"
                    data-target=".navbar-collapse">
                     <span class="nb_left pull-left">
-                        <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span></a>
+                        <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span></button>
             </div>
 
             <div class="collapse navbar-collapse">
@@ -176,7 +176,6 @@
     </footer>
 </div>
 
-<script src="${request.contextPath}/kladr/jquery.kladr.min.js" type="text/javascript"></script>
 <script src="${request.contextPath}/restart_v3/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="${request.contextPath}/restart_v3/js/woothemes-FlexSlider-06b12f8/jquery.flexslider-min.js"></script>
 <script src="${request.contextPath}/restart_v3/js/prettyPhoto_3.1.5/jquery.prettyPhoto.js" type="text/javascript"
@@ -191,4 +190,4 @@
         src="http://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCaHIKLGChzdf1aZA92V65TkAukRqBQrZc&sensor=true&libraries=places">
 </script>
 </body>
-</html>AIzaSyCaHIKLGChzdf1aZA92V65TkAukRqBQrZc
+</html>

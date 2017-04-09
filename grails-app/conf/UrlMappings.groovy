@@ -8,13 +8,16 @@ class UrlMappings {
         }
 
         "/"(controller: "main", action: "index")
+
+        "/p/$page"(controller: "page", action: "index")
+        "/login"(controller: "login", action: 'login', method: "post")
         "/gorod/$city?"(controller: "main", action: "city")
         "/gorod/$city"(controller: "main", action: "city")
-        "/transport/$transport" (controller: "transport", action: "page")
-        "/transport/$transport/$city" (controller: "transport", action: "city")
+        "/transport/$transport"(controller: "transport", action: "page")
+        "/transport/$transport/$city"(controller: "transport", action: "city")
 
         "/gruzoperevozki/$route?"(controller: "main", action: "route")
-        "/$url"(controller: "customPage", action: "page")
+        "/gruzoperevozki/$url"(controller: "custompage", action: "page")
         "500"(view: '/error')
 
         "/$controller/$action?/$id?(.$format)?" {
