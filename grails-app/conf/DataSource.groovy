@@ -4,7 +4,7 @@ dataSource {
     driverClassName = "com.mysql.jdbc.Driver"
     dialect = ru.avtopark.MySQLUTF8InnoDBDialect
     username = "root"
-    password = "donotdrink"
+    password = "sdvig2017"
 }
 hibernate {
     cache.use_second_level_cache = true

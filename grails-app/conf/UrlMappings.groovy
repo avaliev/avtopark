@@ -13,6 +13,7 @@ class UrlMappings {
         "/login"(controller: "login", action: 'login', method: "post")
         "/gorod/$city?"(controller: "main", action: "city")
         "/gorod/$city"(controller: "main", action: "city")
+        "/pereezdy/$city"(controller: "main", action: "pereezdCity")
         "/transport/$transport"(controller: "transport", action: "page")
         "/transport/$transport/$city"(controller: "transport", action: "city")
 

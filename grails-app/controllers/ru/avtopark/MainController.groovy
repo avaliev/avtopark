@@ -32,7 +32,20 @@ class MainController {
         def pages = CustomPage.list();
         def tlist = Transport.list();
         city.routes = city.routes.sort({ r -> r.name });
-        render(view: 'city', model: [city: city, cities: cities, pages: pages, tlist: tlist, seo_content: city.getText(), keyword: city.name, phoneYa: phone_yandex])
+        render(view: 'city', model:
+                [city   : city, cities: cities, pages: pages, tlist: tlist, seo_content: city.getText(),
+                 keyword: city.name, phoneYa: phone_yandex])
+    }
+
+    def pereezdCity() {
+        replacePhone()
+        loadCities()
+        String url = params.get("city");
+        City city = City.findByUrlName(url);
+        def tlist = Transport.list();
+        render(view: 'pereezd-city', model:
+                [city       : city, cities: cities, tlist: tlist,
+                 seo_content: city.getText(), keyword: city.name, phoneYa: phone_yandex])
     }
 
 

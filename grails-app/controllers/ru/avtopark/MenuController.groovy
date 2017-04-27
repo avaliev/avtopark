@@ -36,7 +36,8 @@ class MenuController {
 
     def pereezdy(){
         replacePhone()
-        render(view: 'pereezdy')
+        def maincont=applicationContext.getBean("ru.avtopark.MainController")
+        render (view: 'pereezdy',  model : [cities: maincont.loadCities()]);
     }
 
     def pereezd1() {

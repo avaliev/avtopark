@@ -18,14 +18,25 @@ class CustompageController {
 
     def save(CustomPage page) {
         if (page.url && page.title && page.metaTag && page.content) {
-            page.save()
+            def oldPage = CustomPage.findByUrl(page.url);
+            if (oldPage) {
+                oldPage.title = page.title
+                oldPage.metaTag = page.metaTag
+                oldPage.content = page.content
+                oldPage.save()
+            } else {
+                page.save()
+            }
             redirect(action: "index")
         } else {
             render(view: 'createpage', model: [page: page, msg: "Нужно заполнить все поля"])
         }
     }
 
-    def edit(String url, String title, String metaTag, String decr) {
-
+    def edit(String url) {
+        def page = CustomPage.findByUrl(url);
+        if (page) {
+            render(view: "createpage", model: [page: page])
+        }
     }
 }

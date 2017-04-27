@@ -14,31 +14,30 @@
 
 <body>
 <h2>Управление страницами</h2>
+<a class="btn btn-success pull-right" href="/custompage/create">Создать страницу</a>
+<br/>
+<br/>
+<br/>
+
 <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>URL</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
 
-    <a class="btn btn-success" href="/custompage/create">Создать страницу</a>
-    <br/>
-    <br/>
-    <br/>
 
-    <div class="jumbotron">
-        <g:each var="page" in="${pages}">
-            <thead>
-            <tr>
-                <th>Название</th>
-                <th>URL</th>
-                <th>Действия</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>${page.title}</td>
-                <td><a href="/p/${page.url}">${page.url}</a></td>
-                <td width="20%"><a href="/custompage/edit?url=${page.url}">редактировать</a></td>
-            </tr>
-            </tbody>
-        </g:each>
-    </div>
+    <g:each var="page" in="${pages}">
+        <tbody>
+        <tr>
+            <td>${page.title}</td>
+            <td><a href="/p/${page.url}">${page.url}</a></td>
+            <td width="20%"><a href="/custompage/edit?url=${page.url}">редактировать</a></td>
+        </tr>
+        </tbody>
+    </g:each>
 </table>
 </body>
 </html>
