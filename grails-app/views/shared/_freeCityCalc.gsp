@@ -16,16 +16,8 @@
 
         <div class="form-group">
             <label>Требуемый транспорт:</label>
-
-            <div class="modern" ><!-- / -->
-                <select class="modern" id="ktr">
-                    <option value="" selected="">- Выберите из списка -</option>
-                    <option value="15">до 2 тонн (20 куб)</option>
-                    <option value="20">до 5 тонн (50 куб)</option>
-                    <option value="25">до 10 тонн (60 куб)</option>
-                    <option value="30">до 20 тонн (120 куб)</option>
-                </select>
-            </div>
+            <input class="form-control" name="ktr" type="text" value="" id="ktr"
+                   placeholder="Объем и вес груза">
         </div>
         <label>Узнайте стоимость прямо сейчас:</label>
 

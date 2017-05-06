@@ -42,9 +42,23 @@ class MainController {
         loadCities()
         String url = params.get("city");
         City city = City.findByUrlName(url);
+        city.routes = city.routes.sort({ r -> r.name });
         def tlist = Transport.list();
         render(view: 'pereezd-city', model:
                 [city       : city, cities: cities, tlist: tlist,
+                 seo_content: city.getText(), keyword: city.name, phoneYa: phone_yandex])
+    }
+
+    def pereezdRoute() {
+        replacePhone()
+        loadCities()
+        String url = params.get("route");
+        Route route = Route.findByUrlName(url);
+        City city = route.departureCity;
+        def tlist = Transport.list();
+        render(view: 'pereezd-route', model:
+                [city       : city, cities: cities, tlist: tlist,
+                 route      : route,
                  seo_content: city.getText(), keyword: city.name, phoneYa: phone_yandex])
     }
 
@@ -74,7 +88,11 @@ class MainController {
         def pages = CustomPage.list();
         Route route = query.find();
         //route.departureCity.routes = route.departureCity.routes.sort({ r -> r.name });
-        render(view: 'route', model: [route: route, city: route.departureCity, cities: cities, keyword: route.name, phoneYa: phone_yandex])
+        render(view: 'route', model:
+                [route  : route,
+                 city   : route.departureCity,
+                 pages  : pages, cities: cities,
+                 keyword: route.name, phoneYa: phone_yandex])
     }
 
     public def loadCities() {

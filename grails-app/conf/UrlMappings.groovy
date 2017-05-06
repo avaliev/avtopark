@@ -14,6 +14,7 @@ class UrlMappings {
         "/gorod/$city?"(controller: "main", action: "city")
         "/gorod/$city"(controller: "main", action: "city")
         "/pereezdy/$city"(controller: "main", action: "pereezdCity")
+        "/pereezdy/r/$route"(controller: "main", action: "pereezdRoute")
         "/transport/$transport"(controller: "transport", action: "page")
         "/transport/$transport/$city"(controller: "transport", action: "city")
 

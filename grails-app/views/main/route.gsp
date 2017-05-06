@@ -51,6 +51,10 @@
 
         <div id="#routeId" hidden="hidden">${route.id}</div>
 
+        <div class="row" id="ymap">
+
+        </div>
+
         <div class="row">
             <div class="col-sm-5">
                 <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>

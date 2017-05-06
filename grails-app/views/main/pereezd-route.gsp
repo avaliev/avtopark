@@ -23,8 +23,12 @@
 <div class="row">
     <div class=" col-md-9">
 
-        <h1 class="txt-c font150">Перевозка личных вещей из ${city.gname} по России быстро и недорого</h1>
-        <h4 class="txt-c blue font150">Грузоперевозки и доставка из ${city.gname} по городам России догрузом или отдельным транспортом</h4>
+        <h1 class="txt-c font150">
+            Перевозка личных вещей ${route.name} быстро и недорого
+        </h1>
+        <h4 class="txt-c blue font150">
+            Грузоперевозки и доставка ${route.name} догрузом или отдельным транспортом
+        </h4>
 
         <g:render template="/shared/pereezd"></g:render>
 
@@ -45,7 +49,7 @@
         </div>
 
         <hr/>
-        <g:render template="/shared/services"></g:render>
+        <g:render template="/shared/services" model="[keyword: route.name]"></g:render>
         <hr/>
 
     </div>
@@ -53,11 +57,11 @@
     <div class=" col-md-3">
         <g:render template="/shared/quickForm"></g:render>
         <div class="reis">
-            <b>Машин в рейсе:</b>  <span class="label label-info"></span>
+            <b>Машин свободно:</b>  <span class="label label-info"></span>
         </div>
 
         <div class="vypol">
-            <b>Выполнено заявок за сегодня:</b>  <span class="label label-info"></span>
+            <b>Выполнено заявок сегодня:</b>  <span class="label label-info"></span>
         </div>
 
         <g:render template="/shared/transportList"></g:render>
@@ -67,14 +71,12 @@
 
 </div>
 
-
-<h3>Переезды из города в город (оптимальный маршрут)</h3>
+<h3>Переезды из города в город по маршрутам</h3>
 
 <div class="routesList">
     <g:each in="${city.routes}" var="obj">
-        <a href="/pereezdy/r/${obj.urlName}">${obj.name}</a>
+        <a href="/pereezdy/${obj.urlName}">${obj.name}</a>
     </g:each>
 </div>
-
 </body>
 </html>

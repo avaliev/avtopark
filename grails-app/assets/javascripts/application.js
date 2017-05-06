@@ -192,12 +192,7 @@ function initHandlers() {
             return;
         var city1 = $("#autocomplete1").val();
         var city2 = $("#autocomplete2").val();
-
-        tr = document.getElementById("ktr");
-        if (typeof tr != 'undefined') {
-            var tran = tr.options[tr.selectedIndex].text;
-            msg = msg + '; Транспорт: ' + tran;
-        }
+        var trans = $("#ktr").val();
         var page = $('#page-name').text();
 
         $.post("/main/intent", {
@@ -206,7 +201,7 @@ function initHandlers() {
                 departure: city1,
                 destination: city2,
                 pageType: page,
-                comment: msg
+                volume : trans
             },
             function (data) {
                 $('#calc-btn').removeAttr('disabled');
@@ -217,7 +212,7 @@ function initHandlers() {
                 phone: userPhone,
                 loading: city1,
                 unloading: city2,
-                volume: tran,
+                volume: trans,
                 page: page,
                 special: "Заявка с калькулятора",
                 utm_term: keyword

@@ -105,6 +105,7 @@ class EmailSendService {
 
         Intent intent = new Intent(userName: params.get('userName'), intentDate: new Date(),
                 destination: params.get('destination'), departure: params.get("departure"),
+                volume: params.get("volume"),
                 phone: params.get('phone'), city: city, clientType: params.get("clientType"),
                 comment: params.get("comment"), term: utm_term, page: params.get("pageType"));
 

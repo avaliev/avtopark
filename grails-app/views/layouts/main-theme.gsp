@@ -14,9 +14,12 @@
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.jpg')}" type="image/x-icon">
     <link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
+    %{--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>--}%
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
     <!-- restart theme css links -->
+
+
     <link href="${request.contextPath}/restart_v3/animate.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="${request.contextPath}/restart_v3/js/woothemes-FlexSlider-06b12f8/flexslider.css"
           type="text/css" media="screen">
@@ -36,7 +39,7 @@
 </head>
 
 <body>
-<div class="container-fluid" style="min-width: 400px">
+<div class="container-fluid" style="min-width: 360px">
     <header>
         <g:if test="${city != null}">
             <g:textField id="city_id" style="display:none" name="city_id" value="${city.id}"/>
@@ -118,7 +121,7 @@
         <div id="collage-row" class="col-sm-12"><img style="width:100%" src="/images/collage.png"></div>
     </div>
 
-    <div>
+    <div style="padding: 10px">
         <g:layoutBody/>
     </div>
     <g:render template="/shared/modalWindow"></g:render>
@@ -186,8 +189,19 @@
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/wow.min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/snap.svg-min.js"></script>
 <script type="text/javascript" src="${request.contextPath}/restart_v3/js/restart_theme.js"></script>
+
 <script type="text/javascript"
         src="http://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCaHIKLGChzdf1aZA92V65TkAukRqBQrZc&sensor=true&libraries=places">
 </script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-57154755-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
 </body>
 </html>
