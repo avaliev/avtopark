@@ -17,6 +17,7 @@ class UrlMappings {
         "/pereezdy/r/$route"(controller: "main", action: "pereezdRoute")
         "/transport/$transport"(controller: "transport", action: "page")
         "/transport/$transport/$city"(controller: "transport", action: "city")
+        "/transport-uslugi/$city"(controller: "transport", action: "uslugi")
 
         "/gruzoperevozki/$route?"(controller: "main", action: "route")
         "/gruzoperevozki/$url"(controller: "custompage", action: "page")

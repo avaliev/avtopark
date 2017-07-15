@@ -10,10 +10,10 @@
 <html>
 <head>
     <meta name="layout" content="main-theme"/>
-    <title>Грузоперевозки из ${city.gname} по России. Быстро  и недорого. Все виды транспорта.</title>
+    <title>Квартирный переезды по городам России.</title>
     <meta name="description" content="
-          Офисные и квартирные переезды.
-          Автопарк газелей, камазов, фур. Узнать стоимость перевозки ${contacts.phone}">
+         Планируете сменить место жительства?
+         Мы поможем грамотно организовать перевозку вещей и сохранить ваше имущество во время переезда. ${contacts.phone}">
 </head>
 
 <body>
@@ -44,9 +44,6 @@
             </div>
         </div>
 
-        <hr/>
-        <g:render template="/shared/services"></g:render>
-        <hr/>
 
     </div>
 

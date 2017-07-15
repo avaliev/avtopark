@@ -48,10 +48,6 @@
             </div>
         </div>
 
-        <hr/>
-        <g:render template="/shared/services" model="[keyword: route.name]"></g:render>
-        <hr/>
-
     </div>
 
     <div class=" col-md-3">

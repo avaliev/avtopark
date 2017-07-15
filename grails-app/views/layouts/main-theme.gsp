@@ -88,16 +88,17 @@
             <div class="navbar-header pull-left">
                 %{--<button type="button" style="height: 50px;" class="button_cons car-btn">Бесплатная консультация логиста</button>--}%
                 <button class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse"
-                   data-target=".navbar-collapse">
+                        data-target=".navbar-collapse">
                     <span class="nb_left pull-left">
-                        <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span></button>
+                        <span class="fa fa-reorder"></span></span> <span class="nb_right pull-right">Меню</span>
+                </button>
             </div>
 
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav pull-left">
                     <li><a href="/">Главная</a></li>
                     <li><a href="/menu/request">Оставить заявку</a></li>
-                    <li><a href="/menu/services">Тарифы</a></li>
+                    <li><a href="/menu/services">Тарифы и транспорт</a></li>
                     <li><a href="/menu/about">О компании</a></li>
                     <li><a href="/menu/docs">Документы</a></li>
                     %{--<li><a href="/menu/pereezd1">Домашний переезд</a></li>--}%
@@ -111,6 +112,18 @@
                             <li><a href="/menu/pereezdy">Междугородние переезды</a></li>
                         </ul>
                     </li>
+                    <g:if test="${pages != null}">
+                        <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
+                                                              href="#">Полезная информация<span class="caret"></span>
+                        </a>
+                            <ul class="dropdown-menu">
+                                <g:each in="${pages}" var="p">
+                                    <li><a href="/p/${p.url}">${p.title}</a></li>
+                                </g:each>
+                            </ul>
+                        </li>
+                    </g:if>
+
                 </ul>
             </div>
         </div>
@@ -194,14 +207,20 @@
         src="http://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCaHIKLGChzdf1aZA92V65TkAukRqBQrZc&sensor=true&libraries=places">
 </script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-57154755-1', 'auto');
     ga('send', 'pageview');
 </script>
-
 
 </body>
 </html>
