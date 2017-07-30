@@ -4,14 +4,13 @@ class LoginController {
 
     def index() {}
 
-
     def login() {
         if (params.get("login") && params.get("password")) {
-            Admin admin = Admin.findByLogin(params.login);
+            Admin admin = Admin.findByLogin(params.login)
             if (admin) {
                 if (params.password.equals(admin.password)) {
-                    session.admin = admin;
-                    redirect(action: "index", controller: "custompage")
+                    session.admin = admin
+                    render view: 'enter'
                 } else {
                     render(view: 'index', model: [msg: "password is incorrect"])
                 }

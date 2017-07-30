@@ -26,6 +26,8 @@
         <h1 class="txt-c font150">Перевозка личных вещей из ${city.gname} по России быстро и недорого</h1>
         <h4 class="txt-c blue font150">Грузоперевозки и доставка из ${city.gname} по городам России догрузом или отдельным транспортом</h4>
 
+        <g:render template="/shared/cityDescr"></g:render>
+
         <g:render template="/shared/pereezd"></g:render>
 
         <div class="row">
@@ -43,7 +45,6 @@
 
             </div>
         </div>
-
 
     </div>
 

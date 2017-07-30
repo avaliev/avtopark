@@ -1,4 +1,4 @@
-package avto.park
+package ru.avtopark
 
 class FriendlyUrlService {
 

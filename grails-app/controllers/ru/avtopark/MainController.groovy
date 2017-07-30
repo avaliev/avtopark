@@ -1,15 +1,13 @@
 package ru.avtopark
 
-import avto.park.EmailSendService
 import java.util.logging.Level
 import java.util.logging.Logger
 
 class MainController {
 
-//    def FriendlyUrlService friendlyUrlService;
+//    def ru.avtopark.FriendlyUrlService friendlyUrlService;
 
     EmailSendService emailSendService
-
 
     def cities
 
@@ -46,8 +44,7 @@ class MainController {
         city.routes = city.routes.sort({ r -> r.name })
         def tlist = Transport.list()
         render(view: 'pereezd-city', model:
-                [city       : city, cities: cities, tlist: tlist, pages: pages,
-                 seo_content: city.getText(), keyword: city.name, phoneYa: phone_yandex])
+                [city: city, cities: cities, tlist: tlist, pages: pages, keyword: city.name, phoneYa: phone_yandex])
     }
 
     def pereezdRoute() {
