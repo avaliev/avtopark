@@ -31,7 +31,7 @@ class MainController {
         def tlist = Transport.list()
         city.routes = city.routes.sort({ r -> r.name })
         render(view: 'city', model:
-                [city   : city, cities: cities, pages: pages, tlist: tlist, seo_content: city.getText(),
+                [city   : city, cities: cities, pages: pages, tlist: tlist,
                  keyword: city.name, phoneYa: phone_yandex])
     }
 
@@ -56,10 +56,10 @@ class MainController {
         def tlist = Transport.list()
         def pages = CustomPage.list()
         render(view: 'pereezd-route', model:
-                [city       : city, cities: cities, tlist: tlist,
-                 route      : route,
-                 pages      : pages,
-                 seo_content: city.getText(), keyword: city.name, phoneYa: phone_yandex])
+                [city   : city, cities: cities, tlist: tlist,
+                 route  : route,
+                 pages  : pages,
+                 keyword: city.name, phoneYa: phone_yandex])
     }
 
 

@@ -30,6 +30,8 @@
             Грузоперевозки и доставка ${route.name} догрузом или отдельным транспортом
         </h4>
 
+        <g:render template="/shared/cityDescr"></g:render>
+
         <g:render template="/shared/pereezd"></g:render>
 
         <div class="row">

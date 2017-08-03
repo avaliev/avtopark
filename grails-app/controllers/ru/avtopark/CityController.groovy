@@ -20,9 +20,28 @@ class CityController {
     }
 
     def save(City city) {
-        city.save()
+        if (city.id == null) {
+            city.save()
+            createRoutesFor(city)
+        } else {
+            city.save()
+        }
+
         def cityName = city.name
         flash.message = "Город ${cityName} сохранен"
         redirect(action: 'index')
+    }
+
+    def private createRoutesFor(City city) {
+        def list = City.list()
+        list.each { City c ->
+            def r = new Route()
+            r.departureCity = city
+            r.destinationCity = c
+            r.name = city.name + " - " + c.name
+            r.urlName = city.urlName + "-" + c.urlName
+            r.save()
+        }
+
     }
 }

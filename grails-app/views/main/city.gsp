@@ -30,9 +30,7 @@
              alt="перевозки ${city.name} газель, бычок"
              style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
 
-        %{--<p class="descr">${city.descr}</p>--}%
-
-        %{--<p class="descr">${city.descr1}</p>--}%
+        <g:render template="/shared/cityDescr"></g:render>
 
         <p class="descr">
             Рост экономики и повышение благосостояния населения напрямую связано с нормальным развитием торговых отношений. Непременным условием их налаживания является своевременная доставка грузов.
