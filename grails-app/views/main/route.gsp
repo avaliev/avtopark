@@ -89,6 +89,8 @@
             выбираемой трассы, что позволит выполнить заказ наиболее эффективно,
             качественно и в срок. </br>
         </p>
+        <g:render template="/shared/services"></g:render>
+        <g:render template="/shared/pereezd"></g:render>
     </div>
 
     <div class="col-md-3">
