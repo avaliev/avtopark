@@ -17,8 +17,7 @@ class MainController {
         replacePhone()
         loadCities()
         def pages = CustomPage.list()
-        def tlist = Transport.list()
-        render(view: 'index', model: [cities: cities, pages: pages, tlist: tlist, phoneYa: phone_yandex])
+        render(view: 'index', model: [cities: cities, pages: pages, phoneYa: phone_yandex])
     }
 
 
@@ -28,10 +27,9 @@ class MainController {
         String url = params.get("city")
         City city = City.findByUrlName(url)
         def pages = CustomPage.list()
-        def tlist = Transport.list()
         city.routes = city.routes.sort({ r -> r.name })
         render(view: 'city', model:
-                [city   : city, cities: cities, pages: pages, tlist: tlist,
+                [city   : city, cities: cities, pages: pages,
                  keyword: city.name, phoneYa: phone_yandex])
     }
 
@@ -42,9 +40,8 @@ class MainController {
         def pages = CustomPage.list()
         City city = City.findByUrlName(url)
         city.routes = city.routes.sort({ r -> r.name })
-        def tlist = Transport.list()
         render(view: 'pereezd-city', model:
-                [city: city, cities: cities, tlist: tlist, pages: pages, keyword: city.name, phoneYa: phone_yandex])
+                [city: city, cities: cities, pages: pages, keyword: city.name, phoneYa: phone_yandex])
     }
 
     def pereezdRoute() {
@@ -56,7 +53,7 @@ class MainController {
         def tlist = Transport.list()
         def pages = CustomPage.list()
         render(view: 'pereezd-route', model:
-                [city   : city, cities: cities, tlist: tlist,
+                [city   : city, cities: cities,
                  route  : route,
                  pages  : pages,
                  keyword: city.name, phoneYa: phone_yandex])

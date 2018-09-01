@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Айрат
-  Date: 01.04.2017
-  Time: 21:33
---%>
-
+<%@ page import="ru.avtopark.PageGroup" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="layout" content="pages"/>
@@ -13,8 +8,8 @@
 </head>
 
 <body>
-<h2>Управление страницами</h2>
-<a class="btn btn-success pull-right" href="/custompage/create">Создать страницу</a>
+<h2>Рубрики информационных страниц</h2>
+<a class="btn btn-success pull-right" href="/pageGroup/create">Создать страницу</a>
 <br/>
 <br/>
 <br/>
@@ -28,12 +23,13 @@
     </tr>
     </thead>
 
+
     <tbody>
-    <g:each var="page" in="${pages}">
+    <g:each var="page" in="${pageGroups}">
         <tr>
             <td>${page.title}</td>
             <td><a href="/p/${page.url}">${page.url}</a></td>
-            <td width="20%"><a href="/custompage/edit?url=${page.url}">редактировать</a></td>
+            <td width="20%"><a href="/pageGroup/edit?url=${page.url}">редактировать</a></td>
         </tr>
     </g:each>
     </tbody>

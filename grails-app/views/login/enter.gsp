@@ -21,7 +21,8 @@
     <ul>
         <li><g:link controller="intent">Заявки</g:link></li>
         <li><g:link controller="city">Список городов</g:link></li>
-        <li><g:link controller="custompage">Уникальные страницы (информационные)</g:link></li>
+        <li><g:link controller="pageGroup">Рубрики для информ. страниц</g:link></li>
+        <li><g:link controller="custompage">Информационные страницы</g:link></li>
     </ul>
 
 </div>

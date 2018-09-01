@@ -23,6 +23,7 @@ class CustompageController {
                 oldPage.title = page.title
                 oldPage.metaTag = page.metaTag
                 oldPage.content = page.content
+                oldPage.group = page.group
                 oldPage.save()
             } else {
                 page.save()

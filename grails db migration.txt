@@ -1,0 +1,11 @@
+Нужно создать базовую версию changeset ов из классов или из БД
+ Из классов: grails dbm-generate-gorm-changelog changelog.groovy
+ Из БД:  grails dbm-generate-changelog changelog.groovy
+ Далее:
+grails dbm-changelog-sync - проверяет соответствие или БД и 
+changeset (или просто помечает их исполненными, полезно, когда changesetы создавались из бд) в проекте.
+
+Далее создаем на каждое изменение новый файл:
+grails dbm-gorm-diff add-author-to-post.groovy -add
+
+grails dbm-update

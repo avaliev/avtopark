@@ -62,7 +62,6 @@
             <b>Выполнено заявок сегодня:</b>  <span class="label label-info"></span>
         </div>
 
-        <g:render template="/shared/transportList"></g:render>
         <g:render template="/shared/custompages"></g:render>
 
     </div>

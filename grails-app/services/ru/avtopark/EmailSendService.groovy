@@ -25,10 +25,7 @@ class EmailSendService {
         buffer.append("Имя клиента: ").append(intent.userName).append("\r\n")
         buffer.append("Номер телефона: ").append(intent.phone).append("\r\n")
 
-        if (intent.clientType != null) {
-            String type = intent.clientType.equals("fiz") ? "Физ. лицо" : "Юр. лицо"
-            buffer.append("Тип клиента: ").append(type).append("\r\n")
-        }
+
 
         if (intent.page != null) {
             buffer.append("Страница: ").append(intent.page).append("\r\n")
@@ -103,7 +100,7 @@ class EmailSendService {
         Intent intent = new Intent(userName: params.get('userName'), intentDate: new Date(),
                 destination: params.get('destination'), departure: params.get("departure"),
                 volume: params.get("volume"),
-                phone: params.get('phone'), city: city, clientType: params.get("clientType"),
+                phone: params.get('phone'), city: city,
                 comment: params.get("comment"), term: utm_term, page: params.get("pageType"))
 
         if (params.get("isMainForm")) {
