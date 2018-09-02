@@ -8,9 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="cities"/>
+    <meta name="layout" content="pages"/>
     <title>Список городов</title>
-    <link rel="stylesheet" href="/boostrap/bootstrap.min.css">
 </head>
 
 <body>

@@ -6,7 +6,16 @@ class SecurityFilters {
         custompage(controller: 'custompage', action: '*') {
             before = {
                 if (!session.admin) {
-                    redirect(url: "/login")
+                    redirect(controller: 'login')
+                    return false
+                }
+            }
+        }
+
+        pageGroup(controller: 'pageGroup', action: '*') {
+            before = {
+                if (!session.admin) {
+                    redirect(controller: 'login')
                     return false
                 }
             }
@@ -15,10 +24,21 @@ class SecurityFilters {
         city(controller: 'city', action: '*') {
             before = {
                 if (!session.admin) {
-                    redirect(url: "/login")
+                    redirect(controller: 'login')
                     return false
                 }
             }
         }
+
+        intent(controller: 'intent', action: '*') {
+            before = {
+                if (!session.admin) {
+                    redirect(controller: 'login')
+                    return false
+                }
+            }
+        }
+
+
     }
 }

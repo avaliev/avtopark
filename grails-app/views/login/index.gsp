@@ -15,7 +15,7 @@
 
 <body>
 <div class="container">
-    <form class="form-signin" method="post">
+    <form class="form-signin" method="post" action="/login/auth">
         <h2 class="form-signin-heading">Введите логин и пароль</h2>
         <label for="inputEmail" class="sr-only">Login</label>
         <input name="login" minlength="3" type="text" id="inputEmail" class="form-control" placeholder="login" required="" autofocus="">

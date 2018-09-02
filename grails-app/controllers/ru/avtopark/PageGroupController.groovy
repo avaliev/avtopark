@@ -1,7 +1,5 @@
 package ru.avtopark
 
-
-import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
@@ -19,85 +17,29 @@ class PageGroupController {
     }
 
     def create() {
-        respond new PageGroup(params)
+        render(view: 'create', model: [pageGroup: new PageGroup()]);
     }
 
     @Transactional
-    def save(PageGroup pageGroupInstance) {
-        if (pageGroupInstance == null) {
-            notFound()
-            return
-        }
-
-        if (pageGroupInstance.hasErrors()) {
-            respond pageGroupInstance.errors, view: 'create'
-            return
-        }
-
-        pageGroupInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'pageGroup.label', default: 'PageGroup'), pageGroupInstance.id])
-                redirect pageGroupInstance
+    def save(PageGroup pageGroup) {
+        if (pageGroup.title && pageGroup.url) {
+            def oldEn = CustomPage.findByUrl(pageGroup.url)
+            if (oldEn) {
+                oldEn.title = pageGroup.title;
+                oldEn.save()
+            } else {
+                pageGroup.save()
             }
-            '*' { respond pageGroupInstance, [status: CREATED] }
+            redirect(action: "index")
+        } else {
+            render(view: 'create', model: [pageGroup: pageGroup, msg: "Нужно заполнить все поля"])
         }
     }
 
-    def edit(PageGroup pageGroupInstance) {
-        respond pageGroupInstance
-    }
-
-    @Transactional
-    def update(PageGroup pageGroupInstance) {
-        if (pageGroupInstance == null) {
-            notFound()
-            return
-        }
-
-        if (pageGroupInstance.hasErrors()) {
-            respond pageGroupInstance.errors, view: 'edit'
-            return
-        }
-
-        pageGroupInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'PageGroup.label', default: 'PageGroup'), pageGroupInstance.id])
-                redirect pageGroupInstance
-            }
-            '*' { respond pageGroupInstance, [status: OK] }
-        }
-    }
-
-    @Transactional
-    def delete(PageGroup pageGroupInstance) {
-
-        if (pageGroupInstance == null) {
-            notFound()
-            return
-        }
-
-        pageGroupInstance.delete flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'PageGroup.label', default: 'PageGroup'), pageGroupInstance.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'pageGroup.label', default: 'PageGroup'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*' { render status: NOT_FOUND }
+    def edit(String url) {
+        def pageGroup = PageGroup.findByUrl(url);
+        if (pageGroup) {
+            render(view: "create", model: [pageGroup: pageGroup])
         }
     }
 }

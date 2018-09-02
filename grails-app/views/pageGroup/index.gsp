@@ -23,8 +23,6 @@
     </tr>
     </thead>
 
-
-    <tbody>
     <g:each var="page" in="${pageGroups}">
         <tr>
             <td>${page.title}</td>

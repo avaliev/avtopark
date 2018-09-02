@@ -9,11 +9,11 @@
 <html>
 <head>
     <meta name="layout" content="pages"/>
-    <title>Новая страница</title>
+    <title>Создание/Редактирование информ. страницы</title>
 </head>
 
 <body>
-<h2>Новая страница</h2>
+<h2>Создание/Редактирование информ. страницы</h2>
 
 <div class="jumbotron">
     <form action="/custompage/save" method="post">

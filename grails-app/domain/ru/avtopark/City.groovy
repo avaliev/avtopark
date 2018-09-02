@@ -6,8 +6,7 @@ class City {
     String urlName
     String gname
     String descr
-    // описание для страниц с маршрутом из этого города
-    String routeDescr
+
     String aboutFura
     String aboutZil
     String aboutGazel
@@ -24,7 +23,6 @@ class City {
         urlName unique: true, blank: false
         name unique: true, blank: false
         descr nullable: true
-        routeDescr nullable: true
         aboutFura nullable: true
         aboutZil nullable: true
         aboutKamaz nullable: true
@@ -35,7 +33,6 @@ class City {
 
     static mapping = {
         descr type: 'text'
-        routeDescr type: 'text'
         aboutFura type: 'text'
         aboutKamaz type: 'text'
         aboutZil type: 'text'

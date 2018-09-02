@@ -10,9 +10,14 @@ class Route {
 
     City destinationCity;
 
+    String content;
+
     static constraints = {
 
         urlName unique: true
         name unique: true
+    }
+    static mapping = {
+        content type: 'text'
     }
 }
