@@ -20,7 +20,11 @@ class CityController {
     }
 
     def save(City city) {
+
         if (city.id == null) {
+            def oldCity=City.findByUrlName(city.urlName)
+            if (oldCity!=null)
+                throw new RuntimeException("Страница с таким url уже существует")
             city.save()
             createRoutesFor(city)
         } else {
