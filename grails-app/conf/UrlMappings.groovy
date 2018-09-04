@@ -9,7 +9,7 @@ class UrlMappings {
 
         "/"(controller: "main", action: "index")
 
-        "/p/$page"(controller: "page", action: "index")
+        "/p/$pageGroup/$page"(controller: "page", action: "index")
 //        "/login"(controller: "login", action: 'login', method: "post")
         "/gorod/$city?"(controller: "main", action: "city")
         "/gorod/$city"(controller: "main", action: "city")

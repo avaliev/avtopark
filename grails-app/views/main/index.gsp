@@ -24,7 +24,6 @@
     <p style="display: none" id="page-name">главная</p>
 
 
-
     <div class="col-md-9 center">
         <h1 class="center-block txt-c">Грузоперевозки по всей России</h1>
 
@@ -39,11 +38,13 @@
         <div class="row">
             <div class="col-sm-5">
                 <h2 class="txt-c">Рассчитайте стоимость <br/> перевозки ваших вещей <br/>  прямо сейчас</h2>
+
                 <div align="center">
                     <img style="margin-left: 27%; width: 40%" src="/images/big_arrow.png">
                 </div>
 
             </div>
+
             <div class="col-sm-7">
                 <g:render template="/shared/freeCityCalc"></g:render>
 
@@ -189,6 +190,12 @@
         <div style="float: right; width: 100% ; margin-top: 30px; margin-right: 10px" id="vk_community_messages"></div>
     </div>
 </div>
+<hr/>
+
+<div class="row">
+    <g:render template="/shared/infoPages"></g:render>
+</div>
+<hr/>
 
 <div class="row">
     <g:render template="/shared/citiesList" model="[list: cities]"></g:render>

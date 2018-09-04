@@ -2,6 +2,7 @@ package filters
 
 import org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap
 import ru.avtopark.City
+import ru.avtopark.PageGroup
 import ru.avtopark.Settings
 
 class GeneralDataFilters {
@@ -53,6 +54,7 @@ class GeneralDataFilters {
             after = { Map model ->
                 addContacts(model)
                 addCities(model)
+                addPages(model)
             }
         }
     }
@@ -88,6 +90,13 @@ class GeneralDataFilters {
         if (model != null) {
             def list = City.list()
             model.put("cities", list)
+        }
+    }
+
+    def addPages(Map model) {
+        if (model) {
+            def pageGroups = PageGroup.list();
+            model.put("pageGroups", pageGroups)
         }
     }
 

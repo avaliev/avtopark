@@ -9,7 +9,7 @@
 
 <body>
 <h2>Рубрики информационных страниц</h2>
-<a class="btn btn-success pull-right" href="/pageGroup/create">Создать страницу</a>
+<a class="btn btn-success pull-right" href="/pageGroup/create">Создать новую рубрику</a>
 <br/>
 <br/>
 <br/>
@@ -26,8 +26,8 @@
     <g:each var="page" in="${pageGroups}">
         <tr>
             <td>${page.title}</td>
-            <td><a href="/p/${page.url}">${page.url}</a></td>
-            <td width="20%"><a href="/pageGroup/edit?url=${page.url}">редактировать</a></td>
+            <td>${page.url}</td>
+            <td width="20%"><a href="/pageGroup/edit?id=${page.id}">редактировать</a></td>
         </tr>
     </g:each>
     </tbody>

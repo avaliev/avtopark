@@ -17,6 +17,16 @@
 
 <div class="jumbotron">
     <form action="/custompage/save" method="post">
+
+        <input class="form-control" type="hidden" value="${page.id}" name="page.id" />
+
+        <my:select id="pageGroupSelect" name="page.group.id"
+                   value="${page.group?.id}"
+                   label="Рубрика страницы" from="${ru.avtopark.PageGroup.list()}"
+                   class="form-control"
+                   noSelection="${['null': 'Выберите...']}"
+                   optionKey="id" optionValue="title"/>
+
         <div class="form-group">
             <label for="url">Адрес страницы (URL)</label>
             <input required name="page.url" value="${page.url}" type="text" class="form-control" id="url"

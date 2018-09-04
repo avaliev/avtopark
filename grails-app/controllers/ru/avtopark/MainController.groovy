@@ -17,7 +17,7 @@ class MainController {
         replacePhone()
         loadCities()
         def pages = CustomPage.list()
-        render(view: 'index', model: [cities: cities, pages: pages, phoneYa: phone_yandex])
+        render(view: 'index', model: [cities: cities, pages: pages, pageGroups: PageGroup.list(), phoneYa: phone_yandex])
     }
 
 

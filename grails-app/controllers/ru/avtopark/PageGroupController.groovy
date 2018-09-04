@@ -23,8 +23,8 @@ class PageGroupController {
     @Transactional
     def save(PageGroup pageGroup) {
         if (pageGroup.title && pageGroup.url) {
-            def oldEn = CustomPage.findByUrl(pageGroup.url)
-            if (oldEn) {
+            if (pageGroup.id) {
+                def oldEn = CustomPage.findById(pageGroup.id)
                 oldEn.title = pageGroup.title;
                 oldEn.save()
             } else {
@@ -36,8 +36,8 @@ class PageGroupController {
         }
     }
 
-    def edit(String url) {
-        def pageGroup = PageGroup.findByUrl(url);
+    def edit(String id) {
+        def pageGroup = PageGroup.findById(id);
         if (pageGroup) {
             render(view: "create", model: [pageGroup: pageGroup])
         }

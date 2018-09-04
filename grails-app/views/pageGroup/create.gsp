@@ -9,6 +9,9 @@
 <h2>Редактирование/Создание рубрики</h2>
 <div class="jumbotron">
     <form action="/pageGroup/save" method="post">
+
+        <input class="form-control" type="hidden" value="${pageGroup.id}" name="pageGroup.id"/>
+
         <div class="form-group">
             <label for="url">Адрес страницы (URL)</label>
             <input required name="pageGroup.url" value="${pageGroup.url}" type="text" class="form-control" id="url"
@@ -23,7 +26,6 @@
 
         <br/>
         <button type="submit" class="btn btn-default">Сохранить</button>
-
     </form>
 </div>
 </body>

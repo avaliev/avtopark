@@ -23,6 +23,7 @@
     <thead>
     <tr>
         <th>Название</th>
+        <th>Рубрика</th>
         <th>URL</th>
         <th>Действия</th>
     </tr>
@@ -32,8 +33,9 @@
     <g:each var="page" in="${pages}">
         <tr>
             <td>${page.title}</td>
-            <td><a href="/p/${page.url}">${page.url}</a></td>
-            <td width="20%"><a href="/custompage/edit?url=${page.url}">редактировать</a></td>
+            <td>${page.group?.title}</td>
+            <td><a href="/p/${page.group?.url}/${page.url}" target="_blank">${page.url}</a></td>
+            <td width="20%"><a href="/custompage/edit?id=${page.id}">редактировать</a></td>
         </tr>
     </g:each>
     </tbody>

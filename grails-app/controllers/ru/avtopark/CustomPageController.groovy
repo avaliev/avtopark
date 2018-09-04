@@ -17,9 +17,9 @@ class CustompageController {
     }
 
     def save(CustomPage page) {
-        if (page.url && page.title && page.metaTag && page.content) {
-            def oldPage = CustomPage.findByUrl(page.url);
-            if (oldPage) {
+        if (page.url && page.title && page.metaTag && page.content && page.group) {
+            if (page.id != null) {
+                def oldPage = CustomPage.findById(page.url);
                 oldPage.title = page.title
                 oldPage.metaTag = page.metaTag
                 oldPage.content = page.content
@@ -34,8 +34,8 @@ class CustompageController {
         }
     }
 
-    def edit(String url) {
-        def page = CustomPage.findByUrl(url);
+    def edit(Long id) {
+        def page = CustomPage.findById(id);
         if (page) {
             render(view: "createpage", model: [page: page])
         }

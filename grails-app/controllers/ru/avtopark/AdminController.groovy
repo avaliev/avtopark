@@ -10,6 +10,5 @@ class AdminController {
             render(view: "login")
         }
 
-
     }
 }
