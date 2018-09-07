@@ -1,5 +1,9 @@
 package ru.avtopark
 
+import grails.transaction.Transactional
+
+
+@Transactional
 class CustompageController {
 
     def index() {
@@ -19,11 +23,12 @@ class CustompageController {
     def save(CustomPage page) {
         if (page.url && page.title && page.metaTag && page.content && page.group) {
             if (page.id != null) {
-                def oldPage = CustomPage.findById(page.url);
+                def oldPage = CustomPage.findById(page.id);
                 oldPage.title = page.title
                 oldPage.metaTag = page.metaTag
                 oldPage.content = page.content
                 oldPage.group = page.group
+                oldPage.url = page.url
                 oldPage.save()
             } else {
                 page.save()

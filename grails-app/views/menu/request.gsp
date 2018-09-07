@@ -33,39 +33,18 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Email <small>(необязательно)</small></label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="email" name="email">
-            </div>
-        </div>
-
         <p class="col-sm-offset-2 col-sm-10">Дополнительная информация о грузе:</p>
         <div class="form-group">
-            <label for="departure" class="col-sm-2 control-label">Место погрузки:</label>
+            <label for="departure" class="col-sm-2 control-label">Город погрузки:</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="departure" name="departure">
             </div>
         </div>
 
         <div class="form-group">
-            <label for="destination" class="col-sm-2 control-label">Место выгрузки:</label>
+            <label for="destination" class="col-sm-2 control-label">Город выгрузки:</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="destination" name="destination">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="weight" class="col-sm-2 control-label">Вес:</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="weight" name="weight">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="volume" class="col-sm-2 control-label">Объём:</label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="volume" name="volume">
             </div>
         </div>
 

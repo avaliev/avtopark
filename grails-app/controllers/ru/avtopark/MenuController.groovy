@@ -40,7 +40,7 @@ class MenuController {
         render (view: 'pereezdy',  model : [cities: maincont.loadCities()])
     }
 
-    def pereezd1() {
+    def pereezd_dom() {
         replacePhone()
         def maincont=applicationContext.getBean("ru.avtopark.MainController")
         render (view: 'pereezd1',  model : [cities: maincont.loadCities()])

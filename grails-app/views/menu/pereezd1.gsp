@@ -170,6 +170,14 @@
         </div>
     </div>
 
+    <h3>Переезды по городам</h3>
+
+    <div class="routesList">
+        <g:each in="${cities}" var="obj">
+            <a href="/pereezdy/${obj.urlName}">${obj.name}</a>
+        </g:each>
+    </div>
+
 
 </body>
 </html>

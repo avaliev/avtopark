@@ -101,29 +101,13 @@
                     <li><a href="/menu/services">Тарифы и транспорт</a></li>
                     <li><a href="/menu/about">О компании</a></li>
                     <li><a href="/menu/docs">Документы</a></li>
-                    %{--<li><a href="/menu/pereezd1">Домашний переезд</a></li>--}%
-                    %{--<li><a href="/menu/pereezd2">Офисный переезд</a></li>--}%
-                    %{--<li><a href="/menu/pereezdy">Междугородние переезды</a></li>--}%
                     <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
                                                           href="#">Переезды<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/menu/pereezd1">Домашний переезд</a></li>
-                            <li><a href="/menu/pereezd2">Офисный переезд</a></li>
+                            <li><a href="/menu/pereezd_dom">Домашний переезд</a></li>
                             <li><a href="/menu/pereezdy">Междугородние переезды</a></li>
                         </ul>
                     </li>
-                    <g:if test="${pages != null}">
-                        <li hidden="true" class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
-                                                              href="#">Полезная информация<span class="caret"></span>
-                        </a>
-                            <ul class="dropdown-menu">
-                                <g:each in="${pages}" var="p">
-                                    <li><a href="/p/${p.url}">${p.title}</a></li>
-                                </g:each>
-                            </ul>
-                        </li>
-                    </g:if>
-
                 </ul>
             </div>
         </div>
@@ -171,9 +155,7 @@
             <div class="footer_teaser col-sm-4">
                 <p>&nbsp;</p>
                 <h5>Принимаем к оплате:</h5>
-
                 <p><img width="50%" src="/images/epay1.png"></p>
-
             </div>
         </div>
     </section>
@@ -210,8 +192,8 @@
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
         a = s.createElement(o),
             m = s.getElementsByTagName(o)[0];
         a.async = 1;

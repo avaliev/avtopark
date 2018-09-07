@@ -1,13 +1,12 @@
 package ru.avtopark
 
 import grails.plugin.mail.MailService
-import ru.avtopark.City
-import ru.avtopark.Intent
-import ru.avtopark.Settings
+import grails.transaction.Transactional
 
 /**
  * Created by Admin on 11.10.14.
  */
+@Transactional
 class EmailSendService {
 
     MailService mailService
@@ -35,10 +34,6 @@ class EmailSendService {
             buffer.append("Пришел с запроса: ").append(intent.term).append("\r\n")
         }
 
-        if (intent.email != null) {
-            buffer.append("Email: ").append(intent.email).append("\r\n")
-        }
-
         if (intent.comment != null) {
             buffer.append("Комментарий: ").append(intent.comment).append("\r\n")
         }
@@ -51,23 +46,12 @@ class EmailSendService {
             buffer.append("Место выгрузки: ").append(intent.destination).append("\r\n")
         }
 
-        if (intent.weight != null) {
-            buffer.append("Вес: ").append(intent.weight).append("\r\n")
-        }
-
-
-        if (intent.volume != null && intent.volume) {
-            buffer.append("Объем: ").append(intent.volume).append("\r\n")
-        }
-
         if (params != null) {
             for (String key in params.keySet()) {
                 String value = params.get(key)
                 buffer.append(key + ":").append(value).append("\r\n")
             }
         }
-
-
 
         mailService.sendMail {
             async true
@@ -99,7 +83,6 @@ class EmailSendService {
 
         Intent intent = new Intent(userName: params.get('userName'), intentDate: new Date(),
                 destination: params.get('destination'), departure: params.get("departure"),
-                volume: params.get("volume"),
                 phone: params.get('phone'), city: city,
                 comment: params.get("comment"), term: utm_term, page: params.get("pageType"))
 
@@ -107,8 +90,6 @@ class EmailSendService {
             intent.setDeparture(params.get("departure"))
             intent.setDestination(params.get("destination"))
             intent.setVolume(params.get("volume"))
-            intent.setWeight(params.get("weight"))
-            intent.setEmail(params.get("email"))
         }
         intent.save()
 

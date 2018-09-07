@@ -30,8 +30,6 @@
              alt="перевозки ${city.name} газель, бычок"
              style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
 
-        <g:render template="/shared/cityDescr"></g:render>
-
         <p class="descr">
             ${city.descr}
         </p>

@@ -9,6 +9,5 @@ class AdminController {
         if (request.get) {
             render(view: "login")
         }
-
     }
 }

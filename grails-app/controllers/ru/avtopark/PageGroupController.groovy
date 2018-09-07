@@ -2,7 +2,7 @@ package ru.avtopark
 
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional
 class PageGroupController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -24,8 +24,9 @@ class PageGroupController {
     def save(PageGroup pageGroup) {
         if (pageGroup.title && pageGroup.url) {
             if (pageGroup.id) {
-                def oldEn = CustomPage.findById(pageGroup.id)
+                def oldEn = PageGroup.findById(pageGroup.id)
                 oldEn.title = pageGroup.title;
+                oldEn.url = pageGroup.url
                 oldEn.save()
             } else {
                 pageGroup.save()

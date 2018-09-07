@@ -50,7 +50,6 @@ class MainController {
         String url = params.get("route")
         Route route = Route.findByUrlName(url)
         City city = route.departureCity
-        def tlist = Transport.list()
         def pages = CustomPage.list()
         render(view: 'pereezd-route', model:
                 [city   : city, cities: cities,
