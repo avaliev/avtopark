@@ -19,18 +19,36 @@ class CityController {
         render view: 'edit', model: [city: c]
     }
 
+    def cityroutes(Long id) {
+        City c = City.findById(id)
+        render view: 'cityroutes', model: [city: c]
+    }
+
     def save(City city) {
 
-        if (city.id == null) {
-            def oldCity=City.findByUrlName(city.urlName)
-            if (oldCity!=null)
-                throw new RuntimeException("Страница с таким url уже существует")
-            city.save()
-            createRoutesFor(city)
+        if (city.id) {
+            def oldCity = City.findById(city.id)
+            if (oldCity) {
+                oldCity.name = city.name
+                oldCity.gname = city.gname
+                oldCity.urlName = city.urlName
+                oldCity.descr = city.descr
+                oldCity.aboutGazel = city.aboutGazel
+                oldCity.aboutZil = city.aboutZil
+                oldCity.aboutKamaz = city.aboutKamaz
+                oldCity.aboutFura = city.aboutFura
+                oldCity.aboutPereezd = city.aboutPereezd
+                oldCity.videoLink = city.videoLink
+                oldCity.save()
+                if (city.routes.isEmpty()) {
+                    createRoutesFor(city)
+                }
+            }
         } else {
             city.save()
-        }
+            createRoutesFor(city)
 
+        }
         def cityName = city.name
         flash.message = "Город ${cityName} сохранен"
         redirect(action: 'index')
@@ -39,13 +57,19 @@ class CityController {
     def private createRoutesFor(City city) {
         def list = City.list()
         list.each { City c ->
-            def r = new Route()
-            r.departureCity = city
-            r.destinationCity = c
-            r.name = city.name + " - " + c.name
-            r.urlName = city.urlName + "-" + c.urlName
-            r.save()
-        }
+            def routeFrom = new Route()
+            def routeTo = new Route()
+            routeFrom.departureCity = city
+            routeFrom.destinationCity = c
+            routeFrom.name = city.name + " - " + c.name
+            routeFrom.urlName = city.urlName + "-" + c.urlName
+            routeFrom.save()
 
+            routeTo.departureCity = c
+            routeTo.destinationCity = city
+            routeTo.name = c.name + " - " + city.name
+            routeTo.urlName = c.urlName + "-" + city.urlName
+            routeTo.save()
+        }
     }
 }

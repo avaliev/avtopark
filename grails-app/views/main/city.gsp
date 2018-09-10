@@ -96,25 +96,17 @@
         предоставление транспорта, аренда специализированной техники, экспедиционную группу,
         страхование Ваших вещей на всех этапах перевозки, помощь в оформлении всех видов документации.
     </p>
-
         <hr/>
         <g:render template="/shared/services" model="[c: city]"></g:render>
-
     </div>
 
     <div class=" col-md-3">
         <g:render template="/shared/quickForm"></g:render>
-        <div class="reis">
-            <b>Машин в рейсе:</b>  <span class="label label-info"></span>
-        </div>
-
-        <div class="vypol">
-            <b>Выполнено заявок за сегодня:</b>  <span class="label label-info"></span>
-        </div>
-
-        <g:render template="/shared/custompages"></g:render>
-
     </div>
+</div>
+
+<div class="row">
+    <g:render template="/shared/infoPages"></g:render>
 </div>
 
 <div class="row">
