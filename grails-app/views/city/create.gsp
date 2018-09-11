@@ -35,42 +35,42 @@
 
     <div class="form-group">
         <label>Ссылка на видео</label>
-        <input required name="city.videoLink" value="${city.videoLink}" type="text" class="form-control">
+        <input name="city.videoLink" value="${city.videoLink}" type="text" class="form-control">
     </div>
 
     <div class="form-group">
         <label>Описание города</label>
-        <textarea required name="city.descr" placeholder="описание города не должно быть пустым"
+        <textarea name="city.descr" placeholder="описание города не должно быть пустым"
                   rows="5" class="form-control">${city.descr}</textarea>
     </div>
 
     <div class="form-group">
         <label>Описание для <b>Газели</b> на странице города</label>
-        <textarea required name="city.descr"
+        <textarea name="city.descr"
                   rows="5" class="form-control">${city.aboutGazel}</textarea>
     </div>
 
     <div class="form-group">
         <label>Описание для <b>ЗИЛ (бычок)</b> на странице города</label>
-        <textarea required name="city.descr"
+        <textarea  name="city.descr"
                   rows="5" class="form-control">${city.aboutZil}</textarea>
     </div>
 
     <div class="form-group">
         <label>Описание для <b>Камаза</b> на странице города</label>
-        <textarea required name="city.descr"
+        <textarea name="city.descr"
                   rows="5" class="form-control">${city.aboutKamaz}</textarea>
     </div>
 
     <div class="form-group">
         <label>Описание для <b>фуры</b> на странице города</label>
-        <textarea required name="city.descr"
+        <textarea name="city.descr"
                   rows="5" class="form-control">${city.aboutFura}</textarea>
     </div>
 
     <div class="form-group">
         <label>Текст для страницы переездов из города</label>
-        <textarea required name="city.descr"
+        <textarea  name="city.descr"
                   rows="5" class="form-control">${city.aboutPereezd}</textarea>
     </div>
 

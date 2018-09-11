@@ -47,7 +47,6 @@ class CityController {
         } else {
             city.save()
             createRoutesFor(city)
-
         }
         def cityName = city.name
         flash.message = "Город ${cityName} сохранен"
@@ -57,19 +56,21 @@ class CityController {
     def private createRoutesFor(City city) {
         def list = City.list()
         list.each { City c ->
-            def routeFrom = new Route()
-            def routeTo = new Route()
-            routeFrom.departureCity = city
-            routeFrom.destinationCity = c
-            routeFrom.name = city.name + " - " + c.name
-            routeFrom.urlName = city.urlName + "-" + c.urlName
-            routeFrom.save()
+            if (!c.urlName.equals(city.urlName)) {
+                def routeFrom = new Route()
+                def routeTo = new Route()
+                routeFrom.departureCity = city
+                routeFrom.destinationCity = c
+                routeFrom.name = city.name + " - " + c.name
+                routeFrom.urlName = city.urlName + "-" + c.urlName
+                routeFrom.save(failOnError: true, validate: false)
+                routeTo.departureCity = c
+                routeTo.destinationCity = city
+                routeTo.name = c.name + " - " + city.name
+                routeTo.urlName = c.urlName + "-" + city.urlName
+                routeTo.save(failOnError: true, validate: false)
+            }
 
-            routeTo.departureCity = c
-            routeTo.destinationCity = city
-            routeTo.name = c.name + " - " + city.name
-            routeTo.urlName = c.urlName + "-" + city.urlName
-            routeTo.save()
         }
     }
 }

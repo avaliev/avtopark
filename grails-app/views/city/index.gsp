@@ -4,6 +4,7 @@
     <meta name="layout" content="pages"/>
     <title>Список городов</title>
 </head>
+
 <body>
 <div class="jumbotron">
     <div class="row">
@@ -12,6 +13,7 @@
         <div class="col-sm-6 pull-right">
             <a class="btn btn-success pull-right" href="/city/create">Новый город</a></div>
     </div>
+
     <div class="alert-info">${flash.message != null ? flash.message : ""}</div>
     <table class="table table-responsive">
         <thead>
@@ -74,8 +76,8 @@
                 <g:else>
                     <td class="danger">-</td>
                 </g:else>
-                <td><a class="small" href="/city/edit?id=${c.id}">Изменить</a></td>
-                <td><a class="small" href="/city/cityroutes?id=${c.id}">Маршруты</a></td>
+                <td><a class="small" href="/city/edit?id=${c.id}" target="_blank">Изменить</a></td>
+                <td><a class="small" href="/city/cityroutes?id=${c.id}" target="_blank">Маршруты</a></td>
             </tr>
         </g:each>
     </table>

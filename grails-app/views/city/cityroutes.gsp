@@ -30,13 +30,13 @@
             <tr>
                 <td>${r.name}</td>
                 <td>${r.urlName}</td>
-                <g:if test="${r.content != null}">
+                <g:if test="${r.content}">
                     <td class="success">${r.content.length()} симв.</td>
                 </g:if>
                 <g:else>
                     <td class="danger">-</td>
                 </g:else>
-                <td><a class="small" href="/route/edit?id=${r.id}">Изменить</a></td>
+                <td><a class="small" href="/route/edit?id=${r.id}" target="_blank">Изменить</a></td>
             </tr>
         </g:each>
         </tbody>

@@ -30,6 +30,13 @@
              alt="перевозки ${city.name} газель, бычок"
              style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
 
+        <g:if test="${city.videoLink}">
+            <iframe width="480" height="360" autoplay="1"
+                    src="https://www.youtube.com/embed/${city.videoLink}"
+                    frameborder="0" allowfullscreen></iframe>
+        </g:if>
+
+
         <p class="descr">
             ${city.descr}
         </p>

@@ -13,9 +13,9 @@ class Route {
     String content;
 
     static constraints = {
-
         urlName unique: true
         name unique: true
+        content nullable: true
     }
     static mapping = {
         content type: 'text'
