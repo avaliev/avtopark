@@ -26,14 +26,16 @@
         <h1 class="txt-c font150">Грузоперевозки из ${city.gname} по России быстро и недорого</h1>
         <h4 class="txt-c blue font150">Автомобильные перевозки и доставка из ${city.gname} по городам Росии догрузом или отдельным транспортом</h4>
 
-        <img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA"
-             alt="перевозки ${city.name} газель, бычок"
-             style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">
+        %{--<img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA"--}%
+             %{--alt="перевозки ${city.name} газель, бычок"--}%
+             %{--style="float: right ; margin-left: 10px; max-height: 250px; max-width: 250px">--}%
 
         <g:if test="${city.videoLink}">
-            <iframe width="480" height="360" autoplay="1"
-                    src="https://www.youtube.com/embed/${city.videoLink}"
-                    frameborder="0" allowfullscreen></iframe>
+            <div align="center">
+                <iframe width="480" height="360" autoplay="1"
+                        src="https://www.youtube.com/embed/${city.videoLink}"
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
         </g:if>
 
 
