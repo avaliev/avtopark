@@ -24,7 +24,7 @@
     <div class=" col-md-9">
 
         <h1 class="txt-c font150">Грузоперевозки из ${city.gname} по России быстро и недорого</h1>
-        <h4 class="txt-c blue font150">Автомобильные перевозки и доставка из ${city.gname} по городам Росии догрузом или отдельным транспортом</h4>
+        <h4 class="txt-c blue font150">Автомобильные перевозки и доставка из ${city.gname} по городам Росcии догрузом или отдельным транспортом</h4>
 
         %{--<img src="http://maps.googleapis.com/maps/api/staticmap?center=${city.name}&zoom=10&size=250x200&key=AIzaSyCweSmzfOW9bOdnpHaxlpqamwQ62pFvQCA"--}%
              %{--alt="перевозки ${city.name} газель, бычок"--}%

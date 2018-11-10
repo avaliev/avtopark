@@ -146,10 +146,6 @@
                 <p>Телефон офиса в Москве:</p>
 
                 <p><i class="fa fa-phone"></i> ${contacts.tel_moscow}</p>
-
-                <p>Телефон офиса в Санкт-Петербурге:</p>
-
-                <p><i class="fa fa-phone"></i> ${contacts.tel_spb}</p>
             </div>
 
             <div class="footer_teaser col-sm-4">

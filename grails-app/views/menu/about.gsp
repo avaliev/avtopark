@@ -35,11 +35,7 @@
             <div class="about">
                 <h3>Контакты ТК "Авто-парк"</h3>
 
-                <p> Горячая линия (бесплатно по всей России): <span class="blue">${contacts.phone}</span></p>
-
                 <p>Телефон офиса в Москве: <span class="blue">${contacts.tel_moscow}</span></p>
-
-                <p>Телефон офиса в Санкт-Петербурге: <span class="blue">${contacts.tel_spb}</span></p>
 
                 <p>Телефон офиса в Казани:  <span class="blue">${contacts.tel_kazan}</span></p>
 
