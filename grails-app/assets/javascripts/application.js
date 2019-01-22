@@ -19,6 +19,47 @@ if (typeof jQuery !== 'undefined') {
     })(jQuery);
 }
 
+function checkNamePhone(userName, userPhone, btnId) {
+    // проверяет имя и телефон, соответ формы и работает с кнопкой
+
+    $(btnId).attr('disabled', 'disabled');
+    if (userName == null || userName == '') {
+        window.alert("Вы не указали Ваше имя !");
+        $(btnId).removeAttr('disabled');
+        return false;
+    }
+    if (userPhone == null || userPhone == '') {
+        window.alert("Вы не указали телефон !");
+        $(btnId).removeAttr('disabled');
+        return false;
+    }
+    $(btnId).removeAttr('disabled');
+    return true;
+}
+
+
+function sendRequest(comment, btnId) {
+
+
+    var city = $("#city_id").val();
+    var route = $("#route_id").val();
+    var page = $('#page-name').text();
+
+    $.post("/main/intent", {
+        userName: userName,
+        phone: userPhone,
+        city_id: city,
+        route_id: route,
+        pageType: page,
+        comment: comment
+    }, function (data) {
+        window.alert("Заявка отправлена! \r\n Спасибо!");
+    });
+
+    WBK.sendCrmLead(34563, {'name': userName, 'phone': userPhone, 'comment': comment});
+}
+
+
 function checkCalc() {
 
     g2 = document.getElementById("kg2");
@@ -71,13 +112,18 @@ function initHandlers() {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    $(".reis span").text(getRandomInt(30, 40));
-    $(".vypol span").text(getRandomInt(20, 30));
-
     $(".user-phone").attr('placeholder', '+7-(XXX)-XXX-XXXX');
 
     $('.user-phone').bind("enterKey", function (e) {
         jQuery("#send-btn").click();
+    });
+
+    $('.user-phone').keyup(function (e) {
+        userPhone = $(this).val()
+    });
+
+    $('.user-name').keyup(function (e) {
+        userName = $(this).val()
     });
 
     $('input').keyup(function (e) {
@@ -86,45 +132,18 @@ function initHandlers() {
         }
     });
 
+    // 2й тип отправки - кнопка "заказа обратного звонка"
+    jQuery("#quick-form-btn").click(function () {
 
-    jQuery("#send-btn").click(function () {
-        $('#send-btn').attr('disabled', 'disabled');
-        userName = $("#user_name").val();
-        userPhone = $("#user_phone").val();
-        comment = $("#comment").val();
-        city = $("#city_id").val();
-        page = $('#page-name').text();
-        //clientType=$("input:radio[name='client_type']:checked").val();
+        $('#quick-form-btn').attr('disabled', 'disabled');
 
-        if (!checkNamePhone(userName, userPhone, '#send-btn'))
-            return;
-
-        $.post("/main/intent", {userName: userName, phone: userPhone, city_id: city, comment: comment, pageType: page},
-            function (data) {
-                window.alert("Заявка отправлена!");
-                $('#send-alert-suc').show();
-                $('#send-alert-err').hide();
-                $('#send-btn').removeAttr('disabled');
-
-            });
-
-        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
-                name: userName,
-                phone: userPhone,
-                page: page,
-                special: "Обратный звонок",
-                utm_term: keyword
-            },
-            function (data) {
-                console.log("success response from CRM");
-            }
-        );
+        sendRequest("", "#quick-form-btn");
         yaCounter28224696.reachGoal('RECALL_FORM');
     });
 
 
     // modal window request
-    $('.car-btn').click(function () {
+    $('.logist-btn').click(function () {
         $('#modal-form').modal();
         $('.modal-title').text($(this).text());
         if (typeof $(this).attr("car") != 'undefined') {
@@ -138,6 +157,15 @@ function initHandlers() {
         yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
     });
 
+
+    $(".car-btn").click(function () {
+        userName="<кнопка подбора машины>";
+        $('.car-btn').attr('disabled', 'disabled');
+        sendRequest("", "#quick-form-btn");
+        $('.car-btn').removeAttr("disabled");
+    });
+
+
     $('.zakaz-btn').click(function () {
         $('#modal-form').modal();
         yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
@@ -145,44 +173,17 @@ function initHandlers() {
     });
 
 
+    // 1й тип формы - модальное окно вызываемое кнопкой "консульт. логиста"
     $('#modal-form-button').click(function () {
         var userName = $('.modal-body .user-name').val();
         var userPhone = $('.modal-body .user-phone').val();
-        var city = $("#city_id").val();
-        var route = $("#route_id").val();
-        var page = $('#page-name').text();
 
-        if (!checkNamePhone(userName, userPhone, "#modal-form-button")) {
-            return;
-        }
-
-
-        $.post("/main/intent", {
-            userName: userName,
-            phone: userPhone,
-            city_id: city,
-            route_id: route,
-            comment: carTypeComment,
-            pageType: page
-        }, function (data) {
-            window.alert("Заявка отправлена! \r\n Спасибо!");
-        });
-        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
-                name: userName,
-                phone: userPhone,
-                page: page,
-                special: spec,
-                volume: carTypeComment,
-                utm_term: keyword
-            },
-            function (data) {
-                console.log("success response from CRM");
-            }
-        );
+        sendRequest("", "#modal-form-button");
         yaCounter28224696.reachGoal('WINDOW_FORM_SUBMIT');
     });
 
     // request from calculator
+    // 2й тип формы - калькулятор
     $('#free-calc-btn').click(function () {
         var userName = $('.calc-form .user-name').val();
         var userPhone = $('.calc-form .user-phone').val();
@@ -201,98 +202,31 @@ function initHandlers() {
                 departure: city1,
                 destination: city2,
                 pageType: page,
-                volume : trans
+                volume: trans,
+                comment: msg
             },
             function (data) {
                 $('#calc-btn').removeAttr('disabled');
                 window.alert("Заявка отправлена! \r\n Спасибо!");
             });
-        $.post("http://brainbattle.ru/amo/gefest/amosend.php", {
-                name: userName,
-                phone: userPhone,
-                loading: city1,
-                unloading: city2,
-                volume: trans,
-                page: page,
-                special: "Заявка с калькулятора",
-                utm_term: keyword
-            },
-            function (data) {
-                console.log("success response from CRM");
-            }
-        );
+
+        WBK.sendCrmLead(34563, {'name': userName, 'phone': userPhone, 'comment': msg});
         yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 
     // флаг для работы с главной формы
     submitted = false;
-
     $("#full_form").submit(function (event) {
-
         $("#main_form_btn").attr("disabled", "disabled");
-
-        var userName = $("#user_name").val();
-        var userPhone = $("#user_phone").val();
-        var email = $("#email").val();
-        var destination = $("#destination").val();
-        var departure = $("#departure").val();
-        var weight = $("weight").val();
-        var volume = $("#volume").val();
         var comment = $("#comment").val();
-
-
-        if (!checkNamePhone(userName, userPhone, "#main_form_btn")) {
-            return false;
+        if (!submitted) {
+            sendRequest(comment, "#main_form_btn");
         }
-        if (submitted) {
-            return true;
-        } else {
-            event.preventDefault();
-        }
-
-        $.ajax({
-            method: 'POST',
-            url: "http://brainbattle.ru/amo/gefest/amosend.php",
-            data: {
-                name: userName,
-                phone: userPhone,
-                email: email,
-                page: "Форма заявки",
-                special: comment,
-                loading: departure,
-                unloading: destination,
-                weight: weight,
-                volume: volume
-            }
-
-        }).always(function (a, text, b) {
-            console.log("callback for request from CRM");
-            console.log(text);
-            submitted = true;
-            $("#full_form").submit();
-        });
-
+        submitted = true;
+        event.preventDefault();
         return false;
     });
 
-
-    function checkNamePhone(userName, userPhone, btnId) {
-        // проверяет имя и телефон, соответ формы и работает с кнопкой
-
-        $(btnId).attr('disabled', 'disabled');
-        if (userName == null || userName == '') {
-            window.alert("Вы не указали Ваше имя !");
-            $(btnId).removeAttr('disabled');
-            return false;
-        }
-        if (userPhone == null || userPhone == '') {
-            window.alert("Вы не указали телефон !");
-            $(btnId).removeAttr('disabled');
-            return false;
-        }
-        $(btnId).removeAttr('disabled');
-        return true;
-    }
 
     function setYaKeyWord() {
         var url = window.location.search;
@@ -309,9 +243,7 @@ function initHandlers() {
             }
         }
     }
-
     setYaKeyWord();
-
 }
 
 

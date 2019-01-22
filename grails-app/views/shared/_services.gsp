@@ -16,7 +16,7 @@
 
 
                 <g:if test="${c.aboutGazel}">
-                    ${c.descr}
+                    ${c.aboutGazel}
                 </g:if>
                 <g:else>
                     <p>

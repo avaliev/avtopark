@@ -7,7 +7,7 @@
         <g:form id="quick_form" controller="main" action="intent" method="POST" class="form-group" role="form">
             <div class="form-group">
                 <label for="user_name">Пожалуйста, представьтесь:</label>
-                <g:textField id="user_name" class="form-control" name="userName" value="" placeholder="Ваше имя"/>
+                <g:textField id="user_name" class="form-control user-name" name="userName" value="" placeholder="Ваше имя"/>
             </div>
 
             <div class="form-group">
@@ -25,7 +25,7 @@
 
             <div class="form-group">
                 <button style="width: 100%" type="button" class="btn btn-success"
-                        id="send-btn">Заказать консультацию &#8594;</button>
+                        id="quick-form-btn">Заказать консультацию &#8594;</button>
             </div>
 
             <div id="send-alert-suc" class="alert alert-success form-group"

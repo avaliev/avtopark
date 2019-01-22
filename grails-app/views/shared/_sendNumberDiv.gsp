@@ -9,7 +9,7 @@
     </div>
 
     <div class="col-sm-6">
-        <button style="width: 100%" type="button" class="btn btn-warning"
-                id="send-btn">Узнать у логиста</button>
+        <button style="width: 100%" type="button" class="btn btn-warning car-btn"
+                >Узнать у логиста</button>
     </div>
 </div>

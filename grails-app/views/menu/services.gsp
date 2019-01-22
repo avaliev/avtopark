@@ -151,11 +151,11 @@
     </div>
     <hr/>
 
-    <div class="routesList">
-        <g:each in="${cities}" var="obj">
-            <a href="/transport-uslugi/${obj.urlName}">${obj.name}</a>
-        </g:each>
-    </div>
+    %{--<div class="routesList">--}%
+        %{--<g:each in="${cities}" var="obj">--}%
+            %{--<a href="/transport-uslugi/${obj.urlName}">${obj.name}</a>--}%
+        %{--</g:each>--}%
+    %{--</div>--}%
 
 </section>
 </body>

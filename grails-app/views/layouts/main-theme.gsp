@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="col-xs-6 col-sm-2">
-                    <p class="logist-btn car-btn">Бесплатная консультация логиста</p>
+                    <p class="logist-btn">Бесплатная консультация логиста</p>
 
                 </div>
 
@@ -151,13 +151,14 @@
             <div class="footer_teaser col-sm-4">
                 <p>&nbsp;</p>
                 <h5>Принимаем к оплате:</h5>
+
                 <p><img width="50%" src="/images/epay1.png"></p>
             </div>
         </div>
     </section>
         <section class="copyright">
             <div class="row">
-                <div class="col-sm-5">©2014-2017 Материалы  сайта защищены законом об авторских правах</div>
+                <div class="col-sm-5">©2014-2019 Материалы  сайта защищены законом об авторских правах</div>
 
                 <g:if env="production">
                     <div class="col-xs-2 col-xs-2">
@@ -199,6 +200,10 @@
     ga('create', 'UA-57154755-1', 'auto');
     ga('send', 'pageview');
 </script>
+
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=e179f6b3426dd169d38c8d754f462fdd"
+        charset="UTF-8" async></script>
 
 </body>
 </html>
