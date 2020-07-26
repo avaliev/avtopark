@@ -56,7 +56,6 @@ function sendRequest(comment, btnId) {
         window.alert("Заявка отправлена! \r\n Спасибо!");
     });
 
-    WBK.sendCrmLead(34563, {'name': userName, 'phone': userPhone, 'comment': comment});
 }
 
 
@@ -138,7 +137,6 @@ function initHandlers() {
         $('#quick-form-btn').attr('disabled', 'disabled');
 
         sendRequest("", "#quick-form-btn");
-        yaCounter28224696.reachGoal('RECALL_FORM');
     });
 
 
@@ -153,8 +151,6 @@ function initHandlers() {
             carTypeComment = "Бесплатная консультация логиста";
             spec = "Бесплатная консультация логиста"
         }
-
-        yaCounter28224696.reachGoal('WINDOW_FORM_OPEN');
     });
 
 
@@ -210,8 +206,6 @@ function initHandlers() {
                 window.alert("Заявка отправлена! \r\n Спасибо!");
             });
 
-        WBK.sendCrmLead(34563, {'name': userName, 'phone': userPhone, 'comment': msg});
-        yaCounter28224696.reachGoal('CALC_SUBMIT');
     });
 
     // флаг для работы с главной формы

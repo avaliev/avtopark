@@ -201,9 +201,5 @@
     ga('send', 'pageview');
 </script>
 
-<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
-<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=e179f6b3426dd169d38c8d754f462fdd"
-        charset="UTF-8" async></script>
-
 </body>
 </html>

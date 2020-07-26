@@ -4,7 +4,7 @@ import grails.transaction.Transactional
 
 
 @Transactional
-class CustompageController {
+class CustomPageController {
 
     def index() {
         def list = CustomPage.list();
